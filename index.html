@@ -4,32 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajay Khanna - Computational Chemist</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Ajay Khanna</h1>
-    <p>Ph.D. Computational Chemist</p>
-    <p>akhanna2@ucmerced.edu | 209-631-3804 | <a href="https://www.linkedin.com/in/ajay-khanna/">LinkedIn</a> | <a href="https://github.com/ajaykhanna">GitHub</a></p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>Ph.D. Computational Chemistry, University of California, Merced (2024)</li>
-        <li>M.Sc. Chemistry and Chemical Biology, UC Merced (2022)</li>
-        <li>M.Sc. Chemistry, National Institute of Technology (NIT), Rourkela, India (2017)</li>
-        <li>B.Sc. Chemistry (Hons.), University of Delhi, India (2015)</li>
-      </ul>
-    </section>
+<header>
+  <h1>Ajay Khanna - Computational Chemist</h1>
+</header>
 
-    <!-- Add other sections for Work Experience, Skills, Publications, Awards, etc. -->
+<!-- Scrollable Container -->
+<div class="container" id="scroll-container">
+  
+  <!-- Section 1: About Me -->
+  <div class="section-card">
+    <h2>About Me</h2>
+    <p>I am a computational chemist with a Ph.D. from UC Merced. My work spans molecular modeling, machine learning, and drug discovery.</p>
+  </div>
 
-  </main>
+  <!-- Section 2: Research Interests -->
+  <div class="section-card">
+    <h2>Research Interests</h2>
+    <p>I specialize in molecular dynamics, hybrid QM/MM techniques, and machine learning applications in drug discovery.</p>
+  </div>
 
-  <footer>
-    <p>&copy; 2024 Ajay Khanna</p>
-  </footer>
+  <!-- Section 3: Projects -->
+  <div class="section-card">
+    <h2>Projects</h2>
+    <p>Recent projects include fluorescence spectroscopy, protein-ligand binding, and machine learning-driven cheminformatics tools.</p>
+  </div>
+
+  <!-- Section 4: Publications -->
+  <div class="section-card">
+    <h2>Publications</h2>
+    <p>Featured in high-impact journals like J. Chem. Phys. and Nat. Commun. My work covers resonance energy transfer and molecular spectroscopy.</p>
+  </div>
+
+</div>
+
+<!-- Scroll Buttons -->
+<button class="scroll-button" id="scroll-left" onclick="scrollLeft()">&#9664;</button>
+<button class="scroll-button" id="scroll-right" onclick="scrollRight()">&#9654;</button>
+
+<!-- Scroll Script -->
+<script>
+  const container = document.getElementById('scroll-container');
+
+  function scrollLeft() {
+    container.scrollBy({
+      left: -300, // Adjust for your card width
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollRight() {
+    container.scrollBy({
+      left: 300, // Adjust for your card width
+      behavior: 'smooth'
+    });
+  }
+</script>
+
 </body>
 </html>
