@@ -2,67 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajay Khanna - Computational Chemist</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="font-sans leading-normal tracking-normal text-gray-900">
 
-<header>
-  <h1>Ajay Khanna - Computational Chemist</h1>
-</header>
+  <!-- Navigation Bar -->
+  <nav class="bg-white fixed w-full z-10 top-0 shadow">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4">
+        <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+          Ajay Khanna
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle" class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+            <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#about">About</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#projects">Projects</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#skills">Skills</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#achievements">Achievements</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- Scrollable Container -->
-<div class="container" id="scroll-container">
-  
-  <!-- Section 1: About Me -->
-  <div class="section-card">
-    <h2>About Me</h2>
-    <p>I am a computational chemist with a Ph.D. from UC Merced. My work spans molecular modeling, machine learning, and drug discovery.</p>
+  <!-- Main Content -->
+  <div class="container mx-auto mt-24 px-4">
+
+    <!-- About Section -->
+    <section id="about" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg">
+        👋 Hi, there; welcome to my GitHub! I'm a computational chemistry wizard 🧙‍♂️ obsessed with understanding molecules through data 📊! I perform quantum calculations 🤯 to see electrons dance, run molecular simulations 🔬 to watch molecules move, and build ML models 📈 to predict chemical properties. The computational pipelines I develop screen thousands of compounds 🎛️ and crunch big chemical data 📌 to discover new insights. I develop tools in Python and C++ 🛠️ to analyze all the things about molecules! My chemistry spells and algorithms transform raw data into molecular insights. Let's use the power of computation to advance medicines, materials, and more! 🚀 
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="path_to_project_image1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Project Title 1</h3>
+            <p class="text-gray-700">Description of Project 1.</p>
+          </div>
+        </div>
+        <!-- Add more project items as needed -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Testimonials</h2>
+      <div class="space-y-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <p class="text-xl italic">"Ajay's expertise in computational chemistry is unparalleled."</p>
+          <p class="mt-4 text-right font-semibold">- Person A, Company X</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Professional Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Quantum Calculations</h3>
+          <p class="text-gray-700">Expertise in performing advanced quantum chemical calculations.</p>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Achievements</h2>
+      <!-- Stepper -->
+      <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <div class="h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">1</div>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold">Achievement Title 1</h3>
+            <p class="text-gray-700">Description of Achievement 1.</p>
+          </div>
+        </div>
+        <!-- Add more steps as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg">
+        <div class="mb-4">
+          <label class="block text-gray-700">Name</label>
+          <input type="text" name="name" class="w-full border border-gray-300 p-2 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Email</label>
+          <input type="email" name="_replyto" class="w-full border border-gray-300 p-2 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Message</label>
+          <textarea name="message" class="w-full border border-gray-300 p-2 rounded h-32" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </section>
+
   </div>
 
-  <!-- Section 2: Research Interests -->
-  <div class="section-card">
-    <h2>Research Interests</h2>
-    <p>I specialize in molecular dynamics, hybrid QM/MM techniques, and machine learning applications in drug discovery.</p>
-  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-700">&copy; 2023 Ajay Khanna. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <!-- Section 3: Projects -->
-  <div class="section-card">
-    <h2>Projects</h2>
-    <p>Recent projects include fluorescence spectroscopy, protein-ligand binding, and machine learning-driven cheminformatics tools.</p>
-  </div>
+  <!-- JavaScript for Navbar Toggle -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navContent = document.getElementById('nav-content');
 
-  <!-- Section 4: Publications -->
-  <div class="section-card">
-    <h2>Publications</h2>
-    <p>Featured in high-impact journals like J. Chem. Phys. and Nat. Commun. My work covers resonance energy transfer and molecular spectroscopy.</p>
-  </div>
-
-</div>
-
-<!-- Scroll Buttons -->
-<button class="scroll-button" id="scroll-left" onclick="scrollLeft()">&#9664;</button>
-<button class="scroll-button" id="scroll-right" onclick="scrollRight()">&#9654;</button>
-
-<!-- Scroll Script -->
-<script>
-  const container = document.getElementById('scroll-container');
-
-  function scrollLeft() {
-    container.scrollBy({
-      left: -300, // Adjust for your card width
-      behavior: 'smooth'
+    navToggle.addEventListener('click', function() {
+      navContent.classList.toggle('hidden');
     });
-  }
-
-  function scrollRight() {
-    container.scrollBy({
-      left: 300, // Adjust for your card width
-      behavior: 'smooth'
-    });
-  }
-</script>
+  </script>
 
 </body>
 </html>
