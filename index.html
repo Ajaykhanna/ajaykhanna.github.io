@@ -37,13 +37,13 @@
             <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#projects">Projects</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#testimonials">Testimonials</a>
-          </li>
-          <li class="mr-3">
             <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#skills">Skills</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#achievements">Achievements</a>
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#experience">Experience</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#tutorials">Tutorials</a>
           </li>
           <li class="mr-3">
             <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#contact">Contact</a>
@@ -63,14 +63,11 @@
         👋 I'm a computational chemistry wizard 🧙‍♂️ obsessed with understanding molecules through data 📊! I perform
         quantum calculations 🤯 to see electrons dance, run molecular simulations 🔬 to watch molecules move, and build
         ML models 📈 to predict chemical properties. The computational pipelines I develop screen thousands of compounds
-        🎛️
-        and crunch big chemical data 📌 to discover new insights. I develop tools in Python and C++/CUDA 🛠️ to analyze
-        all
-        the things about molecules! My chemistry spells and algorithms transform raw data into molecular insights.
+        🎛️ and crunch big chemical data 📌 to discover new insights. I develop tools in Python and C++/CUDA 🛠️ to analyze
+        all the things about molecules! My chemistry spells and algorithms transform raw data into molecular insights.
         Let's use the power of computation to advance medicines, materials, and more! 🚀 Happy Computing.
       </p>
     </section>
-
     <!-- Projects Section -->
     <section id="projects" class="my-12">
       <h2 class="text-3xl font-bold mb-4">Projects</h2>
@@ -83,8 +80,7 @@
                 <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water" class="w-full h-48 object-cover">
                 <div class="p-4">
                   <h3 class="text-xl font-semibold mb-2">Automate QM/MM Sims</h3>
-                  <p class="text-gray-700">MD_2_QM/MM Python program is a Python script designed to the process of
-                    conversion MD trajectories containing multiple ligands and solvent to hybrid QM/MM simulations. </p>
+                  <p class="text-gray-700">A Python program designed automate MD trajectories containing dyes in solvents to hybrid QM/MM simulations. </p>
                 </div>
               </div>
             </div>
@@ -101,9 +97,9 @@
             <!-- Project 3 -->
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="path_to_project_image3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities" class="w-full h-48 object-cover">
                 <div class="p-4">
-                  <h3 class="text-xl font-semibold mb-2">Excitonic</h3>
+                  <h3 class="text-xl font-semibold mb-2">Excitonic Coupling</h3>
                   <p class="text-gray-700">Computing Excitonic Coupling Between Molecules Using Various Excitonic Coupling Schemes</p>
                 </div>
               </div>
@@ -111,10 +107,10 @@
             <!-- Project 4 -->
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="path_to_project_image4.jpg" alt="Project 4" class="w-full h-48 object-cover">
+                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex" class="w-full h-48 object-cover">
                 <div class="p-4">
-                  <h3 class="text-xl font-semibold mb-2">Project Title 4</h3>
-                  <p class="text-gray-700">Description of Project 4.</p>
+                  <h3 class="text-xl font-semibold mb-2">DOI2BibTex</h3>
+                  <p class="text-gray-700">Convert Digital Object Identifiers (DOI) into BibTeX entries with a simple, user-friendly web app built using Streamlit!</p>
                 </div>
               </div>
             </div>
@@ -146,20 +142,6 @@
         slider.style.transform = `translateX(${currentPosition * slideWidth}px)`;
       }
     </script>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="my-12">
-      <h2 class="text-3xl font-bold mb-4">Testimonials</h2>
-      <div class="space-y-6">
-        <!-- Testimonial 1 -->
-        <div class="bg-gray-100 p-6 rounded-lg">
-          <p class="text-xl italic">"Ajay's expertise in computational chemistry is unparalleled."</p>
-          <p class="mt-4 text-right font-semibold">- Person A, Company X</p>
-        </div>
-        <!-- Add more testimonials as needed -->
-      </div>
-    </section>
-
     <!-- Skills Section -->
     <section id="skills" class="my-12">
       <h2 class="text-3xl font-bold mb-4">Professional Skills</h2>
@@ -196,9 +178,21 @@
           <!-- Add more skills as needed -->
         </div>
     </section>
+    <!-- Testimonials Section -->
+    <section id="experience" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Experience</h2>
+      <div class="space-y-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <p class="text-xl italic">"Ajay's expertise in computational chemistry is unparalleled."</p>
+          <p class="mt-4 text-right font-semibold">- Person A, Company X</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="my-12">
+    <section id="tutorials" class="my-12">
       <h2 class="text-3xl font-bold mb-4">Achievements</h2>
       <!-- Stepper -->
       <div class="space-y-8">
@@ -215,6 +209,24 @@
         </div>
         <!-- Add more steps as needed -->
       </div>
+    </section>
+  
+    <!-- Publications Section -->
+    <section id="publications" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Publications</h2>
+      <!-- List of Publications -->
+      <ul class="list-disc ml-6">
+        <li>Publication 1</li>
+        <li>Publication 2</li>
+        <li>Publication 3</li>
+        <!-- Add more publications as needed -->
+      </ul>
+    </section>
+
+  <!-- Resume Section -->
+    <section id="resume" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Resume</h2>
+      <a href="path_to_resume.pdf" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Download Resume</a>
     </section>
 
     <!-- Contact Section -->
@@ -242,7 +254,7 @@
   <!-- Footer -->
   <footer class="bg-gray-100 py-6 mt-12">
     <div class="container mx-auto text-center">
-      <p class="text-gray-700">&copy; 2024 Ajay Khanna. All rights reserved.</p>
+      <p class="text-gray-700">&copy; 2025 Ajay Khanna. All rights reserved.</p>
     </div>
   </footer>
 
