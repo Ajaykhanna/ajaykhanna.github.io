@@ -4,9 +4,11 @@ title: Ajay Khanna - Computational Chemist
 ---
 
 # Ajay Khanna
+
 **Ph.D. in Computational Chemistry**  
 University of California, Merced
 
-Welcome to my personal page! I specialize in computational chemistry, molecular modeling, drug discovery, and machine learning. I’m currently exploring postdoctoral opportunities and have a keen interest in developing new tools for drug discovery using both traditional and deep learning techniques.
+Welcome to my portfolio repository! This repository contains a collection of my work, projects, and research in the field of computational chemistry. Feel free to explore and reach out if you have any questions or collaboration opportunities.
 
-[Learn more about me](about.md)
+
+## [Live Portfolio](https://ajaykhanna.github.io/ajay-khanna.github.io/)
