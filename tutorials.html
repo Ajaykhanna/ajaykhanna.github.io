@@ -1,26 +1,76 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Mechanics and Molecular Dynamics Simulation Tutorials</title>
+    <title>Ajay Khanna - Tutorials</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 8;
+        let isLoading = false;
+
+        function searchTutorials() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const tutorialCards = document.getElementsByClassName('tutorial-card');
+
+            for (let i = 0; i < tutorialCards.length; i++) {
+                const card = tutorialCards[i];
+                const title = card.getElementsByTagName('h3')[0].innerText.toLowerCase();
+                const description = card.getElementsByTagName('p')[0].innerText.toLowerCase();
+                const tags = card.getElementsByClassName('tags')[0].innerText.toLowerCase();
+
+                if (title.includes(input) || description.includes(input) || tags.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+
+        function loadMoreTutorials() {
+            if (isLoading) return;
+
+            isLoading = true;
+            currentPage++;
+            const tutorialCards = document.getElementsByClassName('tutorial-card');
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            for (let i = start; i < end && i < tutorialCards.length; i++) {
+                tutorialCards[i].style.display = '';
+            }
+
+            isLoading = false;
+        }
+
+        function initInfiniteScroll() {
+            window.addEventListener('scroll', () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && !isLoading) {
+                    loadMoreTutorials();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tutorialCards = document.getElementsByClassName('tutorial-card');
+            for (let i = itemsPerPage; i < tutorialCards.length; i++) {
+                tutorialCards[i].style.display = 'none';
+            }
+            initInfiniteScroll();
+
+            // Add event listener for 'Enter' key press on search input
+            document.getElementById('search-input').addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    searchTutorials();
+                }
+            });
+        });
+    </script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="font-sans leading-normal tracking-normal text-gray-900">
     <!-- Navigation Bar -->
     <nav class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -40,72 +90,112 @@
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#about">About</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
-                            href="#projects">Projects</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#skills">Skills</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
-                            href="#experience">Experience</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
-                            href="#tutorials">Tutorials</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#resume">Resume</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500" href="#contact">Contact</a>
-                    </li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#about">About</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#projects">Projects</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#skills">Skills</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#experience">Experience</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#tutorials">Tutorials</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#resume">Resume</a></li>
+                    <li class="mr-3"><a class="inline-block py-2 px-4 text-gray-900 hover:text-blue-500"
+                            href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main>
-        <h1>Quantum Mechanics and Molecular Dynamics Simulation Tutorials</h1>
 
-        <section id="quantum-mechanics">
-            <h2>Quantum Mechanics Tutorials</h2>
-            <ul>
-                <li><a href="#">Introduction to Quantum Mechanics</a></li>
-                <li><a href="#">Schrödinger Equation and Wave Functions</a></li>
-                <li><a href="#">Quantum Harmonic Oscillator</a></li>
-                <li><a href="#">Hydrogen Atom and Atomic Orbitals</a></li>
-                <li><a href="#">Perturbation Theory</a></li>
-            </ul>
+    <header class="bg-blue-500 text-white py-6 shadow-lg mt-16">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Tutorials on Quantum Mechanics & Molecular Dynamics Simulations</h1>
+            <a href="index.html" class="text-white hover:text-gray-200">Back to Home</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-12 px-6">
+        <!-- Search Bar -->
+        <section class="my-8">
+            <div class="flex justify-center">
+                <input id="search-input" type="text" placeholder="Search tutorials..."
+                    class="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                <button onclick="searchTutorials()"
+                    class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Search</button>
+            </div>
         </section>
 
-        <section id="molecular-dynamics">
-            <h2>Molecular Dynamics Simulation Tutorials</h2>
-            <ul>
-                <li><a href="#">Basics of Molecular Dynamics</a></li>
-                <li><a href="#">Force Fields and Potential Energy Functions</a></li>
-                <li><a href="#">Integration Algorithms</a></li>
-                <li><a href="#">Thermostats and Barostats</a></li>
-                <li><a href="#">Analysis of MD Trajectories</a></li>
-            </ul>
-        </section>
-
-        <section id="software-tutorials">
-            <h2>Software-specific Tutorials</h2>
-            <ul>
-                <li><a href="#">GROMACS Tutorial</a></li>
-                <li><a href="#">NAMD Tutorial</a></li>
-                <li><a href="#">Quantum ESPRESSO Tutorial</a></li>
-                <li><a href="#">Gaussian Tutorial</a></li>
-            </ul>
+        <!-- Tutorials Grid Section -->
+        <section class="my-12">
+            <h2 class="text-3xl font-bold mb-8 text-blue-600">Explore Our Tutorials</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Example Tutorial Card -->
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Basics</h3>
+                    <p class="text-gray-700 mb-4">Learn the fundamentals of quantum mechanics using Gaussian and
+                        TeraChem.</p>
+                    <div class="tags text-sm text-gray-500 mb-2">Tags: Quantum Mechanics, Gaussian, Basics</div>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <!-- Repeat the Tutorial Card for each tutorial -->
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Molecular Dynamics with GROMACS</h3>
+                    <p class="text-gray-700 mb-4">Step-by-step guide on running MD simulations using GROMACS.</p>
+                    <div class="tags text-sm text-gray-500 mb-2">Tags: Molecular Dynamics, GROMACS, Simulations</div>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Hybrid QM/MM Simulations</h3>
+                    <p class="text-gray-700 mb-4">Learn how to set up and run hybrid QM/MM simulations effectively.</p>
+                    <div class="tags text-sm text-gray-500 mb-2">Tags: Hybrid, QM/MM, Simulations</div>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <!-- Add more tutorial cards as needed -->
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Basics</h3>
+                    <p class="text-gray-700 mb-4">Learn the fundamentals of quantum mechanics using Gaussian and
+                        TeraChem.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Molecular Dynamics with GROMACS</h3>
+                    <p class="text-gray-700 mb-4">Step-by-step guide on running MD simulations using GROMACS.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Hybrid QM/MM Simulations</h3>
+                    <p class="text-gray-700 mb-4">Learn how to set up and run hybrid QM/MM simulations effectively.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Basics</h3>
+                    <p class="text-gray-700 mb-4">Learn the fundamentals of quantum mechanics using Gaussian and
+                        TeraChem.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+                <div
+                    class="tutorial-card bg-white rounded-lg shadow-lg p-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                    <h3 class="text-xl font-semibold mb-2">Molecular Dynamics with GROMACS</h3>
+                    <p class="text-gray-700 mb-4">Step-by-step guide on running MD simulations using GROMACS.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2023 Your Name. All rights reserved.</p>
+    <footer class="bg-gray-100 py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-700">&copy; 2025 Ajay Khanna. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 
