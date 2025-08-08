@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Gaussian Geometry Optimization">
+    <meta name="description" content="A step-by-step guide to running a basic geometry optimization job for Azobenzene with Gaussian.">
+    <meta name="image" content="./images/molecules/azobenzene.png">
+    <meta name="tags" content="Gaussian, Geometry Optimization, Quantum Chemistry, Computational Chemistry">
+</head>
+<body>
+    <h2 class="text-2xl font-bold mb-4">Running a Geometry Optimization with Gaussian</h2>
+    <p class="mb-4">
+        This tutorial walks through the process of setting up and running a basic ground-state geometry optimization for an Azobenzene molecule using Gaussian. Geometry optimization is a fundamental task in computational chemistry used to find the lowest energy structure of a molecule.
+    </p>
+    
+    <img src="./images/molecules/azobenzene.png" alt="Azobenzene Molecule" class="w-full max-w-md mx-auto rounded-lg shadow-md mb-6" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Azobenzene+Molecule';">
+
+    <h3 class="text-xl font-semibold mb-2">Input File Breakdown</h3>
+    <p class="mb-4">
+        Below is the complete input file (`.gjf` or `.com`). The key components are:
+        <ul class="list-disc list-inside mb-4 ml-4">
+            <li><strong>Route Section (`#` line):</strong> Specifies the type of calculation. <code>opt</code> requests an optimization, <code>wb97xd/6-31g(d)</code> defines the theory level and basis set, and <code>geom=connectivity</code> tells Gaussian to read bond connectivity information from the end of the file.</li>
+            <li><strong>Title Section:</strong> A brief, human-readable description of the job.</li>
+            <li><strong>Charge and Multiplicity:</strong> `0 1` for a neutral singlet state.</li>
+            <li><strong>Molecular Specification:</strong> The XYZ coordinates of each atom.</li>
+            <li><strong>Connectivity:</strong> (Optional but recommended) Explicitly defines the bonding, which can help the optimization algorithm.</li>
+        </ul>
+    </p>
+
+    <h3 class="text-xl font-semibold mb-2">Example Gaussian Input File</h3>
+    <div class="code-box bg-gray-800 text-white p-4 rounded-lg shadow-inner">
+        <pre><code class="language-plaintext">
+%chk=azobenzene_gs.chk
+# opt wb97xd/6-31g(d) geom=connectivity
+
+Geometry Optimiztion of Azobenzene
+
+0 1
+ N                 -0.38213800    0.49496100    0.00000000
+ C                 -1.76781500    0.17351900    0.00000000
+ N                  0.37921600   -0.49456300    0.00000000
+ C                 -2.63358600    1.26635100    0.00000000
+ C                 -2.27861600   -1.12885200    0.00000000
+ C                  1.76491900   -0.17311600    0.00000000
+ C                 -4.00998700    1.06556100    0.00000000
+ H                 -2.20621100    2.26413100    0.00000000
+ C                 -3.65212200   -1.32295900    0.00000000
+ H                 -1.58837400   -1.96485600    0.00000000
+ C                  2.63062400   -1.26595900    0.00000000
+ C                  2.27574600    1.12924400    0.00000000
+ C                 -4.52000000   -0.22921200    0.00000000
+ H                 -4.68243600    1.91787500    0.00000000
+ H                 -4.05328500   -2.33214900    0.00000000
+ C                  4.00703700   -1.06523400    0.00000000
+ H                  2.20321900   -2.26372900    0.00000000
+ C                  3.64926000    1.32329400    0.00000000
+ H                  1.58559200    1.96531400    0.00000000
+ H                 -5.59398500   -0.39026800    0.00000000
+ C                  4.51710100    0.22951600    0.00000000
+ H                  4.67944800   -1.91757700    0.00000000
+ H                  4.05045700    2.33247100    0.00000000
+ H                  5.59109100    0.39053200    0.00000000
+
+ 1 2 1.0 3 2.0
+ 2 4 1.5 5 1.5
+ 3 6 1.0
+ 4 7 1.5 8 1.0
+ 5 9 1.5 10 1.0
+ 6 11 1.5 12 1.5
+ 7 13 1.5 14 1.0
+ 8
+ 9 13 1.5 15 1.0
+ 10
+ 11 16 1.5 17 1.0
+ 12 18 1.5 19 1.0
+ 13 20 1.0
+ 14
+ 15
+ 16 21 1.5 22 1.0
+ 17
+ 18 21 1.5 23 1.0
+ 19
+ 20
+ 21 24 1.0
+ 22
+ 23
+ 24
+
+        </code></pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Quantum Mechanics Basics">
+    <meta name="description" content="Learn the fundamentals of quantum mechanics using Gaussian and TeraChem.">
+    <meta name="image" content="images/quantum_example.png">
+    <meta name="tags" content="Quantum Mechanics, Gaussian, Basics">
+</head>
+<body>
+    <h2 class="text-2xl font-bold mb-4">Quantum Mechanics Basics</h2>
+    <p class="mb-4">In this tutorial, you will learn about the basics of quantum mechanics, including wave functions, the Schrödinger equation, and operators. We will also explore practical implementations using Gaussian software to solve real-world quantum problems.</p>
+    <img src="images/quantum_example.png" alt="Quantum Mechanics Example" class="w-auto mb-4">
+    <p class="mb-4">Example topics covered include:</p>
+    <ul class="list-disc list-inside mb-4">
+        <li>Introduction to Quantum States</li>
+        <li>Wave-Particle Duality</li>
+        <li>Setting up Gaussian for simple quantum systems</li>
+    </ul>
+    <p class="mb-4">Here is an example of a Python script used in quantum simulations:</p>
+    <div class="code-box bg-gray-200 p-4 rounded">
+        <pre><code class="language-python">
+# Importing necessary modules
+import numpy as np
+
+# Define the Hamiltonian matrix
+H = np.array([[1, 0.1], [0.1, 2]])
+
+# Calculate eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eigh(H)
+
+# Print the results
+print("Eigenvalues:", eigenvalues)
+print("Eigenvectors:", eigenvectors)
+        </code></pre>
+    </div>
+</body>
+</html>

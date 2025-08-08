@@ -1,0 +1,8 @@
+{
+  "tutorials": [
+	"gaussian-geo-opt.html",
+    "quantum-mechanics-basics.html",
+    "molecular-dynamics-with-gromacs.html",
+    "hybrid-qm-mm-simulations.html"
+  ]
+}

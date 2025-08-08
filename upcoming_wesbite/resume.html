@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Ajay Khanna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- Custom Styles -->
+    <style>
+        /* Custom scrollbar for Swiper */
+        .swiper-scrollbar {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-scrollbar-drag {
+            background: hsl(202, 78%, 75%);
+        }
+    </style>
+</head>
+
+<body class="font-sans leading-normal tracking-normal text-gray-900">
+
+    <!-- Navigation Bar -->
+
+    <body class="font-sans leading-normal tracking-normal text-gray-900">
+        <!-- Navigation Bar -->
+        <nav class="bg-white fixed w-full z-10 top-0 shadow">
+            <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+                <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-10 w-10 rounded-full mr-2">
+                <div class="pl-4">
+                    <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+                        Ajay Khanna
+                    </a>
+                </div>
+                <div class="block lg:hidden pr-4">
+                    <button id="nav-toggle"
+                        class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline">
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+                            <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+                    id="nav-content">
+                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#about">About</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#projects">Projects</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#skills">Skills</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#experience">Experience</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#tutorials">Tutorials</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#resume">Resume</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                                href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-green-900 to-indigo-600 text-white py-5 mt-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl font-bold">Resume</h1>
+                <p class="mt-4 text-xl">Ajay Khanna - Computational Chemist</p>
+                <!-- Download Resume Button -->
+                <div class="mt-6">
+                    <a href="./pdfs/Ajay_Khanna_CV.pdf" download
+                        class="bg-white text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary Section -->
+        <section id="summary" class="py-12 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-6">Summary</h2>
+                <p class="text-lg mb-4">
+                    Computational Chemist specializing in the intersection of computational physics and chemistry,
+                    focusing
+                    on optical spectroscopy, resonance energy transfer, excited state properties, and dynamics of
+                    molecules in a
+                    condensed environment. Expertise in high-throughput computational techniques, spanning ground and
+                    excited state
+                    ab initio molecular dynamics, with a strong foundation in high-performance and GPU computing. Adept
+                    using
+                    Cheminformatics tools for advanced high-throughput virtual screening and ML applications.
+                </p>
+                <p class="text-lg mb-4">
+                    Bringing industrial experience in developing rank-ordering computational pipelines
+                    for accelerating rank-ordering potential molecules. Excellent writing, communication, and
+                    collaboration,
+                    evident from successful resource allocation grants, oral presentations, and experimental
+                    collaborations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sections with Carousel Effects -->
+        <section id="resume-sections" class="py-12">
+            <div class="container mx-auto px-6">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Education Section -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h2 class="text-3xl font-bold mb-4">Education</h2>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Ph.D. Computational Chemistry, University of California, Merced, USA </li>
+                                    <li>M.Sc. Chemistry, National Institute of Technology (NIT), Rourkela, India</li>
+                                    <li>Diploma in Full Stack Web Design and Development, eZone Academy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Awards Section -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h2 class="text-3xl font-bold mb-4">Awards</h2>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Outstanding Graduate Student Support Award </li>
+                                    <li>GROW TA Training and Support Fellowship</li>
+                                    <li>Graduate Excel Peer Mentor Award</li>
+                                    <li>Summer Research Fellowship (twice) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Professional Development Section -->
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h2 class="text-3xl font-bold mb-4">Teaching Pedagogy</h2>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Level 1 - Introduction to Teaching Pedagogy</li>
+                                    <li>Level 2 - Principles of Pedagogy</li>
+                                    <li>Level 3 - Advanced Pedagogy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h2 class="text-3xl font-bold mb-4">Communication</h2>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Toastmasters, 5x Best Speech Accolade</li>
+                                    <li>Stanford's Writing in Sciences course by Dr. Kristin Sainani, Spring 2021</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h2 class="text-3xl font-bold mb-4">Mentorship</h2>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>GradEXCEL Program, UC Merced: Mentored multiple students from 2019 to 2022</li>
+                                    <li>Undergraduate Students: Indar and Ethan</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Add more sections as needed -->
+                    </div>
+                    <!-- Swiper Scrollbar -->
+                    <div class="swiper-scrollbar mt-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 py-6 mt-12">
+            <div class="container mx-auto text-center">
+                <p class="text-gray-700">&copy; 2025 Ajay Khanna. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript for Navbar Toggle -->
+        <script>
+            const navToggle = document.getElementById('nav-toggle');
+            const navContent = document.getElementById('nav-content');
+
+            navToggle.addEventListener('click', function () {
+                navContent.classList.toggle('hidden');
+            });
+        </script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper with mousewheel control
+            var swiper = new Swiper('.mySwiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: false,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: false,
+                },
+                mousewheel: true,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                }
+            });
+        </script>
+
+    </body>
+
+</html>

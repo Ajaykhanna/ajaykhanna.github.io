@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Khanna - Tutorials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/tutorial-style.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white fixed w-full z-10 top-0 shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-10 w-10 rounded-full mr-2">
+            <div class="pl-4">
+                <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+                    Ajay Khanna
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline">
+                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+                        <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#about">About</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#experience">Experience</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#tutorials">Tutorials</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#resume">Resume</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+                            href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-24 px-4">
+        <header class="text-center my-12">
+            <h1 class="text-5xl font-bold text-gray-800">Tutorials</h1>
+            <p class="text-xl text-gray-600">Your one-stop shop for learning computational chemistry.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="mb-8 flex">
+            <input type="text" id="search-bar"
+                class="w-full p-4 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Search for tutorials...">
+            <button id="search-button"
+                class="bg-blue-500 text-white px-6 py-2 rounded-r-lg hover:bg-blue-600 transition-colors">Search</button>
+        </div>
+
+        <!-- Featured Tutorial -->
+        <section id="featured-tutorial" class="mb-12" style="display: none;"></section>
+
+        <!-- Tutorials Grid -->
+        <section id="tutorials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tutorial cards will be inserted here -->
+        </section>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="text-center py-12" style="display: none;">
+            <h2 class="text-2xl font-bold text-gray-600">No tutorials found.</h2>
+            <p class="text-gray-500">Try adjusting your search terms or check if the `tutorials/manifest.json` file is
+                configured correctly.</p>
+        </div>
+
+        <!-- Tutorial Modal -->
+        <div id="tutorial-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-100 py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-700">&copy; 2025 Ajay Khanna. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script src="tutorials.js"></script>
+</body>
+
+</html>

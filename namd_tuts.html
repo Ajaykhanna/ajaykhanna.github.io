@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: A Journey into Non-Adiabatic Molecular Dynamics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-placeholder {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: #4A5568;
+        }
+
+        .flow-box {
+            border: 2px solid #2C5282;
+            background-color: #EBF8FF;
+        }
+
+        .kpi-card {
+            background: linear-gradient(135deg, #4299E1 0%, #3182CE 100%);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-blue-800 text-shadow">Beyond Born-Oppenheimer</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">A Visual Guide to Non-Adiabatic Molecular Dynamics (NAMD)
+            </p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="introduction" class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Do We Need NAMD?</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">In most of chemistry, we assume electrons and nuclei
+                    are decoupled (the Born-Oppenheimer Approximation). But in photochemistry, charge transfer, and at
+                    metal surfaces, this breaks down. NAMD simulates these complex processes where electronic states mix
+                    and molecules take unexpected paths.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="icon-placeholder text-blue-500">⚡️</div>
+                        <h3 class="text-xl font-bold mt-4">Photochemistry</h3>
+                        <p class="text-gray-600 mt-2 text-center">Simulating how light energy is absorbed and
+                            dissipated, like in vision or DNA photostability.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="icon-placeholder text-green-500">↔️</div>
+                        <h3 class="text-xl font-bold mt-4">Charge Transfer</h3>
+                        <p class="text-gray-600 mt-2 text-center">Modeling electron movement in solar cells, batteries,
+                            and organic electronics.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="icon-placeholder text-red-500">🔬</div>
+                        <h3 class="text-xl font-bold mt-4">Material Science</h3>
+                        <p class="text-gray-600 mt-2 text-center">Understanding reactions at metal surfaces, catalysis,
+                            and energy conversion.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="foundations">
+                <h2 class="text-3xl font-bold text-center mb-8">The Landscape of Chemical Change</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4">Potential Energy Surfaces</h3>
+                        <p class="text-gray-700 mb-4">The Born-Oppenheimer breakdown is driven by the topography of
+                            Potential Energy Surfaces (PESs). Where these surfaces for different electronic states get
+                            close or intersect, non-adiabatic transitions happen.</p>
+                        <div class="chart-container">
+                            <canvas id="pesChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2 text-center">An illustration of an avoided crossing and a
+                            conical intersection (CI), the primary funnels for photochemical reactions.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4">Adiabatic vs. Diabatic</h3>
+                        <p class="text-gray-700 mb-4">Simulations require choosing a representation. The "adiabatic"
+                            basis is natural but has problematic singularities at intersections. The "diabatic" basis is
+                            smooth and numerically stable, making it ideal for dynamics.</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border">
+                                <thead class="bg-blue-800 text-white">
+                                    <tr>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Feature</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Adiabatic</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Diabatic</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    <tr class="border-b">
+                                        <td class="py-3 px-4">PES Shape</td>
+                                        <td class="py-3 px-4">Cusps / Avoided Crossings</td>
+                                        <td class="py-3 px-4">Smooth / Crossing</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-3 px-4">Coupling</td>
+                                        <td class="py-3 px-4">Derivative (Singular)</td>
+                                        <td class="py-3 px-4">Potential (Smooth)</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-3 px-4">Use Case</td>
+                                        <td class="py-3 px-4">Static Calculations</td>
+                                        <td class="py-3 px-4">Wavepacket Dynamics</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methods">
+                <h2 class="text-3xl font-bold text-center mb-8">The NAMD Simulation Toolkit</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-10">No single method is perfect. The choice depends
+                    on a trade-off between computational cost and the accurate treatment of quantum effects like
+                    branching and coherence.</p>
+
+                <div class="space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-2xl font-bold mb-4">Hierarchy of NAMD Methods</h3>
+                            <p class="text-gray-700 mb-4">Methods range from efficient but approximate
+                                independent-trajectory approaches (like FSSH) to highly accurate but expensive
+                                wavepacket-based methods (like AIMS). The "best" method balances these factors for the
+                                specific problem.</p>
+                            <div class="chart-container" style="height: 300px;">
+                                <canvas id="methodsChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 kpi-card rounded-lg shadow-xl p-8 text-center">
+                            <h3 class="text-2xl font-bold mb-4">The Machine Learning Revolution</h3>
+                            <p class="text-lg mb-6">The biggest bottleneck is calculating electronic properties. ML
+                                models can learn these properties, offering a speedup of over...</p>
+                            <div class="text-6xl font-black my-4">1,000,000x</div>
+                            <p class="text-lg">... enabling simulations of larger systems for longer times than ever
+                                before. This is the future of NAMD.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="flowchart">
+                <h2 class="text-3xl font-bold text-center mb-8">How a Simulation Works: Trajectory Surface Hopping
+                    (FSSH)</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-10">Fewest Switches Surface Hopping (FSSH) is the
+                    most popular NAMD method. It balances efficiency and accuracy by evolving classical trajectories on
+                    single potential energy surfaces, allowing them to stochastically "hop" between surfaces in regions
+                    of strong coupling.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flow-box p-4 rounded-lg text-center shadow-md">
+                        <h4 class="font-bold">1. Propagate</h4>
+                        <p>Evolve nucleus on active PES. Evolve electron wavefunction.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box p-4 rounded-lg text-center shadow-md">
+                        <h4 class="font-bold">2. Calculate Probabilities</h4>
+                        <p>Determine probability of hopping to other surfaces.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box p-4 rounded-lg text-center shadow-md">
+                        <h4 class="font-bold">3. Stochastic Decision</h4>
+                        <p>Use a random number. Attempt a hop?</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="bg-green-100 border-2 border-green-700 p-4 rounded-lg text-center shadow-md">
+                        <h4 class="font-bold text-green-800">4. Hop!</h4>
+                        <p>If yes & allowed, adjust velocity, switch active surface.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="applications">
+                <h2 class="text-3xl font-bold text-center mb-8">NAMD in Action: From Sunlight to Life</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4">Case Study: Organic Solar Cells</h3>
+                        <p class="text-gray-700 mb-4">NAMD resolves the ultrafast processes in organic solar cells.
+                            Simulations reveal the competition between productive Singlet Fission (one photon → two
+                            excitons) and undesirable charge transfer, guiding the design of more efficient materials.
+                        </p>
+                        <div class="chart-container">
+                            <canvas id="solarCellChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold mb-4">Case Study: DNA Synthesis</h3>
+                        <p class="text-gray-700 mb-4">The enzyme RNR is essential for life, using a chain of
+                            proton-coupled electron transfer (PCET) steps. NAMD simulations classify each step,
+                            revealing a mix of non-adiabatic, adiabatic, and intermediate regimes, which is crucial for
+                            understanding the enzyme's kinetics.</p>
+                        <div class="chart-container">
+                            <canvas id="pcetChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const wrapLabel = (label) => {
+                const maxLength = 16;
+                if (typeof label !== 'string' || label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const palette = {
+                blue: '#2C5282',
+                teal: '#319795',
+                green: '#38A169',
+                yellow: '#D69E2E',
+                red: '#E53E3E',
+                gray: '#A0AEC0'
+            };
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.plugins.legend.position = 'bottom';
+
+            new Chart(document.getElementById('pesChart'), {
+                type: 'line',
+                data: {
+                    labels: ['R1', 'R2', 'Avoided Crossing', 'R3', 'Conical Intersection', 'R4', 'R5'],
+                    datasets: [{
+                        label: 'Excited State (S1)',
+                        data: [5, 4.5, 3, 3.5, 2, 2.5, 3],
+                        borderColor: palette.teal,
+                        backgroundColor: 'rgba(49, 151, 149, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Ground State (S0)',
+                        data: [1, 1.5, 2.5, 1.5, 2, 0.5, 1],
+                        borderColor: palette.blue,
+                        backgroundColor: 'rgba(44, 82, 130, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: 'Potential Energy' } },
+                        x: { title: { display: true, text: 'Nuclear Coordinate' } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('methodsChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ehrenfest', 'FSSH', 'CT-MQC', 'AIMS'].map(wrapLabel),
+                    datasets: [{
+                        label: 'Computational Cost',
+                        data: [10, 15, 60, 95],
+                        backgroundColor: palette.blue,
+                    }, {
+                        label: 'Accuracy (Quantum Effects)',
+                        data: [20, 50, 75, 90],
+                        backgroundColor: palette.teal,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { stacked: false, title: { display: true, text: 'Relative Score' } },
+                        y: { stacked: false }
+                    },
+                    plugins: {
+                        title: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('solarCellChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Singlet Fission (Productive)', 'Charge Transfer (Loss)', 'Other Decay (Loss)'].map(wrapLabel),
+                    datasets: [{
+                        label: 'Decay Pathways',
+                        data: [45, 35, 20],
+                        backgroundColor: [palette.green, palette.red, palette.gray],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } },
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                generateLabels: function (chart) {
+                                    const data = chart.data;
+                                    if (data.labels.length && data.datasets.length) {
+                                        return data.labels.map((label, i) => {
+                                            const meta = chart.getDatasetMeta(0);
+                                            const style = meta.controller.getStyle(i);
+
+                                            return {
+                                                text: Array.isArray(label) ? label.join(' ') : label,
+                                                fillStyle: style.backgroundColor,
+                                                strokeStyle: style.borderColor,
+                                                lineWidth: style.borderWidth,
+                                                hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden,
+                                                index: i
+                                            };
+                                        });
+                                    }
+                                    return [];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('pcetChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Y356↔Y731', 'Y731↔Y730', 'Y730↔C439', 'C439↔GDP'].map(wrapLabel),
+                    datasets: [{
+                        label: 'Adiabatic Character',
+                        data: [10, 95, 50, 98],
+                        fill: true,
+                        backgroundColor: 'rgba(44, 82, 130, 0.2)',
+                        borderColor: palette.blue,
+                        pointBackgroundColor: palette.blue,
+                    }, {
+                        label: 'Non-Adiabatic Character',
+                        data: [90, 5, 50, 2],
+                        fill: true,
+                        backgroundColor: 'rgba(49, 151, 149, 0.2)',
+                        borderColor: palette.teal,
+                        pointBackgroundColor: palette.teal,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { display: true },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: { backdropColor: 'transparent' }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

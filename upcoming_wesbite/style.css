@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  /* Light blue background */
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #4682b4;
+  /* Steel blue for contrast */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Section Container */
+.container {
+  display: flex;
+  overflow-x: auto;
+  /* Enables horizontal scrolling */
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  /* Smooth scrolling effect */
+  padding: 20px;
+}
+
+/* Section Cards */
+.section-card {
+  background-color: white;
+  border: 2px solid #87CEEB;
+  /* Sky blue border */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+  display: inline-block;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+/* Buttons for scroll navigation */
+.scroll-button {
+  background-color: #4682b4;
+  /* Steel blue */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+#scroll-left {
+  left: 0;
+}
+
+#scroll-right {
+  right: 0;
+}

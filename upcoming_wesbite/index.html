@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ajay Khanna - Computational Chemist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans leading-normal tracking-normal text-gray-900">
+  <!-- Navigation Bar -->
+  <nav class="bg-white fixed w-full z-10 top-0 shadow">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-10 w-10 rounded-full mr-2">
+      <div class="pl-4">
+        <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+          Ajay Khanna
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+            <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#about">About</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#projects">Projects</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#skills">Skills</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#experience">Experience</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#tutorials">Tutorials</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#resume">Resume</a>
+          </li>
+          <li class="mr-3">
+            <a class="nav-item inline-block py-2 px-4 text-gray-900 hover:text-blue-500 hover:shadow-lg hover:scale-105 rounded-lg transform transition duration-300 ease-in-out active:scale-95"
+              href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main Content -->
+  <div class="container mx-auto mt-24 px-4">
+
+    <!-- About Section -->
+    <section id="about" class="my-12">
+      <h2 class="text-3xl font-bold mb-4"> Who? Me ?</h2>
+      <p class="text-lg">
+        👋 I'm a computational chemistry wizard 🧙‍♂️ obsessed with understanding molecules through data 📊! I perform
+        quantum calculations 🤯 to see electrons dance, run molecular simulations 🔬 to watch molecules move, and build
+        ML models 📈 to predict chemical properties. The computational pipelines I develop screen thousands of compounds
+        🎛️ and crunch big chemical data 📌 to discover new insights. I develop tools in Python and C++/CUDA 🛠️ to
+        analyze
+        all the things about molecules! My chemistry spells and algorithms transform raw data into molecular insights.
+        Let's use the power of computation to advance medicines, materials, and more! 🚀 Happy Computing.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="relative">
+        <div class="overflow-hidden">
+          <div class="flex transition-transform duration-300 ease-in-out" id="projectSlider">
+            <!-- Project 1 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
+                  class=" w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a
+                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                      class="text-blue-500 hover:underline">Computing Absorption and Fluorescence Spectra</a></h3>
+                  <p class="text-gray-700">Calculating absorption and fluroscence spectra of molecules in explicit
+                    environment using ensemble Franck-Condon methods </p>
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a
+                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                      class="text-blue-500 hover:underline">Automate QM/MM Sims</a></h3>
+                  <p class="text-gray-700">A Python program designed automate MD trajectories containing dyes in
+                    solvents to hybrid QM/MM simulations. </p>
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
+                      class="text-blue-500 hover:underline">MolVizMan</a></h3>
+                  <p class="text-gray-700">An interactive Python GUI application allows you to visualize and manipulate
+                    molecules from an XYZ file.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
+                      class="text-blue-500 hover:underline">Excitonic Coupling</a></h3>
+                  <p class="text-gray-700">Computing Excitonic Coupling Between Molecules Using Various Excitonic
+                    Coupling Schemes</p>
+                </div>
+              </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
+                      class="text-blue-500 hover:underline">DOI2BibTex</a></h3>
+                  <p class="text-gray-700">Convert Digital Object Identifiers (DOI) into BibTeX entries with a simple,
+                    user-friendly web app built using Streamlit!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+          onclick="slide(1)">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+          onclick="slide(-1)">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Professional Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Quantum Mechanics</h3>
+          <p class="text-gray-700">Expertise in performing advanced quantum chemical calculations.</p>
+        </div>
+        <!-- Skill 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Molecular Dynamics</h3>
+          <p class="text-gray-700">Experience in running molecular dynamics simulations.</p>
+        </div>
+        <!-- Skill 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+          <p class="text-gray-700">Proficiency in developing machine learning models for chemical data.</p>
+        </div>
+        <!-- Skill 4 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Python & C++/CUDA</h3>
+          <p class="text-gray-700">Skills in developing computational tools in Python and C++.</p>
+        </div>
+        <!-- Skill 5 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Data Analysis</h3>
+          <p class="text-gray-700">Experience in analyzing big chemical data to extract insights.</p>
+        </div>
+        <!-- Skill 6 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-semibold mb-2">Cheminformatics</h3>
+          <p class="text-gray-700">Knowledge of chemical informatics to screen large compound libraries.</p>
+          <!-- Add more skills as needed -->
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Experience</h2>
+      <div class="space-y-6">
+        <!-- Testimonial 1 -->
+        <div>
+          <p class="text-xl italic">"Ajay's expertise in computational chemistry is unparalleled."</p>
+          <p class="mt-4 text-right font-semibold">- Person A, Company X</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="my-12 ">
+      <h2 class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
+      <div class="mb-4">
+        <a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
+          class="text-blue-500 hover:underline">Google Scholar</a> |
+        <a href="https://www.researchgate.net/profile/Ajay-Khanna-2"
+          class="text-blue-500 hover:underline">ResearchGate</a> |
+        <a href="https://orcid.org/0000-0002-8313-1393" class="text-blue-500 hover:underline">ORCID</a>
+      </div>
+      <!-- Publication List -->
+      <div class="space-y-8">
+        <!-- Publication 1 -->
+        <div>
+          <h4 class="text-xl font-semibold">1. Resonance Energy Transfer Processes in Explicit Solvent Environment:
+            Going Beyond Traditional FRET</h4>
+          <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Christine M. Isborn, <em>Peer-reviewed
+              Journal</em> <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Ongoing</span>
+          </p>
+          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+            Exploring advanced FRET processes in complex solvent environments to enhance energy transfer predictions in
+            molecular systems.</p>
+        </div>
+        <!-- Publication 2 -->
+        <div>
+          <h4 class="text-xl font-semibold">2. <a href="https://doi.org/10.1063/5.0217080"
+              class="text-blue-500 hover:underline">Calculating Absorption and Fluorescence Spectra for Chromophores in
+              Solution with Ensemble Franck-Condon Methods</a></h4>
+          <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Sapana V. Shedge, Tim J. Zuehlsdorff,
+            Christine M. Isborn <span class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem.
+              Phys. (2024)</span><span
+              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 2</span></p>
+          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
+            computational approach for accurate prediction of absorption and fluorescence spectra in solution, advancing
+            spectroscopic analysis techniques.</p>
+        </div>
+        <!-- Publication 3 -->
+        <div>
+          <h4 class="text-xl font-semibold">3. <a href="https://www.nature.com/articles/s41467-022-35589-4"
+              class="text-blue-500 hover:underline">Molecular Polariton Electroabsorption</a></h4>
+          <p style="width: fit-content;">Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman, <u><strong>Ajay
+                Khanna</strong></u>, Sapana Shedge, Christine Isborn, Joel Yuen-Zhou, Noel C. Giebink <span
+              class="inline-block bg-green-800 text-white text-xs px-2 py-1 rounded">Nature Comm. (2022)</span> <span
+              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 16</span></p>
+          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
+            study on molecular polariton electroabsorption, opening new avenues in optoelectronics and quantum
+            technology.</p>
+        </div>
+        <!-- Publication 4 -->
+        <div>
+          <h4 class="text-xl font-semibold">4. <a
+              href="https://pubs.aip.org/aip/jcp/article/154/8/084116/1062868/Explicit-environmental-and-vibronic-effects-in"
+              class="text-blue-500 hover:underline">Explicit Environmental and Vibronic Effects in Simulations of Linear
+              and Nonlinear Optical Spectroscopy</a></h4>
+          <p style="width: fit-content;">Sapana V. Shedge, Tim J. Zuehlsdorff, <u><strong>Ajay Khanna</strong></u>,
+            Stacey Conley, Christine M. Isborn <span
+              class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem. Phys. (2021)</span> <span
+              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 15</span></p>
+          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+            Comprehensive exploration of environmental and vibronic effects in optical spectroscopy simulations,
+            enhancing accuracy in molecular property predictions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" class="my-12">
+      <h2 class="text-3xl font-bold mb-4"> <a href="./tutorials.html">Tutorials</a></h2>
+      <div class="relative">
+        <div class="overflow-hidden">
+          <div class="flex transition-transform duration-300 ease-in-out" id="tutorialSlider">
+            <!-- Tutorial 1 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a
+                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                      class="text-blue-500 hover:underline">Running Classical MD Sims</a></h3>
+                  <p class="text-gray-700">Getting started with running classical molecular dynamics simulations using
+                    Amber24</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tutorial 2 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
+                      class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
+                  <p class="text-gray-700">How to run ab initio molecular dynamics (AIMD) simulations in gas, implicit
+                    and explicit Enviroments</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tutorial 3 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
+                      class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
+                  <p class="text-gray-700">TeraChem for electronic structure calculations: Gas, implicit and explicit
+                    environments</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tutorial 4 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
+                  class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
+                      class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
+                  <p class="text-gray-700">Gaussian16 for electronic structure calculations: Gas, implicit and explicit
+                    environments</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tutorial 5 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover">
+                <div class="p-4 bg-gray-100">
+                  <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
+                      class="text-blue-500 hover:underline">More Tutorials</a></h3>
+                  <p class="text-gray-700">Click For More Tutorials on different types of MD and AIMD sims. Electronic
+                    structure, data analysis, quality images etc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+          onclick="slideTutorials(1)">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+          onclick="slideTutorials(-1)">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Resume</h2>
+      <a href="./resume.html" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Download Full
+        Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="my-12">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg">
+        <div class="mb-4">
+          <label class="block text-gray-700">Name</label>
+          <input type="text" name="name" class="w-full border border-gray-300 p-2 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Email</label>
+          <input type="email" name="_replyto" class="w-full border border-gray-300 p-2 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Message</label>
+          <textarea name="message" class="w-full border border-gray-300 p-2 rounded h-32" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-700">&copy; 2025 Ajay Khanna. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript File -->
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
