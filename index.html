@@ -1,3 +1,4 @@
+<!-- Original Index 2023-04-01 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +6,23 @@
   <meta charset="UTF-8">
   <title>Ajay Khanna - Computational Chemist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ajay Khanna - Computational Chemist specializing in drug discovery, energy transfer, energy storage, and green energy solutions through quantum mechanics, molecular dynamics, and machine learning">
   <!-- Tailwind CSS CDN -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhanced-styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Particles.js for animated background -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Typed.js for dynamic typing effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body class="font-sans leading-normal tracking-normal text-gray-900">
   <!-- Navigation Bar -->
-  <nav class="bg-white fixed w-full z-10 top-0 shadow">
+  <nav class="bg-white fixed w-full z-50 top-0 shadow">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-10 w-10 rounded-full mr-2">
       <div class="pl-4">
@@ -65,22 +75,295 @@
   </nav>
 
 
-  <!-- Main Content -->
-  <div class="container mx-auto mt-24 px-4">
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-40 transition-all duration-300" style="width: 0%"></div>
 
-    <!-- About Section -->
-    <section id="about" class="my-12">
-      <h2 class="text-3xl font-bold mb-4"> Who? Me ?</h2>
-      <p class="text-lg">
-        👋 I'm a computational chemistry wizard 🧙‍♂️ obsessed with understanding molecules through data 📊! I perform
-        quantum calculations 🤯 to see electrons dance, run molecular simulations 🔬 to watch molecules move, and build
-        ML models 📈 to predict chemical properties. The computational pipelines I develop screen thousands of compounds
-        🎛️ and crunch big chemical data 📌 to discover new insights. I develop tools in Python and C++/CUDA 🛠️ to
-        analyze
-        all the things about molecules! My chemistry spells and algorithms transform raw data into molecular insights.
-        Let's use the power of computation to advance medicines, materials, and more! 🚀 Happy Computing.
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Particle Background -->
+    <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 container mx-auto px-4 text-center text-white" data-aos="fade-up" data-aos-duration="1000">
+      <div class="flex justify-center mb-8">
+        <img src="./images/head_img_ajay.png" alt="Ajay Khanna"
+             class="w-40 h-40 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300">
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
+        Ajay Khanna
+      </h1>
+
+      <!-- Typed.js Dynamic Text -->
+      <div class="text-2xl md:text-4xl mb-8 h-20">
+        <span class="typed-text">Computational Chemist | </span>
+        <span id="typed-output" class="text-blue-300 font-semibold"></span>
+      </div>
+
+      <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-200 leading-relaxed">
+        Bridging quantum mechanics and real-world impact through
+        <span class="text-blue-300 font-semibold">drug discovery</span>,
+        <span class="text-green-300 font-semibold">energy transfer</span>, and
+        <span class="text-teal-300 font-semibold">sustainable technologies</span>
       </p>
-    </section>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#research-impact"
+           class="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+          Explore Research
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+
+        <a href="#contact"
+           class="bg-white bg-opacity-10 backdrop-blur-md hover:bg-opacity-20 text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          Let's Collaborate
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl font-bold text-blue-300 counter" data-target="4">0</div>
+          <div class="text-sm text-gray-300 mt-2">Publications</div>
+        </div>
+        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl font-bold text-green-300 counter" data-target="33">0</div>
+          <div class="text-sm text-gray-300 mt-2">Citations</div>
+        </div>
+        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl font-bold text-yellow-300 counter" data-target="10">0</div>
+          <div class="text-sm text-gray-300 mt-2">Open Source Tools</div>
+        </div>
+        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="text-4xl font-bold text-teal-300 counter" data-target="100">0</div>
+          <div class="text-sm text-gray-300 mt-2">K+ Compounds Screened</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#research-impact" class="text-white opacity-75 hover:opacity-100">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Research Impact Areas Section -->
+  <section id="research-impact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-center mb-4" data-aos="fade-up">Research Impact Areas</h2>
+      <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Computational chemistry at the intersection of molecular science and transformative applications
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Drug Discovery Card -->
+        <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="flip-card-inner">
+            <!-- Front -->
+            <div class="flip-card-front bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+              <div class="text-6xl mb-4">💊</div>
+              <h3 class="text-2xl font-bold text-center">Drug Discovery</h3>
+              <p class="text-blue-100 text-center mt-2">Virtual Screening & Design</p>
+            </div>
+            <!-- Back -->
+            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-blue-500">
+              <h4 class="text-xl font-bold text-blue-600 mb-4">Key Capabilities:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Virtual screening pipelines
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Protein-ligand binding
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  ADMET prediction (ML)
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Binding affinity calculations
+                </li>
+              </ul>
+              <div class="mt-6 text-center">
+                <a href="#projects" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                  View Projects
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Energy Transfer Card -->
+        <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-gradient-to-br from-green-500 to-green-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+              <div class="text-6xl mb-4">⚡</div>
+              <h3 class="text-2xl font-bold text-center">Energy Transfer</h3>
+              <p class="text-green-100 text-center mt-2">FRET & Excitonic Coupling</p>
+            </div>
+            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-green-500">
+              <h4 class="text-xl font-bold text-green-600 mb-4">Key Capabilities:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  FRET mechanisms
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Excitonic coupling calculations
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Light-harvesting systems
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Charge transfer dynamics
+                </li>
+              </ul>
+              <div class="mt-6 text-center">
+                <a href="#projects" class="text-green-600 font-semibold hover:text-green-800 inline-flex items-center">
+                  View Projects
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Energy Storage Card -->
+        <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+              <div class="text-6xl mb-4">🔋</div>
+              <h3 class="text-2xl font-bold text-center">Energy Storage</h3>
+              <p class="text-yellow-100 text-center mt-2">Battery Materials</p>
+            </div>
+            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-yellow-500">
+              <h4 class="text-xl font-bold text-yellow-600 mb-4">Key Capabilities:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Electrode materials design
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Electrolyte optimization
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Li-ion migration pathways
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Solid-state batteries
+                </li>
+              </ul>
+              <div class="mt-6 text-center">
+                <a href="#projects" class="text-yellow-600 font-semibold hover:text-yellow-800 inline-flex items-center">
+                  View Projects
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Green Energy Card -->
+        <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="flip-card-inner">
+            <div class="flip-card-front bg-gradient-to-br from-teal-500 to-cyan-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+              <div class="text-6xl mb-4">🌱</div>
+              <h3 class="text-2xl font-bold text-center">Green Energy</h3>
+              <p class="text-teal-100 text-center mt-2">Sustainable Solutions</p>
+            </div>
+            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-teal-500">
+              <h4 class="text-xl font-bold text-teal-600 mb-4">Key Capabilities:</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Organic photovoltaics
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Catalytic CO₂ reduction
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Water splitting mechanisms
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Sustainable materials
+                </li>
+              </ul>
+              <div class="mt-6 text-center">
+                <a href="#projects" class="text-teal-600 font-semibold hover:text-teal-800 inline-flex items-center">
+                  View Projects
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4">
 
     <!-- Projects Section -->
     <section id="projects" class="my-12">
@@ -411,8 +694,9 @@
     </div>
   </footer>
 
-  <!-- External JavaScript File -->
+  <!-- External JavaScript Files -->
   <script src="scripts.js"></script>
+  <script src="enhanced-scripts.js"></script>
 
 </body>
 

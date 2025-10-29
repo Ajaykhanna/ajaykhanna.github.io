@@ -1,0 +1,266 @@
+/* Enhanced Styles for Ajay Khanna's Portfolio */
+
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Stat Card Hover Effects */
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Progress Bar Glow Effect */
+#progress-bar {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Navigation Bar Enhancement */
+nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Button Hover Effects */
+.group:hover svg {
+  transform: translateX(4px);
+}
+
+/* Custom Gradient Text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Particle Container */
+#particles-js {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Section Enhancements */
+#hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Scroll Indicator Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Glassmorphism Effects */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Card Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Shadow Effects */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-3xl {
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 350px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #typed-output {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Focus States for Accessibility */
+a:focus, button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  #particles-js, #progress-bar, nav {
+    display: none;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles here if needed */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+/* Hover Effect for Cards */
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Z-index Management */
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* Transform Effects */
+.transform {
+  transform: translateZ(0);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.10);
+}
+
+.hover\:-translate-y-2:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Transition Durations */
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+/* Opacity Transitions */
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+/* Rounded Corners */
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Enhanced Particle Background */
+#particles-js canvas {
+  display: block;
+  vertical-align: bottom;
+}
