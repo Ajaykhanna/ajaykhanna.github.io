@@ -259,16 +259,6 @@ a:focus, button:focus {
   border-radius: 9999px;
 }
 
-/* AOS Animation Overrides */
-[data-aos="flip-left"] {
-  transform: perspective(2500px) rotateY(-100deg);
-  transition-property: transform;
-}
-
-[data-aos="flip-left"].aos-animate {
-  transform: perspective(2500px) rotateY(0);
-}
-
 /* Enhanced Particle Background */
 #particles-js canvas {
   display: block;
