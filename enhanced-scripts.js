@@ -360,3 +360,123 @@ window.portfolioEnhancements = {
   initProgressBar,
   initSmoothScroll
 };
+
+// ===========================================
+// Phase 2: Floating Action Button (FAB) Logic
+// ===========================================
+
+function initFAB() {
+  const fabMain = document.getElementById('fabMain');
+  const fabActions = document.getElementById('fabActions');
+  const fabSocialMenu = document.getElementById('fabSocialMenu');
+  const fabActionButtons = document.querySelectorAll('.fab-action');
+
+  if (!fabMain || !fabActions) return;
+
+  let isMenuOpen = false;
+  let isSocialMenuOpen = false;
+
+  // Toggle FAB menu
+  fabMain.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleFABMenu();
+  });
+
+  function toggleFABMenu() {
+    isMenuOpen = !isMenuOpen;
+    fabMain.classList.toggle('active');
+    fabActions.classList.toggle('active');
+
+    // Close social menu if opening main menu
+    if (isMenuOpen && isSocialMenuOpen) {
+      closeSocialMenu();
+    } else if (!isMenuOpen) {
+      closeSocialMenu();
+    }
+  }
+
+  function closeSocialMenu() {
+    isSocialMenuOpen = false;
+    fabSocialMenu.classList.remove('active');
+  }
+
+  function closeFABMenu() {
+    isMenuOpen = false;
+    isSocialMenuOpen = false;
+    fabMain.classList.remove('active');
+    fabActions.classList.remove('active');
+    fabSocialMenu.classList.remove('active');
+  }
+
+  // Handle FAB action button clicks
+  fabActionButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const action = this.getAttribute('data-action');
+
+      switch(action) {
+        case 'scroll-top':
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          closeFABMenu();
+          break;
+
+        case 'contact':
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+            const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+          closeFABMenu();
+          break;
+
+        case 'resume':
+          // TODO: Update this URL when you provide the PDF link
+          window.open('./resume.html', '_blank');
+          closeFABMenu();
+          break;
+
+        case 'social':
+          isSocialMenuOpen = !isSocialMenuOpen;
+          fabSocialMenu.classList.toggle('active');
+          fabActions.classList.remove('active');
+          break;
+      }
+    });
+  });
+
+  // Close menus when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.fab-container')) {
+      closeFABMenu();
+    }
+  });
+
+  // Close menus on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeFABMenu();
+    }
+  });
+
+  // Show/hide FAB based on scroll position
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Hide FAB when scrolling down, show when scrolling up
+    if (scrollTop > lastScrollTop && scrollTop > 300) {
+      fabMain.style.transform = 'translateY(100px)';
+      closeFABMenu();
+    } else {
+      fabMain.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = scrollTop;
+  });
+}
+
+// Initialize FAB when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initFAB();
+});
