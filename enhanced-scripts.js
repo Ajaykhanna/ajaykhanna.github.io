@@ -1,482 +1,342 @@
-// Enhanced Scripts for Ajay Khanna's Portfolio
-// Phase 1 Implementation: Hero Section, Particles, Typed.js, Counters, AOS
+// Unified scripts (projects + enhancements). Load-guarded to avoid duplicate execution.
+if (window.__unifiedScriptsLoaded) {
+  console.warn("enhanced-scripts.js: already loaded — skipping.");
+} else {
+  window.__unifiedScriptsLoaded = true;
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+  (function () {
+    "use strict";
 
-  // Initialize all components
-  initParticles();
-  initTypedText();
-  initAOS();
-  initCounters();
-  initProgressBar();
-  initSmoothScroll();
-
-});
-
-// 1. Initialize Particles.js for animated background
-function initParticles() {
-  if (typeof particlesJS === 'undefined') {
-    console.log('Particles.js not loaded');
-    return;
-  }
-
-  particlesJS('particles-js', {
-    particles: {
-      number: {
-        value: 80,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: ['#3b82f6', '#10b981', '#14b8a6', '#8b5cf6']
-      },
-      shape: {
-        type: 'circle',
-        stroke: {
-          width: 0,
-          color: '#000000'
-        }
-      },
-      opacity: {
-        value: 0.5,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 2,
-          size_min: 0.1,
-          sync: false
-        }
-      },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: '#ffffff',
-        opacity: 0.2,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: 'none',
-        random: false,
-        straight: false,
-        out_mode: 'out',
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
-      }
-    },
-    interactivity: {
-      detect_on: 'canvas',
-      events: {
-        onhover: {
-          enable: true,
-          mode: 'grab'
-        },
-        onclick: {
-          enable: true,
-          mode: 'push'
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 140,
-          line_linked: {
-            opacity: 0.5
-          }
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
-    },
-    retina_detect: true
-  });
-}
-
-// 2. Initialize Typed.js for dynamic typing animation
-function initTypedText() {
-  if (typeof Typed === 'undefined') {
-    console.log('Typed.js not loaded');
-    return;
-  }
-
-  const typedElement = document.getElementById('typed-output');
-  if (typedElement) {
-    new Typed('#typed-output', {
-      strings: [
-        'Drug Discovery Expert',
-        'Energy Transfer Researcher',
-        'Battery Materials Scientist',
-        'Green Energy Innovator',
-        'ML for Chemistry Enthusiast',
-        'QM/MM Specialist'
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 2000,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|',
-      autoInsertCss: true
-    });
-  }
-}
-
-// 3. Initialize AOS (Animate On Scroll)
-function initAOS() {
-  if (typeof AOS === 'undefined') {
-    console.log('AOS not loaded');
-    return;
-  }
-
-  AOS.init({
-    duration: 1000,
-    once: false,
-    mirror: true,
-    offset: 100,
-    easing: 'ease-in-out',
-    anchorPlacement: 'top-bottom'
-  });
-}
-
-// 4. Animated Counter for Statistics
-function initCounters() {
-  const counters = document.querySelectorAll('.counter');
-
-  if (counters.length === 0) return;
-
-  // Counter animation function
-  function animateCounter(counter) {
-    const target = parseInt(counter.getAttribute('data-target'));
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        counter.textContent = target + '+';
-        clearInterval(timer);
-      } else {
-        counter.textContent = Math.floor(current);
-      }
-    }, duration / steps);
-  }
-
-  // Intersection Observer to trigger counter when visible
-  const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        entry.target.classList.add('counted');
-        animateCounter(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach(counter => {
-    observer.observe(counter);
-  });
-}
-
-// 5. Reading Progress Bar
-function initProgressBar() {
-  const progressBar = document.getElementById('progress-bar');
-
-  if (!progressBar) return;
-
-  window.addEventListener('scroll', () => {
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-
-    progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-  });
-}
-
-// 6. Smooth Scroll for Anchor Links
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-
-      // Don't prevent default for just "#"
-      if (href === '#') return;
-
-      e.preventDefault();
-
-      const target = document.querySelector(href);
-      if (target) {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-}
-
-// 7. Update Navigation Toggle (Keep existing functionality)
-const navToggle = document.getElementById('nav-toggle');
-const navContent = document.getElementById('nav-content');
-
-if (navToggle && navContent) {
-  navToggle.addEventListener('click', function () {
-    navContent.classList.toggle('hidden');
-  });
-}
-
-// 8. Project Slider Functionality (Keep existing)
-let currentPosition = 0;
-const slider = document.getElementById('projectSlider');
-
-if (slider) {
-  const slideWidth = slider.children[0]?.offsetWidth || 0;
-  const totalSlides = slider.children.length;
-
-  window.slide = function(direction) {
-    currentPosition = Math.max(Math.min(currentPosition + direction, 0), -totalSlides + 1);
-    slider.style.transform = `translateX(${currentPosition * slideWidth}px)`;
-  };
-}
-
-// 9. Tutorial Slider Functionality (Keep existing)
-let currentPositionTutorials = 0;
-const tutorialSlider = document.getElementById('tutorialSlider');
-
-if (tutorialSlider) {
-  const tutorialSlideWidth = tutorialSlider.children[0]?.offsetWidth || 0;
-  const totalTutorialSlides = tutorialSlider.children.length;
-
-  window.slideTutorials = function(direction) {
-    currentPositionTutorials = Math.max(Math.min(currentPositionTutorials + direction, 0), -totalTutorialSlides + 1);
-    tutorialSlider.style.transform = `translateX(${currentPositionTutorials * tutorialSlideWidth}px)`;
-  };
-}
-
-// 10. Handle Window Resize for Sliders
-window.addEventListener('resize', function() {
-  // Update slider positions on resize
-  if (slider && slider.children.length > 0) {
-    const newSlideWidth = slider.children[0].offsetWidth;
-    slider.style.transform = `translateX(${currentPosition * newSlideWidth}px)`;
-  }
-
-  if (tutorialSlider && tutorialSlider.children.length > 0) {
-    const newTutorialWidth = tutorialSlider.children[0].offsetWidth;
-    tutorialSlider.style.transform = `translateX(${currentPositionTutorials * newTutorialWidth}px)`;
-  }
-});
-
-// 11. Performance Optimization: Lazy Loading Images
-function initLazyLoading() {
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      });
-    });
-
-    document.querySelectorAll('img.lazy').forEach(img => {
-      imageObserver.observe(img);
-    });
-  }
-}
-
-// Initialize lazy loading after DOM is ready
-initLazyLoading();
-
-// 12. Add active state to navigation items based on scroll position
-function updateActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-  let current = '';
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= (sectionTop - 200)) {
-      current = section.getAttribute('id');
+    /* ---------- Initializers ---------- */
+    function initAll() {
+      initParticles();
+      initTypedText();
+      initAOS();
+      initCounters();
+      initProgressBar();
+      initSmoothScroll();
+      initLazyLoading();
+      initNavToggle();
+      initFAB();
+      // slider init handled inside their scoped modules
     }
-  });
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', updateActiveNav);
-
-// 13. Console Message (Fun Easter Egg)
-console.log('%c👋 Hello! ', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
-console.log('%cInterested in my work? Let\'s collaborate!', 'font-size: 14px; color: #10b981;');
-console.log('%c🔬 Computational Chemistry | 💊 Drug Discovery | ⚡ Energy Solutions', 'font-size: 12px; color: #8b5cf6;');
-
-// Export functions for potential use in other scripts
-window.portfolioEnhancements = {
-  initParticles,
-  initTypedText,
-  initAOS,
-  initCounters,
-  initProgressBar,
-  initSmoothScroll
-};
-
-// ===========================================
-// Phase 2: Floating Action Button (FAB) Logic
-// ===========================================
-
-function initFAB() {
-  const fabMain = document.getElementById('fabMain');
-  const fabActions = document.getElementById('fabActions');
-  const fabSocialMenu = document.getElementById('fabSocialMenu');
-  const fabActionButtons = document.querySelectorAll('.fab-action');
-
-  if (!fabMain || !fabActions) return;
-
-  let isMenuOpen = false;
-  let isSocialMenuOpen = false;
-
-  // Toggle FAB menu
-  fabMain.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleFABMenu();
-  });
-
-  function toggleFABMenu() {
-    isMenuOpen = !isMenuOpen;
-    fabMain.classList.toggle('active');
-    fabActions.classList.toggle('active');
-
-    // Close social menu if opening main menu
-    if (isMenuOpen && isSocialMenuOpen) {
-      closeSocialMenu();
-    } else if (!isMenuOpen) {
-      closeSocialMenu();
-    }
-  }
-
-  function closeSocialMenu() {
-    isSocialMenuOpen = false;
-    fabSocialMenu.classList.remove('active');
-  }
-
-  function closeFABMenu() {
-    isMenuOpen = false;
-    isSocialMenuOpen = false;
-    fabMain.classList.remove('active');
-    fabActions.classList.remove('active');
-    fabSocialMenu.classList.remove('active');
-  }
-
-  // Handle FAB action button clicks
-  fabActionButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const action = this.getAttribute('data-action');
-
-      switch(action) {
-        case 'scroll-top':
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          closeFABMenu();
-          break;
-
-        case 'contact':
-          const contactSection = document.getElementById('contact');
-          if (contactSection) {
-            const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-            const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-          }
-          closeFABMenu();
-          break;
-
-        case 'resume':
-          // TODO: Update this URL when you provide the PDF link
-          window.open('./resume.html', '_blank');
-          closeFABMenu();
-          break;
-
-        case 'social':
-          isSocialMenuOpen = !isSocialMenuOpen;
-          fabSocialMenu.classList.toggle('active');
-          fabActions.classList.remove('active');
-          break;
-      }
-    });
-  });
-
-  // Close menus when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.fab-container')) {
-      closeFABMenu();
-    }
-  });
-
-  // Close menus on escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeFABMenu();
-    }
-  });
-
-  // Show/hide FAB based on scroll position
-  let lastScrollTop = 0;
-  window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    // Hide FAB when scrolling down, show when scrolling up
-    if (scrollTop > lastScrollTop && scrollTop > 300) {
-      fabMain.style.transform = 'translateY(100px)';
-      closeFABMenu();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initAll);
     } else {
-      fabMain.style.transform = 'translateY(0)';
+      initAll();
     }
 
-    lastScrollTop = scrollTop;
-  });
-}
+    /* ---------- Particles ---------- */
+    function initParticles() {
+      if (typeof particlesJS === "undefined") return;
+      try {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: ["#3b82f6", "#10b981", "#14b8a6", "#8b5cf6"] },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.2,
+              width: 1,
+            },
+            move: { enable: true, speed: 2, out_mode: "out" },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "grab" },
+              onclick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: { grab: { distance: 140 } },
+          },
+          retina_detect: true,
+        });
+      } catch (e) {
+        /* ignore */
+      }
+    }
 
-// Initialize FAB when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  initFAB();
-});
+    /* ---------- Typed.js ---------- */
+    function initTypedText() {
+      if (typeof Typed === "undefined") return;
+      const el = document.getElementById("typed-output");
+      if (!el) return;
+      new Typed("#typed-output", {
+        strings: [
+          "Drug Discovery Expert",
+          "Energy Transfer Researcher",
+          "Battery Materials Scientist",
+          "Green Energy Innovator",
+          "ML for Chemistry Enthusiast",
+          "QM/MM Specialist",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+      });
+    }
+
+    /* ---------- AOS ---------- */
+    function initAOS() {
+      if (typeof AOS === "undefined") return;
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+        offset: 100,
+        easing: "ease-in-out",
+        anchorPlacement: "top-bottom",
+      });
+    }
+
+    /* ---------- Counters ---------- */
+    function initCounters() {
+      const counters = document.querySelectorAll(".counter");
+      if (!counters.length) return;
+      function animateCounter(counter) {
+        const target = parseInt(counter.dataset.target || "0", 10);
+        const duration = 2000,
+          steps = 60,
+          increment = target / steps;
+        let current = 0;
+        const t = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target + "+";
+            clearInterval(t);
+          } else counter.textContent = Math.floor(current);
+        }, duration / steps);
+      }
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !e.target.classList.contains("counted")) {
+              e.target.classList.add("counted");
+              animateCounter(e.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      counters.forEach((c) => obs.observe(c));
+    }
+
+    /* ---------- Progress bar ---------- */
+    function initProgressBar() {
+      const progressBar = document.getElementById("progress-bar");
+      if (!progressBar) return;
+      window.addEventListener(
+        "scroll",
+        () => {
+          const h = document.documentElement;
+          const percent =
+            ((window.pageYOffset || h.scrollTop) /
+              (h.scrollHeight - window.innerHeight)) *
+            100;
+          progressBar.style.width = Math.min(Math.max(percent, 0), 100) + "%";
+        },
+        { passive: true }
+      );
+    }
+
+    /* ---------- Smooth scroll ---------- */
+    function initSmoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href === "#") return;
+          const target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          const navH = document.querySelector("nav")?.offsetHeight || 0;
+          const pos =
+            target.getBoundingClientRect().top + window.pageYOffset - navH;
+          window.scrollTo({ top: pos, behavior: "smooth" });
+        });
+      });
+    }
+
+    /* ---------- Lazy loading ---------- */
+    function initLazyLoading() {
+      if (!("IntersectionObserver" in window)) return;
+      const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          const img = en.target;
+          img.src = img.dataset.src || img.src;
+          img.classList.remove("lazy");
+          o.unobserve(img);
+        });
+      });
+      document.querySelectorAll("img.lazy").forEach((i) => obs.observe(i));
+    }
+
+    /* ---------- Nav toggle (safe) ---------- */
+    function initNavToggle() {
+      const btn = document.getElementById("nav-toggle");
+      const content = document.getElementById("nav-content");
+      if (!btn || !content) return;
+      btn.addEventListener("click", () => content.classList.toggle("hidden"));
+    }
+
+    /* ---------- Sliders (scoped, expose functions) ---------- */
+    (function projectSliderModule() {
+      if (typeof window.projectSliderPos === "undefined")
+        window.projectSliderPos = 0;
+      const el = document.getElementById("projectSlider");
+      if (!el) return;
+      function slideProject(direction) {
+        const w = el.children[0]?.offsetWidth || 0;
+        const total = el.children.length || 1;
+        window.projectSliderPos = Math.max(
+          Math.min(window.projectSliderPos + direction, 0),
+          -total + 1
+        );
+        el.style.transform = `translateX(${window.projectSliderPos * w}px)`;
+      }
+      window.slideProject = slideProject;
+      window.addEventListener("resize", () => {
+        const w = el.children[0]?.offsetWidth || 0;
+        el.style.transform = `translateX(${window.projectSliderPos * w}px)`;
+      });
+    })();
+
+    (function tutorialSliderModule() {
+      if (typeof window.tutorialSliderPos === "undefined")
+        window.tutorialSliderPos = 0;
+      const el = document.getElementById("tutorialSlider");
+      if (!el) return;
+      function slideTutorials(direction) {
+        const w = el.children[0]?.offsetWidth || 0;
+        const total = el.children.length || 1;
+        window.tutorialSliderPos = Math.max(
+          Math.min(window.tutorialSliderPos + direction, 0),
+          -total + 1
+        );
+        el.style.transform = `translateX(${window.tutorialSliderPos * w}px)`;
+      }
+      window.slideTutorials = slideTutorials;
+      window.addEventListener("resize", () => {
+        const w = el.children[0]?.offsetWidth || 0;
+        el.style.transform = `translateX(${window.tutorialSliderPos * w}px)`;
+      });
+    })();
+
+    /* ---------- FAB (scoped) ---------- */
+    function initFAB() {
+      const fabMain = document.getElementById("fabMain");
+      const fabActions = document.getElementById("fabActions");
+      const fabSocialMenu = document.getElementById("fabSocialMenu");
+      const fabActionButtons = document.querySelectorAll(".fab-action");
+      if (!fabMain || !fabActions) return;
+      let isMenuOpen = false,
+        isSocialOpen = false;
+      function closeSocial() {
+        isSocialOpen = false;
+        fabSocialMenu?.classList.remove("active");
+      }
+      function closeAll() {
+        isMenuOpen = false;
+        isSocialOpen = false;
+        fabMain.classList.remove("active");
+        fabActions.classList.remove("active");
+        fabSocialMenu?.classList.remove("active");
+      }
+      function toggle() {
+        isMenuOpen = !isMenuOpen;
+        fabMain.classList.toggle("active");
+        fabActions.classList.toggle("active");
+        if (!isMenuOpen) closeSocial();
+      }
+      fabMain.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggle();
+      });
+      fabActionButtons.forEach((btn) =>
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const action = this.dataset.action;
+          if (action === "scroll-top") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            closeAll();
+            return;
+          }
+          if (action === "contact") {
+            const sec = document.getElementById("contact");
+            if (sec) {
+              const navH = document.querySelector("nav")?.offsetHeight || 0;
+              const pos =
+                sec.getBoundingClientRect().top + window.pageYOffset - navH;
+              window.scrollTo({ top: pos, behavior: "smooth" });
+            }
+            closeAll();
+            return;
+          }
+          if (action === "resume") {
+            window.open("./resume.html", "_blank");
+            closeAll();
+            return;
+          }
+          if (action === "social") {
+            isSocialOpen = !isSocialOpen;
+            fabSocialMenu?.classList.toggle("active");
+            fabActions.classList.remove("active");
+          }
+        })
+      );
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".fab-container")) closeAll();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeAll();
+      });
+      let lastScroll = 0;
+      window.addEventListener(
+        "scroll",
+        () => {
+          const s = window.pageYOffset || document.documentElement.scrollTop;
+          if (s > lastScroll && s > 300) {
+            fabMain.style.transform = "translateY(100px)";
+            closeAll();
+          } else fabMain.style.transform = "translateY(0)";
+          lastScroll = s;
+        },
+        { passive: true }
+      );
+    }
+
+    /* ---------- Update active nav ---------- */
+    function updateActiveNav() {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      let current = "";
+      sections.forEach((s) => {
+        if (window.pageYOffset >= s.offsetTop - 200) current = s.id;
+      });
+      navLinks.forEach((l) =>
+        l.classList.toggle("active", l.getAttribute("href") === "#" + current)
+      );
+    }
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+
+    /* ---------- Exports (if needed) ---------- */
+    window.portfolioEnhancements = {
+      initParticles,
+      initTypedText,
+      initAOS,
+      initCounters,
+      initProgressBar,
+      initSmoothScroll,
+    };
+  })();
+}
