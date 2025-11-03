@@ -1,0 +1,527 @@
+Website Enhancement Roadmap
+Current Status: Phase 1 ✅ COMPLETED
+Your website now has:
+
+✅ Animated hero section with particles.js
+✅ Dynamic typed text showing expertise areas
+✅ Four interactive flip cards for research impact areas
+✅ Animated statistics counters
+✅ Scroll animations (AOS)
+✅ Progress bar indicator
+🎯 PHASE OVERVIEW
+Phase 1: Core Visual Impact ✅ DONE
+Goal: Create eye-catching, professional homepage that immediately engages visitors
+
+What Was Implemented:
+
+Hero Section
+
+Animated particle background (particles.js)
+Dynamic typed text showing roles
+Call-to-action buttons
+Statistics counters (Publications, Citations, Tools, Compounds)
+Research Impact Cards
+
+💊 Drug Discovery (Blue)
+⚡ Energy Transfer (Green)
+🔋 Energy Storage (Yellow)
+🌱 Green Energy (Teal)
+Flip animation on hover
+Detailed capabilities on back
+Enhancement Features
+
+Scroll progress bar
+Smooth scroll navigation
+Responsive design
+AOS animations
+Phase 2: Enhanced Engagement 🔄 PENDING
+Goal: Add interactive widgets and improve user engagement
+
+Proposed Enhancements:
+
+A. Floating Action Button (FAB)
+┌─────────────┐
+│Quick Actions│
+├─────────────┤
+│ 📧 Email    │
+│ 📚 Scholar  │
+│ 📄 Resume   │
+└─────────────┘
+Fixed bottom-right corner
+Quick access menu
+Email, Google Scholar, CV download
+B. Newsletter/Updates Section
+Email subscription form
+Research updates notification
+New publication alerts
+Professional newsletter design
+C. Enhanced Project Cards
+Filtering system (Drug Discovery / Energy / Tools / All)
+Search functionality
+Tags for categorization
+Modal popup for project details
+GitHub stars/forks display
+D. Micro-interactions
+Button ripple effects
+Card lift on hover
+Icon animations
+Loading states
+Success notifications
+Phase 3: Advanced Features 🔄 PENDING
+Goal: Add sophisticated interactive elements
+
+Proposed Enhancements:
+
+A. 3D Molecule Viewer
+┌──────────────────────────┐
+│  Interactive 3D Molecule │
+│   [Rotating Structure]   │
+│                          │
+│ [Aspirin] [Caffeine]    │
+│ [Your Research Molecule] │
+└──────────────────────────┘
+3Dmol.js integration
+Display research molecules
+Interactive rotation
+Atom labels and bonds
+B. Research Timeline
+2024 ●─────● 2023 ●─────● 2022
+     │      │      │
+     │      │      └─ Nature Comm.
+     │      └──────── J. Chem. Phys.
+     └────────────── Current Work
+Visual publication timeline
+Animated scroll reveal
+Milestone markers
+Expandable details
+C. Collaboration Map
+Interactive world map
+Collaboration institutions
+Co-author network
+Click to see details
+Phase 4: Content Enhancements 🔄 PENDING
+Goal: Improve content presentation and messaging
+
+Proposed Improvements:
+
+A. About Section Rewrite
+Current:
+
+👋 I'm a computational chemistry wizard 🧙‍♂️ obsessed with...
+Recommended:
+
+Computational Chemist at the Intersection of Molecular Science 
+and Transformative Solutions
+
+I develop and deploy quantum mechanical methods, molecular 
+dynamics simulations, and machine learning models to tackle 
+critical challenges in:
+
+• Drug Discovery & Therapeutic Design
+• Energy Transfer Mechanisms  
+• Energy Storage Solutions
+• Green Energy Technologies
+B. Experience Section
+Replace placeholder testimonial with:
+
+Professional Experience entries
+Research Positions
+Industry Work (if applicable)
+Quantified achievements
+C. Skills Section Enhancement
+Add domain-specific tools:
+
+Drug Discovery: RDKit, AutoDock, Schrödinger
+Energy Materials: VASP, CP2K, Quantum ESPRESSO
+HPC: CUDA, OpenMP, cluster management
+D. Publications Enhancement
+Category filters (Drug Discovery / Energy / Methods)
+Altmetric badges
+PDF links
+Citation export (BibTeX, RIS)
+Phase 5: SEO & Performance 🔄 PENDING
+Goal: Improve discoverability and load times
+
+Proposed Optimizations:
+
+A. SEO Enhancements
+Meta tags optimization
+Open Graph tags for social media
+JSON-LD structured data
+Sitemap generation
+robots.txt
+B. Performance
+Image lazy loading
+Code splitting
+Minification
+CDN setup
+Caching strategy
+C. Analytics
+Google Analytics integration
+Heatmap tracking (Hotjar)
+Conversion tracking
+A/B testing setup
+Phase 6: Mobile & Accessibility 🔄 PENDING
+Goal: Perfect mobile experience and ensure accessibility
+
+Improvements:
+
+A. Mobile Optimization
+Touch-friendly interactions
+Mobile navigation menu
+Responsive images
+Reduced animations for mobile
+PWA capabilities
+B. Accessibility
+ARIA labels
+Keyboard navigation
+Screen reader support
+Color contrast compliance (WCAG AA)
+Focus indicators
+📊 Priority Implementation Order
+High Priority (Next Steps):
+About Section Rewrite - Remove emojis, professional tone
+Experience Section - Real content instead of placeholders
+Enhanced Project Cards - Filtering and better categorization
+Newsletter Signup - Engagement widget
+Medium Priority:
+FAB (Floating Action Button)
+Publications Filtering
+SEO Meta Tags
+Skills Enhancement
+Low Priority (Future):
+3D Molecule Viewer
+Research Timeline
+Collaboration Map
+Advanced Analytics
+🎨 Design Principles
+All enhancements will follow:
+
+Eye-catching but Professional
+
+Modern animations without being gimmicky
+Clean, minimalist design
+Strategic use of color (Blue/Green/Yellow/Teal theme)
+User Engagement
+
+Interactive elements encourage exploration
+Clear CTAs (Call to Actions)
+Progressive disclosure of information
+Performance First
+
+Fast loading times
+Smooth animations (60fps)
+Mobile-friendly
+Content Focused
+
+Emphasize drug discovery, energy transfer, storage, green energy
+Quantify achievements
+Professional credibility
+💭 Recommended Next Step
+Given that Phase 1 is complete and working, I recommend we focus on:
+
+Quick Win: Content Improvements (Phase 4)
+
+Update About section (remove emojis, professional tone)
+Replace Experience placeholder
+Enhance Skills section with domain tools
+This doesn't require complex technical implementation and will immediately improve the professional presentation.
+
+OR
+
+Enhanced Features: Phase 2 Selected Items
+
+Add Floating Action Button
+Implement project filtering
+Add newsletter section
+
+Phase 2: Enhanced Engagement - Overview
+Phase 2 focuses on interactive features that encourage user engagement and provide multiple touchpoints for visitors to connect with your work.
+
+Planned Features:
+1. Floating Action Button (FAB)
+Purpose: Quick access to key actions from anywhere on the page
+Features:
+Contact button
+Download resume
+Social media links
+Scroll to top
+Design: Follows Material Design principles with smooth animations
+Benefit: Improves navigation and accessibility
+2. Newsletter/Contact Enhancement
+Email subscription form for research updates
+Integration options:
+Formspree (already partially in place)
+Mailchimp
+ConvertKit
+Features:
+Inline signup in hero section
+Footer newsletter form
+Success/error notifications
+3. Enhanced Projects Section
+Interactive project cards with:
+Live demo links
+GitHub repository links
+Technology tags (already partially implemented)
+View/star counts
+Filter/Sort functionality:
+Filter by category (Drug Discovery, Energy Transfer, ML, etc.)
+Sort by date, popularity, or relevance
+Project detail modals (optional):
+Detailed descriptions
+Screenshots/demos
+Installation instructions
+4. Social Proof Elements
+Research metrics dashboard:
+Real-time citation counts
+Publication timeline
+Collaboration network visualization
+Testimonials/Endorsements (if available):
+From collaborators
+From mentees
+From conference attendees
+5. Call-to-Action (CTA) Improvements
+Strategic placement:
+After research impact section
+After publications
+In footer
+CTA types:
+"Discuss Collaboration"
+"Download Full CV"
+"Schedule a Meeting" (Calendly integration)
+
+
+Questions for You:
+Before proceeding with Phase 2 implementation, I'd like to understand your priorities:
+
+Which Phase 2 features interest you most?
+
+FAB with quick actions?
+Newsletter/email signup?
+Enhanced projects filtering?
+Social proof/metrics?
+All of the above?
+Do you have specific integrations in mind?
+
+Email service provider (Mailchimp, ConvertKit, etc.)?
+Calendar scheduling (Calendly, Cal.com)?
+Analytics (Google Analytics)?
+What level of interactivity do you want?
+
+Simple (static enhancements)
+Moderate (basic JavaScript interactions)
+Advanced (full dynamic features)
+Let me know which features you'd like to prioritize, and I'll create a focused implementation plan!
+
+Lets work on these two portion of the Phase 2 first:"
+
+Floating Action Button (FAB) Purpose: Quick access to key actions from anywhere on the page Features: Contact button Download resume Social media links Scroll to top Design: Follows Material Design principles with smooth animations Benefit: Improves navigation and accessibility
+
+Social Proof Elements Research metrics dashboard: Real-time citation counts Publication timeline Collaboration network visualization "
+
+
+
+Phase 2 Implementation Plan
+Part 1: Floating Action Button (FAB)
+Design Concept:
+
+Fixed position button in bottom-right corner
+Expands to show 4 action buttons on hover/click
+Smooth Material Design animations
+Color-coded icons matching your brand
+Features to Implement:
+
+Main FAB Button (Plus icon or menu icon)
+
+Position: fixed bottom-6 right-6
+Color: Gradient matching hero section
+Hover effect: Slight scale + shadow increase
+Action Buttons (appear on click):
+
+Contact (✉️ icon) - Scrolls to contact section
+Download Resume (📄 icon) - Links to resume.html or PDF
+Social Links (🔗 icons):
+Google Scholar
+ResearchGate
+ORCID
+GitHub
+LinkedIn
+Scroll to Top (⬆️ icon) - Smooth scroll to hero section
+Animation Details:
+
+Stagger animation for action buttons (50ms delay each)
+Rotation animation for main button (45° when open)
+Backdrop blur overlay (optional)
+Part 2: Social Proof Elements - Research Metrics Dashboard
+Section Location: After Publications section, before Tutorials
+
+Components:
+
+2.1 Research Impact Summary Card
+┌─────────────────────────────────────────┐
+│  Research Impact at a Glance           │
+│  ─────────────────────────────────────  │
+│  📊 6 Publications                      │
+│  📈 43 Citations                        │
+│  🎯 h-index: [value]                    │
+│  🌐 5 International Collaborations      │
+└─────────────────────────────────────────┘
+2.2 Publication Timeline (Interactive)
+Horizontal timeline showing publications by year
+Clickable nodes with hover tooltips
+Color-coded by impact (citations)
+Special badges for journal covers/awards
+Visual Design:
+
+2021 ──●─── 2022 ──●─── 2024 ──●●─── 2025 ──●●──
+       │           │           │ │         │ │
+       │           │           │ │         │ └─ PDI Trimers
+       │           │           │ │         └─── Chiroptical (Cover)
+       │           │           │ └───────────── EFC Methods
+       │           │           └─────────────── FRET (Ongoing)
+       │           └─────────────────────────── Nature Comm
+       └─────────────────────────────────────── Optical Spectroscopy
+2.3 Collaboration Network Visualization
+Interactive network graph showing:
+Central node: You (larger, highlighted)
+Collaborator nodes: Co-authors
+Connection lines: Publications together
+Node size: Number of collaborations
+Hover effect: Shows names and affiliations
+Key Collaborators to Include:
+
+Christine M. Isborn (UC Merced) - 3 papers
+Sergei Tretiak (LANL) - 2 papers
+Victor M. Freixas (LANL)
+Sapana V. Shedge
+Tim J. Zuehlsdorff
+Others from your publications
+2.4 Citation Trends Chart (Optional)
+Line chart showing citations over time
+Total citations vs citations per year
+Google Scholar integration (if API available)
+Technical Implementation Details
+Libraries Needed:
+
+For Timeline: Custom CSS + JavaScript (no external library needed)
+For Network Graph:
+Option A: D3.js (powerful but complex)
+Option B: Vis.js Network (simpler, good for collaboration networks)
+Option C: Custom Canvas/SVG (lightweight)
+Data Structure:
+
+// Publications data
+const publications = [
+  {
+    year: 2025,
+    title: "PDI Trimers",
+    citations: 0,
+    type: "submitted",
+    collaborators: ["Sergei Tretiak"]
+  },
+  {
+    year: 2025,
+    title: "Chiroptical Response",
+    citations: 0,
+    type: "published",
+    badges: ["Journal Cover", "Top 15% Novelty"],
+    collaborators: ["Sergei Tretiak", "Victor M. Freixas", "Lei Xu", "..."]
+  },
+  // ... more
+];
+
+// Collaborators network
+const collaborators = [
+  {
+    name: "Christine M. Isborn",
+    institution: "UC Merced",
+    papers: 3,
+    role: "PhD Advisor"
+  },
+  // ... more
+];
+Questions Before Implementation:
+FAB Social Links - Which social platforms do you want to include?
+
+Google Scholar ✓
+ResearchGate ✓
+ORCID ✓
+GitHub - Do you have a GitHub profile URL?
+LinkedIn - Do you have a LinkedIn profile URL?
+Twitter/X?
+Resume Download - Do you have:
+
+A PDF version of your resume?
+Where should it link? (resume.html or a PDF file?)
+Collaboration Network - Which detail level?
+
+Simple: Just show top 5-10 collaborators
+Detailed: Show all co-authors from all papers
+Interactive: Clickable nodes that filter publications
+Citation Data - How should we handle citation counts?
+
+Static: Use the counts we already have (43 total)
+Manual Update: You update periodically
+API Integration: Try to fetch from Google Scholar (complex)
+Timeline Interactivity:
+
+Click to jump to publication details?
+Hover tooltips with full info?
+Filter publications by clicking timeline nodes?
+Let me know your preferences, and I'll start implementing! Should I proceed with default sensible choices, or would you like to specify these details first?
+
+FAB Social Links - Which social platforms do you want to include? Google Scholar ✓ ORCID ✓ GitHub - Do you have a GitHub profile URL? Yes, https://github.com/Ajaykhanna LinkedIn - Do you have a LinkedIn profile URL? https://www.linkedin.com/in/ajay-khanna/ Twitter/X? - Yes, https://x.com/samdig
+
+Resume Download - Do you have: A PDF version of your resume? Yes, I have but I'll provide the link later Where should it link? (resume.html or a PDF file?): A PDF File
+
+Collaboration Network - Which detail level? Interactive: Clickable nodes that filter publications
+
+Citation Data - How should we handle citation counts? Manual Update: You update periodically
+
+Timeline Interactivity: Filter publications by clicking timeline nodes?
+
+Is it possible to have a world map of collaboration showing countries and states I have collaborators. Ideally, I as big dot hover at the top of the world map and arrows going from me to countries and states where I have collaborators. When a mouse arrow is brought to the country/states, it will show the collaborators name and publication titles. The map can be flat but needs to be interactive.
+
+
+Updated Implementation Plan
+Phase 2 Features (In Order):
+✅ Floating Action Button (FAB) - With your 5 social links
+✅ Research Metrics Dashboard - Static cards with key metrics
+✅ Interactive Publication Timeline - With filtering capability
+✅ World Collaboration Map - Geographic visualization with arrows and hover details
+World Map Collaboration - Technical Details
+Library: Leaflet.js (lightweight, perfect for interactive maps)
+
+Visual Concept:
+
+        ┌─────────────────────────────────┐
+        │   Global Research Collaborations│
+        │                                  │
+        │        YOU ●━━━━━━━━━━●         │
+        │      (LANL/UC Merced)   ↘        │
+        │                          ●       │
+        │                    (Collaborator)│
+        │         ●━━━━━━━━━━●            │
+        │         ↓                        │
+        │    (Collaborator)                │
+        └─────────────────────────────────┘
+Features:
+
+Your location: Large pulsing dot at Los Alamos/UC Merced
+Collaborator locations: Smaller dots at their institutions
+Connection arrows: Curved lines from you to each location
+Hover interactions:
+Shows collaborator name
+Institution
+List of co-authored publications
+Color coding: By number of collaborations (gradient from blue to green)
+Collaborators to Map (from your publications):
+
+UC Merced, CA, USA - Christine M. Isborn, Sapana V. Shedge
+Los Alamos, NM, USA - Sergei Tretiak, Victor M. Freixas, Lei Xu
+Oregon State University, USA - Tim J. Zuehlsdorff
+Penn State, PA, USA - Noel C. Giebink, Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman
+UC San Diego, CA, USA - Joel Yuen-Zhou
+Pacific Northwest National Laboratory, WA, USA - Niranjan Govind
+University of Bologna, Italy - Marco Garavelli
+Jérémy R. Rouxel - Argonne National Laboratory
