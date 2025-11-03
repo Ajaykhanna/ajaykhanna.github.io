@@ -485,31 +485,34 @@ if (window.__unifiedScriptsLoaded) {
 
           // Draw lines from home locations to collaborators
           if (!loc.isHome) {
-            const homeCoords = locations.find(l => l.isHome && l.name === 'Los Alamos National Laboratory').coords;
-            L.polyline([homeCoords, loc.coords], {
-              color: '#3b82f6',
-              weight: 2,
-              opacity: 0.4,
-              dashArray: '5, 10'
-            }).addTo(map);
+            const homeCoords = locations.find(l => l.isHome && l.name === 'Los Alamos National Laboratory (LANL)');
+            if (homeCoords) {
+              L.polyline([homeCoords.coords, loc.coords], {
+                color: '#3b82f6',
+                weight: 2,
+                opacity: 0.4,
+                dashArray: '5, 10'
+              }).addTo(map);
+            }
           }
         });
 
         // Add legend with reset button
         const legend = L.control({ position: 'bottomright' });
         legend.onAdd = function () {
-          const div = L.DomUtil.create('div', 'bg-white p-3 rounded shadow-lg');
+          const div = L.DomUtil.create('div', 'map-legend');
+          div.style.cssText = 'background: white; padding: 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);';
           div.innerHTML = `
-            <div class="text-sm font-semibold mb-2">Legend</div>
-            <div class="flex items-center mb-1">
-              <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-              <span class="text-xs">Home Institution</span>
+            <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #1e293b;">Legend</div>
+            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444; margin-right: 8px;"></div>
+              <span style="font-size: 12px; color: #64748b;">Home Institution</span>
             </div>
-            <div class="flex items-center mb-3">
-              <div class="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
-              <span class="text-xs">Collaborator</span>
+            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; margin-right: 8px;"></div>
+              <span style="font-size: 12px; color: #64748b;">Collaborator</span>
             </div>
-            <button onclick="resetCollaborationMap()" class="w-full bg-blue-500 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded transition-colors">
+            <button onclick="resetCollaborationMap()" style="width: 100%; background: #3b82f6; color: white; font-size: 12px; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">
               Reset View
             </button>
           `;

@@ -726,6 +726,15 @@ button:focus {
   margin-top: 8px;
 }
 
+/* Map Legend Styles */
+.map-legend {
+  min-width: 140px;
+}
+
+.map-legend button:active {
+  transform: scale(0.98);
+}
+
 /* ============================================
    Project Filter Styles
    ============================================ */
