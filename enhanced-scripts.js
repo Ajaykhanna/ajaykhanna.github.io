@@ -367,53 +367,47 @@ if (window.__unifiedScriptsLoaded) {
         // Collaboration locations
         const locations = [
           {
-            name: 'Los Alamos National Laboratory',
+            name: 'Los Alamos National Laboratory (LANL)',
             coords: [35.8800, -106.3031],
-            city: 'Los Alamos, NM',
-            publications: ['Perylene Diimide Trimers (2025)', 'Chiroptical Response (2025)'],
+            city: 'Los Alamos, NM, USA',
+            publications: ['Chiroptical Response (2025)', 'Perylene Diimide Trimers (2025)'],
+            collaborator: 'Sergei Tretiak',
             isHome: true
           },
           {
-            name: 'UC Merced',
+            name: 'UC Merced (UCM)',
             coords: [37.3661, -120.4250],
-            city: 'Merced, CA',
-            publications: ['Franck-Condon Methods (2024)', 'Optical Spectroscopy (2021)'],
-            isHome: true
+            city: 'Merced, CA, USA',
+            publications: ['Optical Spectroscopy (2021)', 'Franck-Condon Methods (2024)'],
+            collaborator: 'Christine M. Isborn, Sapana V. Shedge'
           },
           {
-            name: 'UC San Diego',
-            coords: [32.8801, -117.2340],
-            city: 'San Diego, CA',
+            name: 'UC Irvine (UCI)',
+            coords: [33.6405, -117.8443],
+            city: 'Irvine, CA, USA',
             publications: ['Chiroptical Response (2025)'],
-            collaborator: 'Shaul Mukamel'
+            collaborator: 'Shaul Mukamel, Victor M. Freixas'
           },
           {
-            name: 'Oregon State University',
+            name: 'UC San Diego (UCSD)',
+            coords: [32.8801, -117.2340],
+            city: 'San Diego, CA, USA',
+            publications: ['Molecular Polariton (2022)'],
+            collaborator: 'Joel Yuen-Zhou'
+          },
+          {
+            name: 'Oregon State University (OSU)',
             coords: [44.5646, -123.2620],
-            city: 'Corvallis, OR',
-            publications: ['Franck-Condon Methods (2024)'],
+            city: 'Corvallis, OR, USA',
+            publications: ['Optical Spectroscopy (2021)', 'Franck-Condon Methods (2024)'],
             collaborator: 'Tim J. Zuehlsdorff'
           },
           {
             name: 'Penn State University',
             coords: [40.7982, -77.8599],
-            city: 'State College, PA',
+            city: 'State College, PA, USA',
             publications: ['Molecular Polariton (2022)'],
-            collaborator: 'Noel C. Giebink'
-          },
-          {
-            name: 'Pacific Northwest National Laboratory',
-            coords: [46.3458, -119.2781],
-            city: 'Richland, WA',
-            publications: ['Chiroptical Response (2025)'],
-            collaborator: 'Niranjan Govind'
-          },
-          {
-            name: 'Argonne National Laboratory',
-            coords: [41.7123, -87.9850],
-            city: 'Lemont, IL',
-            publications: ['Perylene Diimide Trimers (2025)'],
-            collaborator: 'Sebastian Fernandez-Alberti'
+            collaborator: 'Noel C. Giebink, Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman'
           },
           {
             name: 'University of Bologna',
@@ -421,6 +415,41 @@ if (window.__unifiedScriptsLoaded) {
             city: 'Bologna, Italy',
             publications: ['Chiroptical Response (2025)'],
             collaborator: 'Marco Garavelli'
+          },
+          {
+            name: 'Pacific Northwest National Laboratory (PNNL)',
+            coords: [46.3458, -119.2781],
+            city: 'Richland, WA, USA',
+            publications: ['Chiroptical Response (2025)'],
+            collaborator: 'Niranjan Govind, Lei Xu'
+          },
+          {
+            name: 'Argonne National Laboratory (ANL)',
+            coords: [41.7123, -87.9850],
+            city: 'Lemont, IL, USA',
+            publications: ['Chiroptical Response (2025)'],
+            collaborator: 'Jérémy R. Rouxel'
+          },
+          {
+            name: 'University of New Mexico (UNM)',
+            coords: [35.0844, -106.6504],
+            city: 'Albuquerque, NM, USA',
+            publications: ['Perylene Diimide Trimers (2025)'],
+            collaborator: 'Jean-Hubert Olivier'
+          },
+          {
+            name: 'Universidad Nacional de Quilmes/CONICET',
+            coords: [-34.7153, -58.2527],
+            city: 'Bernal, Argentina',
+            publications: ['Perylene Diimide Trimers (2025)'],
+            collaborator: 'Sebastian Fernandez-Alberti'
+          },
+          {
+            name: 'National Institute of Technology Rourkela',
+            coords: [22.2500, 84.9000],
+            city: 'Odisha, India',
+            publications: ['Ligand Driven Electron Counting Rule (2018)'],
+            collaborator: 'Rakesh Parida, G. Naaresh Reddy, Gourisankar Roymahapatra, Santanab Giri'
           }
         ];
 
@@ -466,7 +495,7 @@ if (window.__unifiedScriptsLoaded) {
           }
         });
 
-        // Add legend
+        // Add legend with reset button
         const legend = L.control({ position: 'bottomright' });
         legend.onAdd = function () {
           const div = L.DomUtil.create('div', 'bg-white p-3 rounded shadow-lg');
@@ -476,19 +505,32 @@ if (window.__unifiedScriptsLoaded) {
               <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
               <span class="text-xs">Home Institution</span>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center mb-3">
               <div class="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
               <span class="text-xs">Collaborator</span>
             </div>
+            <button onclick="resetCollaborationMap()" class="w-full bg-blue-500 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded transition-colors">
+              Reset View
+            </button>
           `;
           return div;
         };
         legend.addTo(map);
 
+        // Store map instance globally for reset button
+        window.collaborationMapInstance = map;
+
       } catch (error) {
         console.error('Error initializing collaboration map:', error);
       }
     }
+
+    /* ---------- Reset Collaboration Map ---------- */
+    window.resetCollaborationMap = function () {
+      if (window.collaborationMapInstance) {
+        window.collaborationMapInstance.setView([39.8283, -98.5795], 4);
+      }
+    };
 
     /* ---------- Project Filtering ---------- */
     window.filterProjects = function (category) {
