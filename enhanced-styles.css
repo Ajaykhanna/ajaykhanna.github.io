@@ -561,3 +561,228 @@ button:focus {
     opacity: 1;
   }
 }
+
+/* ============================================
+   Publication Timeline Styles
+   ============================================ */
+
+.publication-timeline-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.publication-timeline {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  min-width: fit-content;
+  padding: 0 20px;
+}
+
+.timeline-year {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 100px;
+}
+
+.timeline-year:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
+  border-color: #60a5fa;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.timeline-year.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: #1d4ed8;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.timeline-year.active .year-label,
+.timeline-year.active .year-count {
+  color: white;
+}
+
+.year-label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.year-count {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 12px;
+  border-radius: 12px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.timeline-year.active .year-count {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Publication Item Animations */
+.publication-item {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.publication-item.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .publication-timeline {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .timeline-year {
+    min-width: 80px;
+    padding: 12px 16px;
+  }
+
+  .year-label {
+    font-size: 1rem;
+  }
+
+  .year-count {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+  }
+}
+
+/* ============================================
+   Collaboration Map Styles
+   ============================================ */
+
+#collaboration-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid #e2e8f0;
+}
+
+.collaboration-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 60px 0;
+  margin: 40px 0;
+}
+
+.map-popup {
+  font-family: 'Inter', system-ui, sans-serif;
+  max-width: 280px;
+}
+
+.map-popup h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.map-popup p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 4px 0;
+}
+
+.map-popup .publication-count {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ============================================
+   Project Filter Styles
+   ============================================ */
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.project-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.project-item.filtered-out {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@media (max-width: 640px) {
+  .project-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

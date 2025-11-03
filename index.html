@@ -18,6 +18,13 @@
   <!-- AOS (Animate On Scroll) -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Leaflet.js for interactive maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 </head>
 
 <body class="font-sans leading-normal tracking-normal text-gray-900">
@@ -419,11 +426,31 @@
     <!-- Projects Section -->
     <section id="projects" class="my-12">
       <h2 class="text-3xl font-bold mb-4">Projects</h2>
+
+      <!-- Project Filters -->
+      <div class="project-filters mb-8">
+        <button class="filter-btn active" data-category="all" onclick="filterProjects('all')">
+          All Projects
+        </button>
+        <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')">
+          Spectroscopy
+        </button>
+        <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')">
+          QM/MM
+        </button>
+        <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')">
+          Tools
+        </button>
+        <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')">
+          Energy Transfer
+        </button>
+      </div>
+
       <div class="relative">
         <div class="overflow-hidden">
           <div class="flex transition-transform duration-300 ease-in-out" id="projectSlider">
             <!-- Project 1 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="spectroscopy">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
                   class=" w-full h-48 object-cover">
@@ -437,7 +464,7 @@
               </div>
             </div>
             <!-- Project 2 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="qmmm">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
                   class="w-full h-48 object-cover">
@@ -451,7 +478,7 @@
               </div>
             </div>
             <!-- Project 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
                   class="w-full h-48 object-cover">
@@ -463,8 +490,8 @@
                 </div>
               </div>
             </div>
-            <!-- Project 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+            <!-- Project 4 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="energy">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
                   class="w-full h-48 object-cover">
@@ -476,8 +503,8 @@
                 </div>
               </div>
             </div>
-            <!-- Project 4 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+            <!-- Project 5 -->
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
                   class="w-full h-48 object-cover">
@@ -864,10 +891,41 @@
           class="text-blue-500 hover:underline">ResearchGate</a> |
         <a href="https://orcid.org/0000-0002-8313-1393" class="text-blue-500 hover:underline">ORCID</a>
       </div>
+
+      <!-- Interactive Publication Timeline -->
+      <div class="my-8">
+        <div class="flex items-center justify-center mb-6">
+          <div class="publication-timeline-container">
+            <div class="publication-timeline">
+              <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')">
+                <span class="year-label">All</span>
+                <span class="year-count">6</span>
+              </button>
+              <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')">
+                <span class="year-label">2025</span>
+                <span class="year-count">2</span>
+              </button>
+              <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')">
+                <span class="year-label">2024</span>
+                <span class="year-count">2</span>
+              </button>
+              <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')">
+                <span class="year-label">2022</span>
+                <span class="year-count">1</span>
+              </button>
+              <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')">
+                <span class="year-label">2021</span>
+                <span class="year-count">1</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Publication List -->
-      <div class="space-y-8">
+      <div class="space-y-8" id="publicationList">
         <!-- Publication 1 - NEW -->
-        <div>
+        <div class="publication-item" data-year="2025">
           <h4 class="text-xl font-semibold">1. Covalent Control of Excitonic Interactions in Perylene Diimide Trimers: A
             Computational Study</h4>
           <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Jean-Huber Olivier, Sebastian
@@ -883,7 +941,7 @@
         </div>
 
         <!-- Publication 2 - Journal Cover -->
-        <div>
+        <div class="publication-item" data-year="2025">
           <h4 class="text-xl font-semibold">2. <a href="https://doi.org/10.1021/acs.jpclett.5c02638"
               class="text-blue-500 hover:underline">Deconstructing Chirality: Probing Local and Nonlocal Effects in
               Azobenzene Derivatives with X-ray Circular Dichroism</a></h4>
@@ -903,7 +961,7 @@
         </div>
 
         <!-- Publication 3 -->
-        <div>
+        <div class="publication-item" data-year="2024">
           <h4 class="text-xl font-semibold">4. <a href="https://doi.org/10.1063/5.0217080"
               class="text-blue-500 hover:underline">Calculating Absorption and Fluorescence Spectra for Chromophores in
               Solution with Ensemble Franck-Condon Methods</a></h4>
@@ -921,7 +979,7 @@
         </div>
 
         <!-- Publication 4 -->
-        <div>
+        <div class="publication-item" data-year="2022">
           <h4 class="text-xl font-semibold">5. <a href="https://www.nature.com/articles/s41467-022-35589-4"
               class="text-blue-500 hover:underline">Molecular Polariton Electroabsorption</a></h4>
           <p style="width: fit-content;">Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman, <u><strong>Ajay
@@ -933,7 +991,7 @@
             technology.</p>
         </div>
         <!-- Publication 5 -->
-        <div>
+        <div class="publication-item" data-year="2021">
           <h4 class="text-xl font-semibold">6. <a
               href="https://pubs.aip.org/aip/jcp/article/154/8/084116/1062868/Explicit-environmental-and-vibronic-effects-in"
               class="text-blue-500 hover:underline">Explicit Environmental and Vibronic Effects in Simulations of Linear
@@ -947,7 +1005,7 @@
             enhancing accuracy in molecular property predictions.</p>
         </div>
         <!-- Publication 6 -->
-        <div>
+        <div class="publication-item" data-year="2024">
           <h4 class="text-xl font-semibold">6. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.4c01401"
               class="text-blue-500 hover:underline">Axial H-Bonding Solvent Controls Inhomogeneous Spectral Broadening,
               While Peripheral H-Bonding Solvent Controls Vibronic Broadening: Cresyl Violet in Methanol</a></h4>
@@ -959,6 +1017,39 @@
           <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
             Systematic dissection of solvent effects on spectral line shapes, improving simulation accuracy by
             identifying the critical role of specific molecular interactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- World Collaboration Map Section -->
+    <section class="collaboration-section">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Global Research Collaboration</h2>
+        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Working with leading researchers and institutions worldwide to advance computational chemistry
+        </p>
+
+        <!-- Map Container -->
+        <div id="collaboration-map" data-aos="fade-up" data-aos-delay="200"></div>
+
+        <!-- Collaboration Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 mb-2">8</div>
+            <div class="text-sm text-gray-600">Institutions</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-green-600 mb-2">3</div>
+            <div class="text-sm text-gray-600">Countries</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-purple-600 mb-2">10+</div>
+            <div class="text-sm text-gray-600">Collaborators</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-orange-600 mb-2">6</div>
+            <div class="text-sm text-gray-600">Joint Publications</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1264,6 +1355,19 @@
   <!-- External JavaScript File -->
   <!-- <script src="scripts.js"></script> -->
   <script src="enhanced-scripts.js"></script>
+
+  <!-- Initialize Collaboration Map -->
+  <script>
+    // Initialize the collaboration map when Leaflet is ready
+    if (typeof L !== 'undefined') {
+      // Use setTimeout to ensure DOM is fully loaded
+      setTimeout(function() {
+        if (typeof window.initCollaborationMap === 'function') {
+          window.initCollaborationMap();
+        }
+      }, 500);
+    }
+  </script>
 </body>
 
 </html>

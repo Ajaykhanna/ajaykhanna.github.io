@@ -329,6 +329,191 @@ if (window.__unifiedScriptsLoaded) {
     }
     window.addEventListener("scroll", updateActiveNav, { passive: true });
 
+    /* ---------- Publication Timeline Filtering ---------- */
+    window.filterPublicationsByYear = function (year) {
+      const publications = document.querySelectorAll('.publication-item');
+      const buttons = document.querySelectorAll('.timeline-year');
+
+      // Update active button
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.year === year);
+      });
+
+      // Filter publications
+      publications.forEach(pub => {
+        if (year === 'all' || pub.dataset.year === year) {
+          pub.classList.remove('hidden');
+        } else {
+          pub.classList.add('hidden');
+        }
+      });
+    };
+
+    /* ---------- Collaboration Map Initialization ---------- */
+    function initCollaborationMap() {
+      const mapElement = document.getElementById('collaboration-map');
+      if (!mapElement || typeof L === 'undefined') return;
+
+      try {
+        // Initialize map centered on USA
+        const map = L.map('collaboration-map').setView([39.8283, -98.5795], 4);
+
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(map);
+
+        // Collaboration locations
+        const locations = [
+          {
+            name: 'Los Alamos National Laboratory',
+            coords: [35.8800, -106.3031],
+            city: 'Los Alamos, NM',
+            publications: ['Perylene Diimide Trimers (2025)', 'Chiroptical Response (2025)'],
+            isHome: true
+          },
+          {
+            name: 'UC Merced',
+            coords: [37.3661, -120.4250],
+            city: 'Merced, CA',
+            publications: ['Franck-Condon Methods (2024)', 'Optical Spectroscopy (2021)'],
+            isHome: true
+          },
+          {
+            name: 'UC San Diego',
+            coords: [32.8801, -117.2340],
+            city: 'San Diego, CA',
+            publications: ['Chiroptical Response (2025)'],
+            collaborator: 'Shaul Mukamel'
+          },
+          {
+            name: 'Oregon State University',
+            coords: [44.5646, -123.2620],
+            city: 'Corvallis, OR',
+            publications: ['Franck-Condon Methods (2024)'],
+            collaborator: 'Tim J. Zuehlsdorff'
+          },
+          {
+            name: 'Penn State University',
+            coords: [40.7982, -77.8599],
+            city: 'State College, PA',
+            publications: ['Molecular Polariton (2022)'],
+            collaborator: 'Noel C. Giebink'
+          },
+          {
+            name: 'Pacific Northwest National Laboratory',
+            coords: [46.3458, -119.2781],
+            city: 'Richland, WA',
+            publications: ['Chiroptical Response (2025)'],
+            collaborator: 'Niranjan Govind'
+          },
+          {
+            name: 'Argonne National Laboratory',
+            coords: [41.7123, -87.9850],
+            city: 'Lemont, IL',
+            publications: ['Perylene Diimide Trimers (2025)'],
+            collaborator: 'Sebastian Fernandez-Alberti'
+          },
+          {
+            name: 'University of Bologna',
+            coords: [44.4949, 11.3426],
+            city: 'Bologna, Italy',
+            publications: ['Chiroptical Response (2025)'],
+            collaborator: 'Marco Garavelli'
+          }
+        ];
+
+        // Add markers
+        locations.forEach(loc => {
+          const iconColor = loc.isHome ? 'red' : 'blue';
+          const iconSize = loc.isHome ? [12, 12] : [8, 8];
+
+          const marker = L.circleMarker(loc.coords, {
+            radius: loc.isHome ? 10 : 6,
+            fillColor: loc.isHome ? '#ef4444' : '#3b82f6',
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.8
+          }).addTo(map);
+
+          // Create popup content
+          let popupContent = `
+            <div class="map-popup">
+              <h4>${loc.name}</h4>
+              <p><strong>${loc.city}</strong></p>
+              ${loc.collaborator ? `<p>Collaborator: ${loc.collaborator}</p>` : ''}
+              <p class="text-sm text-gray-600 mt-2">Publications:</p>
+              <ul class="text-xs text-gray-700 ml-4 list-disc">
+                ${loc.publications.map(pub => `<li>${pub}</li>`).join('')}
+              </ul>
+              <span class="publication-count">${loc.publications.length} publication${loc.publications.length > 1 ? 's' : ''}</span>
+            </div>
+          `;
+
+          marker.bindPopup(popupContent);
+
+          // Draw lines from home locations to collaborators
+          if (!loc.isHome) {
+            const homeCoords = locations.find(l => l.isHome && l.name === 'Los Alamos National Laboratory').coords;
+            L.polyline([homeCoords, loc.coords], {
+              color: '#3b82f6',
+              weight: 2,
+              opacity: 0.4,
+              dashArray: '5, 10'
+            }).addTo(map);
+          }
+        });
+
+        // Add legend
+        const legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function () {
+          const div = L.DomUtil.create('div', 'bg-white p-3 rounded shadow-lg');
+          div.innerHTML = `
+            <div class="text-sm font-semibold mb-2">Legend</div>
+            <div class="flex items-center mb-1">
+              <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+              <span class="text-xs">Home Institution</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
+              <span class="text-xs">Collaborator</span>
+            </div>
+          `;
+          return div;
+        };
+        legend.addTo(map);
+
+      } catch (error) {
+        console.error('Error initializing collaboration map:', error);
+      }
+    }
+
+    /* ---------- Project Filtering ---------- */
+    window.filterProjects = function (category) {
+      const projects = document.querySelectorAll('.project-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update active button
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === category);
+      });
+
+      // Filter projects
+      projects.forEach(project => {
+        if (category === 'all' || project.dataset.category === category) {
+          project.classList.remove('filtered-out');
+        } else {
+          project.classList.add('filtered-out');
+        }
+      });
+    };
+
+    /* ---------- Update initAll to include new features ---------- */
+    // Note: initCollaborationMap will be called separately after Leaflet loads
+    window.initCollaborationMap = initCollaborationMap;
+
     /* ---------- Exports (if needed) ---------- */
     window.portfolioEnhancements = {
       initParticles,
@@ -337,6 +522,7 @@ if (window.__unifiedScriptsLoaded) {
       initCounters,
       initProgressBar,
       initSmoothScroll,
+      initCollaborationMap,
     };
   })();
 }
