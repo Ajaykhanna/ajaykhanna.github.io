@@ -1,3 +1,130 @@
+## Nov.02.2025
+Website Enhancement Roadmap: A Phased Approach
+
+# 1. Overview
+
+This document outlines a strategic, multi-phase plan to enhance the professional website, transitioning it from a visually engaging portfolio into an interactive research hub. The plan prioritizes content improvements and user engagement features first, followed by advanced technical integrations and performance optimization.
+
+## Guiding Design Principles
+
+All development will adhere to the following principles:
+
+- Professional & Eye-Catching: Utilize modern animations and a clean, minimalist design that is professional, not gimmicky.
+
+- User Engagement: Encourage exploration through interactive elements, clear calls-to-action (CTAs), and progressive disclosure of information.
+
+- Performance First: Ensure fast load times and smooth (60fps) animations, with a mobile-first mindset.
+
+- Content Focused: Emphasize research impact, quantify achievements, and build professional credibility.
+
+## Implementation Priority
+
+- High Priority: Content enhancements (About, Experience, Skills), project filtering, newsletter signup.
+
+- Medium Priority: Floating Action Button (FAB), publication filtering, core SEO meta tags.
+
+- Low Priority (Future): 3D molecule viewer, advanced analytics, full performance optimization.
+
+# 2. Phased Implementation Plan
+
+## Phase 1: Core Visual Impact (Completed)
+
+Goal: Create an eye-catching, professional homepage that immediately engages visitors.
+
+Completed Features:
+
+- Hero Section: Animated particle background (particles.js) with a dynamic typed-text effect.
+
+- Statistic Counters: Animated counters for Publications, Citations, Tools, and Compounds.
+
+- Research Impact Cards: Four interactive flip-cards detailing research areas (Drug Discovery, Energy Transfer, Energy Storage, Green Energy).
+
+- UI Enhancements: Page scroll progress bar, smooth scrolling, and scroll-reveal animations (AOS).
+
+## Phase 2: Enhanced Engagement (In Progress)
+
+Goal: Add interactive features to improve user engagement and provide immediate access to key information.
+
+Implementation Plan:
+
+1. Floating Action Button (FAB):
+
+- A fixed button in the bottom-right corner that expands on click to reveal quick actions.
+
+- Styled with Material Design principles and smooth animations.
+
+- Actions:
+- Contact (scrolls to contact form)
+- Download Resume (links to a PDF file)
+- Google Scholar
+- ORCID
+- GitHub (https://github.com/Ajaykhanna)
+- LinkedIn (https://www.linkedin.com/in/ajay-khanna/)
+- Twitter/X (https://x.com/samdig)
+- Scroll to Top
+
+2. Social Proof & Metrics Dashboard:
+- A new section to build credibility and visualize research output.
+- Research Impact Card: A static summary card displaying key metrics (e.g., "6 Publications," "43 Citations," "h-index: 5," "5 International Collaborations"). Citation data will be updated manually as needed. (completed)
+- Interactive Publication Timeline: A horizontal, interactive timeline that allows users to filter the publications list by clicking on a specific year or milestone. (pending)
+- World Collaboration Map: An interactive world map (using Leaflet.js) to visualize the global collaboration network.
+	- Features: A central, large dot representing your location (Los Alamos/UC Merced).
+	- Interactivity: Arrows will connect your location to collaborator locations. Hovering over a location will display the collaborator's name, institution, and a list of co-authored publications.
+	- Locations: UC Merced (USA), Los Alamos (USA), Oregon State (USA), Penn State (USA), UC San Diego (USA), PNNL (USA), Argonne (USA), University of Bologna (Italy).
+
+3. Newsletter/Updates Section: 
+- An email subscription form to allow visitors to sign up for research updates and new publication alerts.
+
+4. Enhanced Project Cards:
+	- Implement a filtering system for project cards (e.g., Drug Discovery, Energy, Tools, All).
+	- Add search functionality, categorization tags, and modal popups for viewing detailed project information.
+
+Phase 3: Advanced Features (Pending)
+
+Goal: Add sophisticated, domain-specific interactive elements.
+
+Proposed Enhancements:
+	-  3D Molecule Viewer: Integrate 3Dmol.js to display interactive 3D models of research molecules (e.g., Aspirin, Caffeine, and specific research compounds).
+	-  Research Timeline: Create a comprehensive visual timeline (separate from the publication timeline) to showcase key milestones, grants, and academic achievements.
+
+Phase 4: Content Enhancements (Pending)
+
+Goal: Improve content quality, professionalism, and messaging.
+
+Proposed Improvements:
+	- "About Me" Section Rewrite: Refine the professional narrative, removing informal language and emojis to better articulate expertise and research goals.
+	- "Experience" Section: Replace placeholder content with detailed entries for professional and research positions, including quantified achievements.
+	- "Skills" Section Enhancement: Add domain-specific tools and software:
+		- Drug Discovery: RDKit, AutoDock, Schrödinger
+		- Energy Materials: VASP, CP2K, Quantum ESPRESSO
+		- HPC: CUDA, OpenMP, Cluster Management
+
+Publications Section Enhancement:
+	- Add category filters (e.g., Drug Discovery, Energy, Methods).
+	- Integrate Altmetric badges.
+	- Provide direct PDF links and citation export options (BibTeX, RIS).
+
+Phase 5: SEO & Performance (Pending)
+
+Goal: Improve website discoverability (Search Engine Optimization) and load times.
+
+Proposed Optimizations:
+
+- SEO: Implement meta tags, Open Graph tags (for social media), JSON-LD structured data (for rich snippets), a sitemap.xml, and a robots.txt file.
+- Performance: Implement image lazy loading, code splitting, asset minification (CSS/JS), and explore CDN/caching strategies.
+- Analytics: Integrate Google Analytics and heatmap tracking (e.g., Hotjar) to monitor user behavior.
+
+Phase 6: Mobile & Accessibility (Pending)
+
+Goal: Perfect the mobile experience and ensure the site is accessible to all users.
+
+Proposed Improvements:
+
+- Mobile Optimization: Ensure all interactions are touch-friendly, implement a dedicated mobile navigation menu, and consider Progressive Web App (PWA) capabilities.
+- Accessibility (A11y): Conduct a full audit to ensure compliance with WCAG AA standards, including ARIA labels for all interactive elements, full keyboard navigation support, high-contrast color ratios, and visible focus indicators. 
+
+
+# --------------------
 Website Enhancement Roadmap
 Current Status: Phase 1 ✅ COMPLETED
 Your website now has:
