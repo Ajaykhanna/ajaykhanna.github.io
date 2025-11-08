@@ -137,7 +137,53 @@ This document details all performance optimizations implemented on the website t
 
 ---
 
-### 5. CDN Optimization with Gzip/Brotli Compression
+### 5. Cumulative Layout Shift (CLS) Prevention
+
+**What**: Adding explicit width and height attributes to all images prevents layout jumps during page load.
+
+**Implementation**:
+```html
+<!-- Profile Images with Explicit Dimensions -->
+<img src="./images/head_img_ajay.png" alt="Profile"
+     class="h-12 w-12 rounded-full"
+     width="48" height="48"
+     loading="eager" fetchpriority="high">
+
+<img src="./images/head_img_ajay.png" alt="Hero"
+     class="w-44 h-44 rounded-full"
+     width="176" height="176"
+     loading="eager" fetchpriority="high">
+
+<img src="./images/head_img_ajay.png" alt="About"
+     class="w-48 h-48 rounded-full"
+     width="192" height="192"
+     loading="lazy">
+
+<!-- Project/Tutorial Card Images -->
+<img src="./images/projects/project.png" alt="Project"
+     class="w-full h-48 object-cover"
+     width="400" height="192"
+     loading="lazy">
+```
+
+**Benefits**:
+- ✅ Browser reserves correct space before image loads
+- ✅ Eliminates layout shift (improves CLS score)
+- ✅ Better user experience (no content jumping)
+- ✅ CSS classes still control actual display size
+- ✅ Improves Core Web Vitals scores
+
+**Images Updated**:
+- 3 profile images (nav, hero, about sections)
+- 5 project card images
+- 5 tutorial card images
+- **Total: 13 images** with explicit dimensions
+
+**Expected Impact**: CLS score improvement from ~0.1-0.15 to <0.05
+
+---
+
+### 6. CDN Optimization with Gzip/Brotli Compression
 
 **What**: Using production CDNs with automatic compression via GitHub Pages.
 
@@ -157,7 +203,7 @@ GitHub Pages automatically serves assets with gzip/brotli compression, providing
 
 ---
 
-### 6. CDN Optimization for External Libraries
+### 7. CDN Optimization for External Libraries
 
 **What**: Using production CDNs for reliable, fast delivery of external libraries.
 
@@ -392,10 +438,12 @@ Every 3 months:
 
 ### ✅ Completed Optimizations
 
-- [x] Image lazy loading implemented
+- [x] Image lazy loading implemented (11 images)
+- [x] Hero image preload for optimal LCP
 - [x] Resource hints (preconnect, dns-prefetch) added
 - [x] Script loading strategy optimized (synchronous for reliability)
 - [x] CSS loading strategy optimized
+- [x] CLS prevention with explicit image dimensions (13 images)
 - [x] Automatic compression via GitHub Pages (gzip/brotli)
 - [x] CDN optimization for external libraries
 - [x] CDN configuration documented
