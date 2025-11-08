@@ -574,6 +574,27 @@ if (window.__unifiedScriptsLoaded) {
       });
     };
 
+    /* ---------- Research Timeline Scrolling ---------- */
+    window.scrollTimeline = function (direction) {
+      const container = document.querySelector(".timeline-scroll-container");
+      if (!container) return;
+
+      const scrollAmount = 400; // Scroll by 400px
+      const currentScroll = container.scrollLeft;
+
+      if (direction === "left") {
+        container.scrollTo({
+          left: currentScroll - scrollAmount,
+          behavior: "smooth",
+        });
+      } else if (direction === "right") {
+        container.scrollTo({
+          left: currentScroll + scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    };
+
     /* ---------- Update initAll to include new features ---------- */
     // Note: initCollaborationMap will be called separately after Leaflet loads
     window.initCollaborationMap = initCollaborationMap;
