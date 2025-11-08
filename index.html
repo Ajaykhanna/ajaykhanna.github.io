@@ -44,12 +44,12 @@
   <!-- Google Analytics 4 (GA4) -->
   <!-- Replace 'G-XXXXXXXXXX' with your actual GA4 Measurement ID -->
   <!-- Get your ID from: https://analytics.google.com/ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LEL36ZKV3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', {
+    gtag('config', 'G-8LEL36ZKV3', {
       'send_page_view': true,
       'anonymize_ip': true
     });
@@ -193,9 +193,7 @@
       <div class="block lg:hidden pr-4">
         <button id="nav-toggle"
           class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="nav-content">
+          aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-content">
           <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
           </svg>
@@ -241,1571 +239,1609 @@
   <!-- Reading Progress Bar -->
   <div id="progress-bar"
     class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-40 transition-all duration-300"
-    style="width: 0%" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    style="width: 0%" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0"
+    aria-valuemax="100"></div>
 
   <!-- Main Content -->
   <main id="main-content">
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero introduction">
-    <!-- Particle Background -->
-    <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900"></div>
-
-    <!-- Hero Content -->
-    <div class="relative z-10 container mx-auto px-4 text-center text-white" data-aos="fade-up"
-      data-aos-duration="1000">
-      <div class="flex justify-center mb-8">
-        <!-- changed sizes: w-40 h-40 -> w-44 h-44 (≈10% larger) -->
-        <img src="./images/head_img_ajay.png" alt="Ajay Khanna"
-          class="w-44 h-44 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Hero introduction">
+      <!-- Particle Background -->
+      <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
-        Ajay Khanna
-      </h1>
-
-      <!-- Typed.js Dynamic Text -->
-      <div class="text-2xl md:text-4xl mb-8 h-20">
-        <span class="typed-text">Computational Chemist | </span>
-        <span id="typed-output" class="text-blue-300 font-semibold"></span>
-      </div>
-
-      <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-200 leading-relaxed">
-        Bridging quantum mechanics and real-world impact through
-        <span class="text-blue-300 font-semibold">drug discovery</span>,
-        <span class="text-green-300 font-semibold">energy transfer</span>, and
-        <span class="text-teal-300 font-semibold">sustainable technologies</span>
-      </p>
-
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#research-impact"
-          class="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-          Explore Research
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-          </svg>
-        </a>
-
-        <a href="#contact"
-          class="bg-white bg-opacity-10 backdrop-blur-md hover:bg-opacity-20 text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-          Let's Collaborate
-        </a>
-      </div>
-
-      <!-- Quick Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
-          data-aos-delay="100">
-          <div class="text-4xl font-bold text-blue-300 counter" data-target="7">7</div>
-          <div class="text-sm text-gray-300 mt-2">Publications</div>
-        </div>
-        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
-          data-aos-delay="200">
-          <div class="text-4xl font-bold text-green-300 counter" data-target="50">50</div>
-          <div class="text-sm text-gray-300 mt-2">Citations</div>
-        </div>
-        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
-          data-aos-delay="300">
-          <div class="text-4xl font-bold text-yellow-300 counter" data-target="4">4</div>
-          <div class="text-sm text-gray-300 mt-2">Open Source Tools</div>
-        </div>
-        <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
-          data-aos-delay="400">
-          <div class="text-4xl font-bold text-teal-300 counter" data-target="2000">2000</div>
-          <div class="text-sm text-gray-300 mt-2">Articles Downloaded</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#research-impact" class="text-white opacity-75 hover:opacity-100">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Research Impact Areas Section -->
-  <section id="research-impact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-4" data-aos="fade-up">Research Impact Areas</h2>
-      <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        Computational chemistry at the intersection of molecular science and transformative applications
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        <!-- Drug Discovery Card -->
-        <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="flip-card-inner">
-            <!-- Front -->
-            <div
-              class="flip-card-front bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
-              <div class="text-6xl mb-4">💊</div>
-              <h3 class="text-2xl font-bold text-center">Drug Discovery</h3>
-              <p class="text-blue-100 text-center mt-2">Virtual Screening & Design</p>
-            </div>
-            <!-- Back -->
-            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-blue-500">
-              <h4 class="text-xl font-bold text-blue-600 mb-4">Key Capabilities:</h4>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Virtual screening pipelines
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Protein-ligand binding
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  ADMET prediction (ML)
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Binding affinity calculations
-                </li>
-              </ul>
-              <div class="mt-6 text-center">
-                <a href="#projects" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
-                  View Projects
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+      <!-- Hero Content -->
+      <div class="relative z-10 container mx-auto px-4 text-center text-white" data-aos="fade-up"
+        data-aos-duration="1000">
+        <div class="flex justify-center mb-8">
+          <!-- changed sizes: w-40 h-40 -> w-44 h-44 (≈10% larger) -->
+          <img src="./images/head_img_ajay.png" alt="Ajay Khanna"
+            class="w-44 h-44 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300">
         </div>
 
-        <!-- Energy Transfer Card -->
-        <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front bg-gradient-to-br from-green-500 to-green-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
-              <div class="text-6xl mb-4">⚡</div>
-              <h3 class="text-2xl font-bold text-center">Energy Transfer</h3>
-              <p class="text-green-100 text-center mt-2">FRET & Excitonic Coupling</p>
-            </div>
-            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-green-500">
-              <h4 class="text-xl font-bold text-green-600 mb-4">Key Capabilities:</h4>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  FRET mechanisms
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Excitonic coupling calculations
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Light-harvesting systems
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Charge transfer dynamics
-                </li>
-              </ul>
-              <div class="mt-6 text-center">
-                <a href="#projects" class="text-green-600 font-semibold hover:text-green-800 inline-flex items-center">
-                  View Projects
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
+          Ajay Khanna
+        </h1>
+
+        <!-- Typed.js Dynamic Text -->
+        <div class="text-2xl md:text-4xl mb-8 h-20">
+          <span class="typed-text">Computational Chemist | </span>
+          <span id="typed-output" class="text-blue-300 font-semibold"></span>
         </div>
 
-        <!-- Energy Storage Card -->
-        <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
-              <div class="text-6xl mb-4">🔋</div>
-              <h3 class="text-2xl font-bold text-center">Energy Storage</h3>
-              <p class="text-yellow-100 text-center mt-2">Battery Materials</p>
-            </div>
-            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-yellow-500">
-              <h4 class="text-xl font-bold text-yellow-600 mb-4">Key Capabilities:</h4>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Electrode materials design
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Electrolyte optimization
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Li-ion migration pathways
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Solid-state batteries
-                </li>
-              </ul>
-              <div class="mt-6 text-center">
-                <a href="#projects"
-                  class="text-yellow-600 font-semibold hover:text-yellow-800 inline-flex items-center">
-                  View Projects
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Green Energy Card -->
-        <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front bg-gradient-to-br from-teal-500 to-cyan-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
-              <div class="text-6xl mb-4">🌱</div>
-              <h3 class="text-2xl font-bold text-center">Green Energy</h3>
-              <p class="text-teal-100 text-center mt-2">Sustainable Solutions</p>
-            </div>
-            <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-teal-500">
-              <h4 class="text-xl font-bold text-teal-600 mb-4">Key Capabilities:</h4>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Organic photovoltaics
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Catalytic CO₂ reduction
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Water splitting mechanisms
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  Sustainable materials
-                </li>
-              </ul>
-              <div class="mt-6 text-center">
-                <a href="#projects" class="text-teal-600 font-semibold hover:text-teal-800 inline-flex items-center">
-                  View Projects
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
-
-      <div class="max-w-6xl mx-auto">
-        <!-- Main Content Grid -->
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-
-          <!-- Photo & Quick Info -->
-          <div class="md:col-span-1" data-aos="fade-right">
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg text-center">
-              <!-- Photo Placeholder -->
-              <div
-                class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold shadow-xl">
-                <img src="./images/head_img_ajay.png" alt="Ajay Khanna" class="w-48 h-48 rounded-full object-cover">
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ajay Khanna, Ph.D.</h3>
-              <p class="text-blue-600 font-semibold mb-1">Postdoctoral Researcher</p>
-              <p class="text-gray-600 text-sm mb-6">Los Alamos National Laboratory</p>
-
-              <!-- Quick Stats -->
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="bg-white rounded-lg p-3 shadow">
-                  <div class="text-2xl font-bold text-blue-600">7</div>
-                  <div class="text-xs text-gray-600">Publications</div>
-                </div>
-                <div class="bg-white rounded-lg p-3 shadow">
-                  <div class="text-2xl font-bold text-green-600">50+</div>
-                  <div class="text-xs text-gray-600">Citations</div>
-                </div>
-              </div>
-
-              <!-- CTA Buttons -->
-              <div class="space-y-3">
-                <a href="./resume.html"
-                  class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
-                  Download CV
-                </a>
-                <a href="#contact"
-                  class="block w-full bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-colors duration-300">
-                  Contact Me
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Professional Summary & Details -->
-          <div class="md:col-span-2" data-aos="fade-left">
-
-            <!-- Professional Summary -->
-            <div class="mb-8">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span class="w-1 h-8 bg-blue-600 mr-3"></span>
-                Professional Summary
-              </h3>
-              <div class="text-gray-700 leading-relaxed space-y-4">
-                <p>
-                  I'm a computational chemist at Los Alamos National Laboratory, specializing in the development
-                  and application of quantum mechanical methods and machine learning to solve critical challenges
-                  at the intersection of molecular science and real-world applications.
-                </p>
-                <p>
-                  My research bridges fundamental theoretical chemistry with transformative solutions in drug
-                  discovery, energy materials, and sustainable technologies. I believe the most impactful
-                  computational research emerges at the intersection of rigorous quantum mechanics, efficient
-                  algorithms, and practical applications.
-                </p>
-              </div>
-            </div>
-
-            <!-- Current Research Focus -->
-            <div class="mb-8">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span class="w-1 h-8 bg-green-600 mr-3"></span>
-                Current Research at LANL
-              </h3>
-              <div class="grid gap-3">
-                <div class="flex items-start bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
-                  <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <p class="text-gray-800">Developing deep learning frameworks for non-adiabatic molecular dynamics
-                    simulations</p>
-                </div>
-                <div class="flex items-start bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
-                  <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <p class="text-gray-800">Investigating chiroptical spectroscopy in π-stacked molecular aggregates</p>
-                </div>
-                <div class="flex items-start bg-purple-50 rounded-lg p-4 border-l-4 border-purple-500">
-                  <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                  <p class="text-gray-800">Designing QSPR models for energy transfer materials</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Core Expertise -->
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span class="w-1 h-8 bg-purple-600 mr-3"></span>
-                Core Expertise
-              </h3>
-              <div class="flex flex-wrap gap-3">
-                <span
-                  class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                  Quantum Mechanics & QM/MM
-                </span>
-                <span
-                  class="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                  Molecular Dynamics
-                </span>
-                <span
-                  class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                  Machine Learning for Chemistry
-                </span>
-                <span
-                  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                  High-Performance Computing
-                </span>
-                <span
-                  class="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
-                  Virtual Screening & Drug Design
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <div class="container mx-auto px-4">
-
-    <!-- Projects Section -->
-    <section id="projects" class="my-12" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" class="text-3xl font-bold mb-4">Projects</h2>
-
-      <!-- Screen reader announcements for filter changes -->
-      <div aria-live="polite" aria-atomic="true" class="sr-only" id="project-filter-status"></div>
-
-      <!-- Project Filters -->
-      <div class="project-filters mb-8" role="group" aria-label="Project category filters">
-        <button class="filter-btn active" data-category="all" onclick="filterProjects('all')" aria-pressed="true" aria-label="Show all projects">
-          All Projects
-        </button>
-        <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')" aria-pressed="false" aria-label="Filter by Spectroscopy projects">
-          Spectroscopy
-        </button>
-        <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')" aria-pressed="false" aria-label="Filter by QM/MM projects">
-          QM/MM
-        </button>
-        <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')" aria-pressed="false" aria-label="Filter by Tools projects">
-          Tools
-        </button>
-        <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')" aria-pressed="false" aria-label="Filter by Energy Transfer projects">
-          Energy Transfer
-        </button>
-      </div>
-
-      <div class="relative">
-        <div class="overflow-hidden">
-          <div class="flex transition-transform duration-300 ease-in-out" id="projectSlider">
-            <!-- Project 1 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="spectroscopy">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
-                  class=" w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      class="text-blue-500 hover:underline">Computing Absorption and Fluorescence Spectra</a></h3>
-                  <p class="text-gray-700">Calculating absorption and fluroscence spectra of molecules in explicit
-                    environment using ensemble Franck-Condon methods </p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="qmmm">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      class="text-blue-500 hover:underline">Automate QM/MM Sims</a></h3>
-                  <p class="text-gray-700">A Python program designed automate MD trajectories containing dyes in
-                    solvents to hybrid QM/MM simulations. </p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
-                      class="text-blue-500 hover:underline">MolVizMan</a></h3>
-                  <p class="text-gray-700">An interactive Python GUI application allows you to visualize and manipulate
-                    molecules from an XYZ file.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="energy">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
-                      class="text-blue-500 hover:underline">Excitonic Coupling</a></h3>
-                  <p class="text-gray-700">Computing Excitonic Coupling Between Molecules Using Various Excitonic
-                    Coupling Schemes</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
-                      class="text-blue-500 hover:underline">DOI2BibTex</a></h3>
-                  <p class="text-gray-700">Convert Digital Object Identifiers (DOI) into BibTeX entries with a simple,
-                    user-friendly web app built using Streamlit!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideProject(1)" aria-label="Previous project">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </button>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideProject(-1)" aria-label="Next project">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </button>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="my-12">
-      <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Technical Expertise</h2>
-      <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Combining quantum mechanics,
-        molecular simulations, and machine learning for real-world impact</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Skill 1: Drug Discovery Tools -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="100">
-          <div class="flex items-center mb-3">
-            <div class="bg-blue-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">Drug Discovery</h3>
-          </div>
-          <p class="text-gray-700 mb-3">Virtual screening, docking, and ADMET prediction for therapeutic design</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">RDKit</span>
-            <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">AutoDock</span>
-            <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">Schrödinger</span>
-            <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">MOE</span>
-          </div>
-        </div>
-
-        <!-- Skill 2: QM/MM & Spectroscopy -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="200">
-          <div class="flex items-center mb-3">
-            <div class="bg-green-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">QM/MM & Spectroscopy</h3>
-          </div>
-          <p class="text-gray-700 mb-3">Hybrid quantum/classical methods for excited states and optical properties</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">TeraChem</span>
-            <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Gaussian</span>
-            <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Amber</span>
-            <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">NAMD</span>
-          </div>
-        </div>
-
-        <!-- Skill 3: Energy Materials -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="300">
-          <div class="flex items-center mb-3">
-            <div class="bg-yellow-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">Energy Materials</h3>
-          </div>
-          <p class="text-gray-700 mb-3">Periodic DFT for batteries, catalysts, and photovoltaic materials</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">SIESTA</span>
-            <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">ORCA</span>
-            <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">LAMMPS</span>
-            <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">Quantum Espresso</span>
-          </div>
-        </div>
-
-        <!-- Skill 4: Machine Learning -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="400">
-          <div class="flex items-center mb-3">
-            <div class="bg-purple-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">Machine Learning</h3>
-          </div>
-          <p class="text-gray-700 mb-3">ML/DL models for property prediction, QSAR, and molecular generation</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">PyTorch</span>
-            <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">TensorFlow</span>
-            <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">Scikit-learn</span>
-            <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">DeepChem</span>
-          </div>
-        </div>
-
-        <!-- Skill 5: Programming & HPC -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="500">
-          <div class="flex items-center mb-3">
-            <div class="bg-indigo-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">Programming & HPC</h3>
-          </div>
-          <p class="text-gray-700 mb-3">High-performance computing and GPU acceleration for large-scale simulations</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">Python</span>
-            <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">C++</span>
-            <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">CUDA</span>
-            <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">MPI</span>
-          </div>
-        </div>
-
-        <!-- Skill 6: Cheminformatics -->
-        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up"
-          data-aos-delay="600">
-          <div class="flex items-center mb-3">
-            <div class="bg-teal-100 p-2 rounded-lg mr-3">
-              <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold">Cheminformatics</h3>
-          </div>
-          <p class="text-gray-700 mb-3">Large-scale compound screening, similarity search, and QSAR modeling</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">RDKit</span>
-            <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">OpenBabel</span>
-            <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">ChemAxon</span>
-            <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">KNIME</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="my-12">
-      <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Professional Experience</h2>
-      <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Research and development at the
-        forefront of computational chemistry</p>
-
-      <div class="space-y-8">
-
-        <!-- Postdoc Position at LANL -->
-        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500" data-aos="fade-up"
-          data-aos-delay="100">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-            <div>
-              <h3 class="text-2xl font-semibold text-gray-900">Postdoctoral Research Associate</h3>
-              <p class="text-xl text-green-600 mt-1">Los Alamos National Laboratory (LANL)</p>
-              <p class="text-gray-600 mt-1">Advisor: Dr. Sergei Tretiak</p>
-            </div>
-            <div class="text-gray-500 mt-2 md:mt-0">
-              <span class="bg-green-100 px-3 py-1 rounded-full text-sm font-semibold">Nov 2024 - Present</span>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Developing deep learning-based surrogate models for non-adiabatic molecular dynamics simulations
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Established quantitative structure-property relationships (QSPR) in π-stacked molecular aggregates
-                (perylene diimide, squaraine, and cyanine dyes)
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Generated foundational insights into the structural origins of chiroptical signals in chiral molecular
-                aggregates
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Research Focus:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Deep Learning</span>
-              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Non-adiabatic MD</span>
-              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">QM/MM</span>
-              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Photophysics</span>
-              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Chiroptical Spectroscopy</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Graduate Research Position -->
-        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500" data-aos="fade-up"
-          data-aos-delay="200">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-            <div>
-              <h3 class="text-2xl font-semibold text-gray-900">Graduate Researcher</h3>
-              <p class="text-xl text-blue-600 mt-1">University of California, Merced</p>
-              <p class="text-gray-600 mt-1">Computational Chemistry & Physics</p>
-            </div>
-            <div class="text-gray-500 mt-2 md:mt-0">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">2018 - 2024</span>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Extended ensemble Franck-Condon methods for accurate full stack UV-Vis spectroscopy predictions in
-                solution (J. Chem. Phys. 2024)
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Co-authored Nature Communications publication on molecular polariton electroabsorption (16+ citations)
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Developed QM/MM automation tools reducing simulation setup time by 70%
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Research Focus:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">Resonance Energy Transfer</span>
-              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">Optical Spectroscopy</span>
-              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">QM/MM Methods</span>
-              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">GPU Computing</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CADD Intern Position at Frontier Medicines -->
-        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-500" data-aos="fade-up"
-          data-aos-delay="300">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-            <div>
-              <h3 class="text-2xl font-semibold text-gray-900">Computer-Aided Drug Design (CADD) Intern</h3>
-              <p class="text-xl text-orange-600 mt-1">Frontier Medicines</p>
-              <p class="text-gray-600 mt-1">Computational Chemistry & Drug Discovery</p>
-            </div>
-            <div class="text-gray-500 mt-2 md:mt-0">
-              <span class="bg-orange-100 px-3 py-1 rounded-full text-sm font-semibold">May 2023 - Aug 2023</span>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Developed Python pipelines to automate SMILES-to-desolvation energy calculations and conformational
-                sampling for Bruton's Tyrosine Kinase (BTK) inhibitors, leveraging OpenMM and TeraChem (hybrid QM/MM
-                interface) for significantly streamlined workflows
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Gained proficiency in unbiased and biased ligand-based docking (MOE), successfully deploying these
-                techniques to perform protein-ligand docking for BTK inhibitors
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-                </svg>
-                Built robust Protein-Ligand binding free energy calculation pipelines, utilizing hybrid QM/MM
-                techniques, to enable accurate rank-ordering of Bruton's Tyrosine Kinase (BTK) inhibitors
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">Python</span>
-              <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">OpenMM</span>
-              <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">TeraChem</span>
-              <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">MOE</span>
-              <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">QM/MM</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Teaching & Mentorship -->
-        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg shadow-lg p-6 border-l-4 border-purple-500"
-          data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Teaching & Mentorship</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 class="font-semibold text-gray-800 mb-2">Graduate Mentoring</h4>
-              <ul class="space-y-1 text-gray-700 text-sm">
-                <li>• GradEXCEL Program mentor (2019-2022)</li>
-                <li>• Supervised undergraduate researchers</li>
-                <li>• Graduate Excel Peer Mentor Award</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800 mb-2">Teaching Development</h4>
-              <ul class="space-y-1 text-gray-700 text-sm">
-                <li>• Advanced Pedagogy certification</li>
-                <li>• GROW TA Training Fellowship</li>
-                <li>• Stanford Writing in Sciences course</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="my-12 " aria-labelledby="publications-heading">
-      <h2 id="publications-heading" class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
-
-      <!-- Screen reader announcements for filter changes -->
-      <div aria-live="polite" aria-atomic="true" class="sr-only" id="publication-filter-status"></div>
-      <div class="mb-4">
-        <a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
-          class="text-blue-500 hover:underline">Google Scholar</a> |
-        <a href="https://www.researchgate.net/profile/Ajay-Khanna-2"
-          class="text-blue-500 hover:underline">ResearchGate</a> |
-        <a href="https://orcid.org/0000-0002-8313-1393" class="text-blue-500 hover:underline">ORCID</a>
-      </div>
-
-      <!-- Interactive Publication Timeline -->
-      <div class="my-8" role="region" aria-label="Publication timeline filter">
-        <div class="flex items-center justify-center mb-6">
-          <div class="publication-timeline-container">
-            <div class="publication-timeline" role="group" aria-label="Filter publications by year">
-              <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')" aria-pressed="true" aria-label="Show all publications (7 total)">
-                <span class="year-label">All</span>
-                <span class="year-count" aria-hidden="true">7</span>
-              </button>
-              <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')" aria-pressed="false" aria-label="Show 2025 publications (2 total)">
-                <span class="year-label">2025</span>
-                <span class="year-count" aria-hidden="true">2</span>
-              </button>
-              <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')" aria-pressed="false" aria-label="Show 2024 publications (2 total)">
-                <span class="year-label">2024</span>
-                <span class="year-count" aria-hidden="true">2</span>
-              </button>
-              <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')" aria-pressed="false" aria-label="Show 2022 publications (1 total)">
-                <span class="year-label">2022</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
-              <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')" aria-pressed="false" aria-label="Show 2021 publications (1 total)">
-                <span class="year-label">2021</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
-              <button class="timeline-year" data-year="2018" onclick="filterPublicationsByYear('2018')" aria-pressed="false" aria-label="Show 2018 publications (1 total)">
-                <span class="year-label">2018</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication List -->
-      <div class="space-y-8" id="publicationList">
-        <!-- Publication 1 - NEW -->
-        <div class="publication-item" data-year="2025">
-          <h4 class="text-xl font-semibold">1. Covalent Control of Excitonic Interactions in Perylene Diimide Trimers: A
-            Computational Study</h4>
-          <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Jean-Huber Olivier, Sebastian
-            Fernandez-Albertia, and Sergei Tretiak <span
-              class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded">Peer-reviewed journal (2025 -
-              Submitted)</span>
-            <span class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded font-semibold">Under
-              Review</span>
-          </p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
-            Comprehensive study investigating structural disorder effects on electronic and optical properties in
-            π-stacked perylene diimide aggregates, providing insights for organic photovoltaic design.</p>
-        </div>
-
-        <!-- Publication 2 - Journal Cover -->
-        <div class="publication-item" data-year="2025">
-          <h4 class="text-xl font-semibold">2. <a href="https://doi.org/10.1021/acs.jpclett.5c02638"
-              class="text-blue-500 hover:underline">Deconstructing Chirality: Probing Local and Nonlocal Effects in
-              Azobenzene Derivatives with X-ray Circular Dichroism</a></h4>
-          <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Victor M. Freixas, Lei Xu, Jérémy R.
-            Rouxel, Niranjan Govind, Marco Garavelli, Shaul Mukamel, and Sergei Tretiak <span
-              class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">J. Phys. Chem. Lett. 16
-              (2025)</span>
-            <span class="inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded font-semibold">Journal
-              Cover</span>
-            <span class="inline-block bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded font-semibold">Top 15%
-              Novelty</span>
-          </p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
-            Delivered foundational insights into the structural origins of chiroptical signals, leading to a mechanistic
-            understanding crucial for the rational design of functional molecular machines. Accepted without revision
-            and selected for journal cover.</p>
-        </div>
-
-        <!-- Publication 3 -->
-        <div class="publication-item" data-year="2024">
-          <h4 class="text-xl font-semibold">4. <a href="https://doi.org/10.1063/5.0217080"
-              class="text-blue-500 hover:underline">Calculating Absorption and Fluorescence Spectra for Chromophores in
-              Solution with Ensemble Franck-Condon Methods</a></h4>
-          <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Sapana V. Shedge, Tim J. Zuehlsdorff,
-            Christine M. Isborn <span class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem.
-              Phys. (2024)</span><span
-              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 6</span>
-            <span class="inline-block bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded font-semibold">Top 5-25%
-              Novelty</span>
-          </p>
-
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
-            computational approach for accurate prediction of absorption and fluorescence spectra in solution, advancing
-            spectroscopic analysis techniques.</p>
-        </div>
-
-        <!-- Publication 4 -->
-        <div class="publication-item" data-year="2022">
-          <h4 class="text-xl font-semibold">5. <a href="https://www.nature.com/articles/s41467-022-35589-4"
-              class="text-blue-500 hover:underline">Molecular Polariton Electroabsorption</a></h4>
-          <p style="width: fit-content;">Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman, <u><strong>Ajay
-                Khanna</strong></u>, Sapana Shedge, Christine Isborn, Joel Yuen-Zhou, Noel C. Giebink <span
-              class="inline-block bg-green-800 text-white text-xs px-2 py-1 rounded">Nature Comm. (2022)</span> <span
-              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 22</span></p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
-            study on molecular polariton electroabsorption, opening new avenues in optoelectronics and quantum
-            technology.</p>
-        </div>
-        <!-- Publication 5 -->
-        <div class="publication-item" data-year="2021">
-          <h4 class="text-xl font-semibold">6. <a
-              href="https://pubs.aip.org/aip/jcp/article/154/8/084116/1062868/Explicit-environmental-and-vibronic-effects-in"
-              class="text-blue-500 hover:underline">Explicit Environmental and Vibronic Effects in Simulations of Linear
-              and Nonlinear Optical Spectroscopy</a></h4>
-          <p style="width: fit-content;">Sapana V. Shedge, Tim J. Zuehlsdorff, <u><strong>Ajay Khanna</strong></u>,
-            Stacey Conley, Christine M. Isborn <span
-              class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem. Phys. (2021)</span> <span
-              class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 15</span></p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
-            Comprehensive exploration of environmental and vibronic effects in optical spectroscopy simulations,
-            enhancing accuracy in molecular property predictions.</p>
-        </div>
-        <!-- Publication 6 -->
-        <div class="publication-item" data-year="2024">
-          <h4 class="text-xl font-semibold">6. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.4c01401"
-              class="text-blue-500 hover:underline">Axial H-Bonding Solvent Controls Inhomogeneous Spectral Broadening,
-              While Peripheral H-Bonding Solvent Controls Vibronic Broadening: Cresyl Violet in Methanol</a></h4>
-          <p style="width: fit-content;">Christopher A. Myers, Shao-Yu Lu, Sapana Shedge, Arthur Pyuskulyan, Katherine
-            Donahoe, <u><strong>Ajay Khanna</strong></u>, Liang Shi, and Christine M. Isborn <span
-              class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">The Journal of Physical Chemistry B
-              2024</span> <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations:
-              6</span></p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
-            Systematic dissection of solvent effects on spectral line shapes, improving simulation accuracy by
-            identifying the critical role of specific molecular interactions.</p>
-        </div>
-        <!-- Publication 7 -->
-        <div class="publication-item" data-year="2018">
-          <h4 class="text-xl font-semibold">7. <a href="https://hittransaction.in/journals/4_1A/41A_01.pdf"
-              class="text-blue-500 hover:underline">Ligand Driven Electron Counting Rule Selection: A Case Study for
-              Ge5R Complex</a></h4>
-          <p style="width: fit-content;">Rakesh Parida, G. Naaresh Reddy, <u><strong>Ajay Khanna</strong></u>,
-            Gourisankar Roymahapatra, Santanab Giri <span
-              class="inline-block bg-indigo-600 text-white text-xs px-2 py-1 rounded">Int. J. HIT. TRANSC: ECCN. Vol
-              (2018)</span></p>
-          <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
-            Theoretical investigation of ligand-driven electron counting rules in germanium cluster complexes,
-            contributing to understanding of main-group element chemistry.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- World Collaboration Map Section -->
-    <section class="collaboration-section">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Global Research Collaboration</h2>
-        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Working with leading researchers and institutions worldwide to advance computational chemistry
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-200 leading-relaxed">
+          Bridging quantum mechanics and real-world impact through
+          <span class="text-blue-300 font-semibold">drug discovery</span>,
+          <span class="text-green-300 font-semibold">energy transfer</span>, and
+          <span class="text-teal-300 font-semibold">sustainable technologies</span>
         </p>
 
-        <!-- Map Container -->
-        <div id="collaboration-map" data-aos="fade-up" data-aos-delay="200"></div>
-
-        <!-- Collaboration Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto" data-aos="fade-up"
-          data-aos-delay="300">
-          <div class="text-center">
-            <div class="text-4xl font-bold text-blue-600 mb-2">12</div>
-            <div class="text-sm text-gray-600">Institutions</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-green-600 mb-2">4</div>
-            <div class="text-sm text-gray-600">Countries</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
-            <div class="text-sm text-gray-600">Collaborators</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-orange-600 mb-2">7</div>
-            <div class="text-sm text-gray-600">Joint Publications</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research Timeline Section -->
-    <section id="research-timeline" class="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">My Research Journey</h2>
-        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          From first publication to cutting-edge postdoctoral research
-        </p>
-
-        <!-- Timeline Container (Horizontal Scrollable) -->
-        <div class="relative" data-aos="fade-up" data-aos-delay="200">
-          <!-- Scroll Instructions -->
-          <div class="text-center text-sm text-gray-500 mb-4 flex items-center justify-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#research-impact"
+            class="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+            Explore Research
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
-            <span>Scroll horizontally to explore the timeline</span>
+          </a>
+
+          <a href="#contact"
+            class="bg-white bg-opacity-10 backdrop-blur-md hover:bg-opacity-20 text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+            Let's Collaborate
+          </a>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+          <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="text-4xl font-bold text-blue-300 counter" data-target="7">7</div>
+            <div class="text-sm text-gray-300 mt-2">Publications</div>
+          </div>
+          <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="text-4xl font-bold text-green-300 counter" data-target="50">50</div>
+            <div class="text-sm text-gray-300 mt-2">Citations</div>
+          </div>
+          <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="text-4xl font-bold text-yellow-300 counter" data-target="4">4</div>
+            <div class="text-sm text-gray-300 mt-2">Open Source Tools</div>
+          </div>
+          <div class="stat-card bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4" data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="text-4xl font-bold text-teal-300 counter" data-target="2000">2000</div>
+            <div class="text-sm text-gray-300 mt-2">Articles Downloaded</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#research-impact" class="text-white opacity-75 hover:opacity-100">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Research Impact Areas Section -->
+    <section id="research-impact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-5xl font-bold text-center mb-4" data-aos="fade-up">Research Impact Areas</h2>
+        <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Computational chemistry at the intersection of molecular science and transformative applications
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Drug Discovery Card -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flip-card-inner">
+              <!-- Front -->
+              <div
+                class="flip-card-front bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+                <div class="text-6xl mb-4">💊</div>
+                <h3 class="text-2xl font-bold text-center">Drug Discovery</h3>
+                <p class="text-blue-100 text-center mt-2">Virtual Screening & Design</p>
+              </div>
+              <!-- Back -->
+              <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-blue-500">
+                <h4 class="text-xl font-bold text-blue-600 mb-4">Key Capabilities:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Virtual screening pipelines
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Protein-ligand binding
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    ADMET prediction (ML)
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Binding affinity calculations
+                  </li>
+                </ul>
+                <div class="mt-6 text-center">
+                  <a href="#projects" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                    View Projects
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="timeline-scroll-container">
-            <div class="timeline-track">
-              <!-- Timeline Line -->
-              <div class="timeline-line"></div>
+          <!-- Energy Transfer Card -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front bg-gradient-to-br from-green-500 to-green-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+                <div class="text-6xl mb-4">⚡</div>
+                <h3 class="text-2xl font-bold text-center">Energy Transfer</h3>
+                <p class="text-green-100 text-center mt-2">FRET & Excitonic Coupling</p>
+              </div>
+              <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-green-500">
+                <h4 class="text-xl font-bold text-green-600 mb-4">Key Capabilities:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    FRET mechanisms
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Excitonic coupling calculations
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Light-harvesting systems
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Charge transfer dynamics
+                  </li>
+                </ul>
+                <div class="mt-6 text-center">
+                  <a href="#projects"
+                    class="text-green-600 font-semibold hover:text-green-800 inline-flex items-center">
+                    View Projects
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <!-- 2018: First Publication -->
-              <div class="timeline-event" data-year="2018">
-                <div class="timeline-dot education"></div>
-                <div class="timeline-card">
-                  <div class="timeline-year">2018</div>
-                  <div class="timeline-icon">📄</div>
-                  <h4 class="timeline-title">First Publication</h4>
-                  <p class="timeline-description">
-                    Ligand Driven Electron Counting Rule Selection (NIT Rourkela collaboration)
+          <!-- Energy Storage Card -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+                <div class="text-6xl mb-4">🔋</div>
+                <h3 class="text-2xl font-bold text-center">Energy Storage</h3>
+                <p class="text-yellow-100 text-center mt-2">Battery Materials</p>
+              </div>
+              <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-yellow-500">
+                <h4 class="text-xl font-bold text-yellow-600 mb-4">Key Capabilities:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Electrode materials design
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Electrolyte optimization
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Li-ion migration pathways
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Solid-state batteries
+                  </li>
+                </ul>
+                <div class="mt-6 text-center">
+                  <a href="#projects"
+                    class="text-yellow-600 font-semibold hover:text-yellow-800 inline-flex items-center">
+                    View Projects
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Green Energy Card -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front bg-gradient-to-br from-teal-500 to-cyan-700 rounded-2xl shadow-xl p-8 text-white flex flex-col items-center justify-center">
+                <div class="text-6xl mb-4">🌱</div>
+                <h3 class="text-2xl font-bold text-center">Green Energy</h3>
+                <p class="text-teal-100 text-center mt-2">Sustainable Solutions</p>
+              </div>
+              <div class="flip-card-back bg-white rounded-2xl shadow-xl p-6 border-4 border-teal-500">
+                <h4 class="text-xl font-bold text-teal-600 mb-4">Key Capabilities:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Organic photovoltaics
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Catalytic CO₂ reduction
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Water splitting mechanisms
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Sustainable materials
+                  </li>
+                </ul>
+                <div class="mt-6 text-center">
+                  <a href="#projects" class="text-teal-600 font-semibold hover:text-teal-800 inline-flex items-center">
+                    View Projects
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
+
+        <div class="max-w-6xl mx-auto">
+          <!-- Main Content Grid -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+            <!-- Photo & Quick Info -->
+            <div class="md:col-span-1" data-aos="fade-right">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg text-center">
+                <!-- Photo Placeholder -->
+                <div
+                  class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold shadow-xl">
+                  <img src="./images/head_img_ajay.png" alt="Ajay Khanna" class="w-48 h-48 rounded-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Ajay Khanna, Ph.D.</h3>
+                <p class="text-blue-600 font-semibold mb-1">Postdoctoral Researcher</p>
+                <p class="text-gray-600 text-sm mb-6">Los Alamos National Laboratory</p>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="bg-white rounded-lg p-3 shadow">
+                    <div class="text-2xl font-bold text-blue-600">7</div>
+                    <div class="text-xs text-gray-600">Publications</div>
+                  </div>
+                  <div class="bg-white rounded-lg p-3 shadow">
+                    <div class="text-2xl font-bold text-green-600">50+</div>
+                    <div class="text-xs text-gray-600">Citations</div>
+                  </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="space-y-3">
+                  <a href="./resume.html"
+                    class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+                    Download CV
+                  </a>
+                  <a href="#contact"
+                    class="block w-full bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-colors duration-300">
+                    Contact Me
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Summary & Details -->
+            <div class="md:col-span-2" data-aos="fade-left">
+
+              <!-- Professional Summary -->
+              <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span class="w-1 h-8 bg-blue-600 mr-3"></span>
+                  Professional Summary
+                </h3>
+                <div class="text-gray-700 leading-relaxed space-y-4">
+                  <p>
+                    I'm a computational chemist at Los Alamos National Laboratory, specializing in the development
+                    and application of quantum mechanical methods and machine learning to solve critical challenges
+                    at the intersection of molecular science and real-world applications.
                   </p>
-                  <span class="timeline-badge publication">Publication</span>
+                  <p>
+                    My research bridges fundamental theoretical chemistry with transformative solutions in drug
+                    discovery, energy materials, and sustainable technologies. I believe the most impactful
+                    computational research emerges at the intersection of rigorous quantum mechanics, efficient
+                    algorithms, and practical applications.
+                  </p>
                 </div>
               </div>
 
-              <!-- 2019: PhD Start + Fellowship -->
-              <div class="timeline-event" data-year="2019">
-                <div class="timeline-dot education"></div>
-                <div class="timeline-card">
-                  <div class="timeline-year">2019</div>
-                  <div class="timeline-icon">🎓</div>
-                  <h4 class="timeline-title">Ph.D. Started</h4>
-                  <p class="timeline-description">
-                    UC Merced - Computational Chemistry<br>
-                    <span class="text-sm text-yellow-600 font-semibold">🏆 Summer Research Fellowship</span>
-                  </p>
-                  <span class="timeline-badge education">Education</span>
+              <!-- Current Research Focus -->
+              <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span class="w-1 h-8 bg-green-600 mr-3"></span>
+                  Current Research at LANL
+                </h3>
+                <div class="grid gap-3">
+                  <div class="flex items-start bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
+                    <svg class="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-gray-800">Developing deep learning frameworks for non-adiabatic molecular dynamics
+                      simulations</p>
+                  </div>
+                  <div class="flex items-start bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                    <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-gray-800">Investigating chiroptical spectroscopy in π-stacked molecular aggregates
+                    </p>
+                  </div>
+                  <div class="flex items-start bg-purple-50 rounded-lg p-4 border-l-4 border-purple-500">
+                    <svg class="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <p class="text-gray-800">Designing QSPR models for energy transfer materials</p>
+                  </div>
                 </div>
               </div>
 
-              <!-- 2020: Summer Fellowship (2nd) -->
-              <div class="timeline-event" data-year="2020">
-                <div class="timeline-dot award"></div>
-                <div class="timeline-card">
-                  <div class="timeline-year">2020</div>
-                  <div class="timeline-icon">🏆</div>
-                  <h4 class="timeline-title">Summer Research Fellowship</h4>
-                  <p class="timeline-description">
-                    UC Merced (2nd consecutive year)
-                  </p>
-                  <span class="timeline-badge award">Award</span>
-                </div>
-              </div>
-
-              <!-- 2021: Publication + Conferences -->
-              <div class="timeline-event" data-year="2021">
-                <div class="timeline-dot publication"></div>
-                <div class="timeline-card">
-                  <div class="timeline-year">2021</div>
-                  <div class="timeline-icon">📄</div>
-                  <h4 class="timeline-title">J. Chem. Phys. Publication</h4>
-                  <p class="timeline-description">
-                    Explicit Environmental Effects in Optical Spectroscopy<br>
-                    <span class="text-sm text-green-600">🎤 ACS Conference (Talk & Poster)</span><br>
-                    <span class="text-sm text-green-600">🎤 UC Merced Talk</span>
-                  </p>
-                  <span class="timeline-badge publication">Publication</span>
-                  <span class="timeline-badge conference">Conference</span>
-                </div>
-              </div>
-
-              <!-- 2022: Nature Communications + Multiple Awards -->
-              <div class="timeline-event" data-year="2022">
-                <div class="timeline-dot publication"></div>
-                <div class="timeline-card highlight">
-                  <div class="timeline-year">2022</div>
-                  <div class="timeline-icon">⭐</div>
-                  <h4 class="timeline-title">Nature Communications</h4>
-                  <p class="timeline-description">
-                    Molecular Polariton Electroabsorption (22 citations)<br>
-                    <span class="text-sm text-yellow-600 font-semibold">🏆 5 Awards & Fellowships:</span><br>
-                    <span class="text-xs">• Graduate Excel Peer Mentor Award</span><br>
-                    <span class="text-xs">• Graduate Fellowship Incentive Program</span><br>
-                    <span class="text-xs">• GROW TA Training Fellowship</span><br>
-                    <span class="text-xs">• Chemistry Travel Award</span><br>
-                    <span class="text-sm text-green-600">🎤 ACS Spring Conference (Talk)</span>
-                  </p>
-                  <span class="timeline-badge publication">Publication</span>
-                  <span class="timeline-badge award">Awards</span>
-                </div>
-              </div>
-
-              <!-- 2023: Internship + Outstanding Award + Grant -->
-              <div class="timeline-event" data-year="2023">
-                <div class="timeline-dot work"></div>
-                <div class="timeline-card highlight">
-                  <div class="timeline-year">2023</div>
-                  <div class="timeline-icon">💼</div>
-                  <h4 class="timeline-title">CADD Intern - Frontier Medicines</h4>
-                  <p class="timeline-description">
-                    Virtual screening, QM/MM, and drug design<br>
-                    <span class="text-sm text-yellow-600 font-semibold">🏆 Outstanding Graduate Student Award (UC
-                      Merced)</span><br>
-                    <span class="text-sm text-purple-600 font-semibold">💰 XSEDE/ACCESS HPC Grant ($5,263)</span><br>
-                    <span class="text-xs">8000 GPU-hours + 3000 CPU-hours</span>
-                  </p>
-                  <span class="timeline-badge work">Work Experience</span>
-                  <span class="timeline-badge award">Grant</span>
-                </div>
-              </div>
-
-              <!-- 2024: PhD Complete + Publications + Conference -->
-              <div class="timeline-event" data-year="2024">
-                <div class="timeline-dot education"></div>
-                <div class="timeline-card highlight">
-                  <div class="timeline-year">2024</div>
-                  <div class="timeline-icon">🎓</div>
-                  <h4 class="timeline-title">Ph.D. Completed</h4>
-                  <p class="timeline-description">
-                    UC Merced - Computational Chemistry<br>
-                    <span class="text-sm text-blue-600">📄 2 Publications:</span><br>
-                    <span class="text-xs">• J. Chem. Phys. (Franck-Condon Methods - 6 citations)</span><br>
-                    <span class="text-xs">• J. Phys. Chem. B (Spectral Broadening - 6 citations)</span><br>
-                    <span class="text-sm text-green-600">🎤 WCTC Conference (Poster)</span>
-                  </p>
-                  <span class="timeline-badge education">Milestone</span>
-                  <span class="timeline-badge publication">Publications</span>
-                </div>
-              </div>
-
-              <!-- 2025: LANL Postdoc + Journal Cover -->
-              <div class="timeline-event" data-year="2025">
-                <div class="timeline-dot work"></div>
-                <div class="timeline-card highlight current">
-                  <div class="timeline-year">2025</div>
-                  <div class="timeline-icon">🚀</div>
-                  <h4 class="timeline-title">Postdoc - Los Alamos National Laboratory</h4>
-                  <p class="timeline-description">
-                    Deep Learning for Non-Adiabatic MD & Chiroptical Spectroscopy<br>
-                    <span class="text-sm text-blue-600">📄 2 Publications (2025):</span><br>
-                    <span class="text-xs">• J. Phys. Chem. Lett. (Journal Cover + Top 15% Novelty)</span><br>
-                    <span class="text-xs">• J. Phys. Chem. C. (Under Review)</span><br>
-                    <span class="text-sm text-green-600">🎤 ESP 2025 Conference (Poster)</span>
-                  </p>
-                  <span class="timeline-badge work current">Current Position</span>
-                  <span class="timeline-badge publication">Publications</span>
+              <!-- Core Expertise -->
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span class="w-1 h-8 bg-purple-600 mr-3"></span>
+                  Core Expertise
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                    Quantum Mechanics & QM/MM
+                  </span>
+                  <span
+                    class="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                    Molecular Dynamics
+                  </span>
+                  <span
+                    class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                    Machine Learning for Chemistry
+                  </span>
+                  <span
+                    class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                    High-Performance Computing
+                  </span>
+                  <span
+                    class="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
+                    Virtual Screening & Drug Design
+                  </span>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- Navigation Arrows -->
-          <button class="timeline-arrow timeline-arrow-left" onclick="scrollTimeline('left')" aria-label="Scroll timeline left">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4">
+
+      <!-- Projects Section -->
+      <section id="projects" class="my-12" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="text-3xl font-bold mb-4">Projects</h2>
+
+        <!-- Screen reader announcements for filter changes -->
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="project-filter-status"></div>
+
+        <!-- Project Filters -->
+        <div class="project-filters mb-8" role="group" aria-label="Project category filters">
+          <button class="filter-btn active" data-category="all" onclick="filterProjects('all')" aria-pressed="true"
+            aria-label="Show all projects">
+            All Projects
+          </button>
+          <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')"
+            aria-pressed="false" aria-label="Filter by Spectroscopy projects">
+            Spectroscopy
+          </button>
+          <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')" aria-pressed="false"
+            aria-label="Filter by QM/MM projects">
+            QM/MM
+          </button>
+          <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')" aria-pressed="false"
+            aria-label="Filter by Tools projects">
+            Tools
+          </button>
+          <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')" aria-pressed="false"
+            aria-label="Filter by Energy Transfer projects">
+            Energy Transfer
+          </button>
+        </div>
+
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div class="flex transition-transform duration-300 ease-in-out" id="projectSlider">
+              <!-- Project 1 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="spectroscopy">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
+                  class=" w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a
+                        href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                        class="text-blue-500 hover:underline">Computing Absorption and Fluorescence Spectra</a></h3>
+                    <p class="text-gray-700">Calculating absorption and fluroscence spectra of molecules in explicit
+                      environment using ensemble Franck-Condon methods </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="qmmm">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a
+                        href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                        class="text-blue-500 hover:underline">Automate QM/MM Sims</a></h3>
+                    <p class="text-gray-700">A Python program designed automate MD trajectories containing dyes in
+                      solvents to hybrid QM/MM simulations. </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Project 3 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
+                        class="text-blue-500 hover:underline">MolVizMan</a></h3>
+                    <p class="text-gray-700">An interactive Python GUI application allows you to visualize and
+                      manipulate
+                      molecules from an XYZ file.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Project 4 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="energy">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
+                        class="text-blue-500 hover:underline">Excitonic Coupling</a></h3>
+                    <p class="text-gray-700">Computing Excitonic Coupling Between Molecules Using Various Excitonic
+                      Coupling Schemes</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Project 5 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
+                        class="text-blue-500 hover:underline">DOI2BibTex</a></h3>
+                    <p class="text-gray-700">Convert Digital Object Identifiers (DOI) into BibTeX entries with a simple,
+                      user-friendly web app built using Streamlit!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            onclick="slideProject(1)" aria-label="Previous project">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button class="timeline-arrow timeline-arrow-right" onclick="scrollTimeline('right')" aria-label="Scroll timeline right">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            onclick="slideProject(-1)" aria-label="Next project">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
         </div>
+      </section>
 
-        <!-- Timeline Summary Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12 max-w-4xl mx-auto" data-aos="fade-up"
-          data-aos-delay="300">
-          <div class="text-center bg-blue-50 rounded-lg p-4">
-            <div class="text-3xl font-bold text-blue-600">6</div>
-            <div class="text-sm text-gray-600">Years Journey</div>
+      <!-- Skills Section -->
+      <section id="skills" class="my-12">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Technical Expertise</h2>
+        <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Combining quantum mechanics,
+          molecular simulations, and machine learning for real-world impact</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Skill 1: Drug Discovery Tools -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-3">
+              <div class="bg-blue-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Drug Discovery</h3>
+            </div>
+            <p class="text-gray-700 mb-3">Virtual screening, docking, and ADMET prediction for therapeutic design</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">RDKit</span>
+              <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">AutoDock</span>
+              <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">Schrödinger</span>
+              <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">MOE</span>
+            </div>
           </div>
-          <div class="text-center bg-green-50 rounded-lg p-4">
-            <div class="text-3xl font-bold text-green-600">7</div>
-            <div class="text-sm text-gray-600">Publications</div>
+
+          <!-- Skill 2: QM/MM & Spectroscopy -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-3">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">QM/MM & Spectroscopy</h3>
+            </div>
+            <p class="text-gray-700 mb-3">Hybrid quantum/classical methods for excited states and optical properties</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">TeraChem</span>
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Gaussian</span>
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Amber</span>
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">NAMD</span>
+            </div>
           </div>
-          <div class="text-center bg-yellow-50 rounded-lg p-4">
-            <div class="text-3xl font-bold text-yellow-600">7+</div>
-            <div class="text-sm text-gray-600">Awards</div>
+
+          <!-- Skill 3: Energy Materials -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center mb-3">
+              <div class="bg-yellow-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Energy Materials</h3>
+            </div>
+            <p class="text-gray-700 mb-3">Periodic DFT for batteries, catalysts, and photovoltaic materials</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">SIESTA</span>
+              <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">ORCA</span>
+              <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">LAMMPS</span>
+              <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">Quantum Espresso</span>
+            </div>
           </div>
-          <div class="text-center bg-purple-50 rounded-lg p-4">
-            <div class="text-3xl font-bold text-purple-600">5</div>
-            <div class="text-sm text-gray-600">Conferences</div>
+
+          <!-- Skill 4: Machine Learning -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="400">
+            <div class="flex items-center mb-3">
+              <div class="bg-purple-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Machine Learning</h3>
+            </div>
+            <p class="text-gray-700 mb-3">ML/DL models for property prediction, QSAR, and molecular generation</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">PyTorch</span>
+              <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">TensorFlow</span>
+              <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">Scikit-learn</span>
+              <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">DeepChem</span>
+            </div>
           </div>
-          <div class="text-center bg-pink-50 rounded-lg p-4">
-            <div class="text-3xl font-bold text-pink-600">1</div>
-            <div class="text-sm text-gray-600">HPC Grant</div>
+
+          <!-- Skill 5: Programming & HPC -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center mb-3">
+              <div class="bg-indigo-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Programming & HPC</h3>
+            </div>
+            <p class="text-gray-700 mb-3">High-performance computing and GPU acceleration for large-scale simulations
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">Python</span>
+              <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">C++</span>
+              <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">CUDA</span>
+              <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">MPI</span>
+            </div>
+          </div>
+
+          <!-- Skill 6: Cheminformatics -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="600">
+            <div class="flex items-center mb-3">
+              <div class="bg-teal-100 p-2 rounded-lg mr-3">
+                <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Cheminformatics</h3>
+            </div>
+            <p class="text-gray-700 mb-3">Large-scale compound screening, similarity search, and QSAR modeling</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">RDKit</span>
+              <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">OpenBabel</span>
+              <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">ChemAxon</span>
+              <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">KNIME</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="my-12">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Professional Experience</h2>
+        <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Research and development at the
+          forefront of computational chemistry</p>
+
+        <div class="space-y-8">
+
+          <!-- Postdoc Position at LANL -->
+          <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900">Postdoctoral Research Associate</h3>
+                <p class="text-xl text-green-600 mt-1">Los Alamos National Laboratory (LANL)</p>
+                <p class="text-gray-600 mt-1">Advisor: Dr. Sergei Tretiak</p>
+              </div>
+              <div class="text-gray-500 mt-2 md:mt-0">
+                <span class="bg-green-100 px-3 py-1 rounded-full text-sm font-semibold">Nov 2024 - Present</span>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Developing deep learning-based surrogate models for non-adiabatic molecular dynamics simulations
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Established quantitative structure-property relationships (QSPR) in π-stacked molecular aggregates
+                  (perylene diimide, squaraine, and cyanine dyes)
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Generated foundational insights into the structural origins of chiroptical signals in chiral molecular
+                  aggregates
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Research Focus:</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Deep Learning</span>
+                <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Non-adiabatic MD</span>
+                <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">QM/MM</span>
+                <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Photophysics</span>
+                <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full">Chiroptical Spectroscopy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graduate Research Position -->
+          <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900">Graduate Researcher</h3>
+                <p class="text-xl text-blue-600 mt-1">University of California, Merced</p>
+                <p class="text-gray-600 mt-1">Computational Chemistry & Physics</p>
+              </div>
+              <div class="text-gray-500 mt-2 md:mt-0">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">2018 - 2024</span>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Extended ensemble Franck-Condon methods for accurate full stack UV-Vis spectroscopy predictions in
+                  solution (J. Chem. Phys. 2024)
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Co-authored Nature Communications publication on molecular polariton electroabsorption (16+ citations)
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Developed QM/MM automation tools reducing simulation setup time by 70%
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Research Focus:</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">Resonance Energy Transfer</span>
+                <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">Optical Spectroscopy</span>
+                <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">QM/MM Methods</span>
+                <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full">GPU Computing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CADD Intern Position at Frontier Medicines -->
+          <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-500" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900">Computer-Aided Drug Design (CADD) Intern</h3>
+                <p class="text-xl text-orange-600 mt-1">Frontier Medicines</p>
+                <p class="text-gray-600 mt-1">Computational Chemistry & Drug Discovery</p>
+              </div>
+              <div class="text-gray-500 mt-2 md:mt-0">
+                <span class="bg-orange-100 px-3 py-1 rounded-full text-sm font-semibold">May 2023 - Aug 2023</span>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Key Achievements:</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Developed Python pipelines to automate SMILES-to-desolvation energy calculations and conformational
+                  sampling for Bruton's Tyrosine Kinase (BTK) inhibitors, leveraging OpenMM and TeraChem (hybrid QM/MM
+                  interface) for significantly streamlined workflows
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Gained proficiency in unbiased and biased ligand-based docking (MOE), successfully deploying these
+                  techniques to perform protein-ligand docking for BTK inhibitors
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Built robust Protein-Ligand binding free energy calculation pipelines, utilizing hybrid QM/MM
+                  techniques, to enable accurate rank-ordering of Bruton's Tyrosine Kinase (BTK) inhibitors
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">Python</span>
+                <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">OpenMM</span>
+                <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">TeraChem</span>
+                <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">MOE</span>
+                <span class="bg-orange-50 text-orange-700 text-sm px-3 py-1 rounded-full">QM/MM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teaching & Mentorship -->
+          <div
+            class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg shadow-lg p-6 border-l-4 border-purple-500"
+            data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Teaching & Mentorship</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">Graduate Mentoring</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>• GradEXCEL Program mentor (2019-2022)</li>
+                  <li>• Supervised undergraduate researchers</li>
+                  <li>• Graduate Excel Peer Mentor Award</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">Teaching Development</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>• Advanced Pedagogy certification</li>
+                  <li>• GROW TA Training Fellowship</li>
+                  <li>• Stanford Writing in Sciences course</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section id="publications" class="my-12 " aria-labelledby="publications-heading">
+        <h2 id="publications-heading" class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
+
+        <!-- Screen reader announcements for filter changes -->
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="publication-filter-status"></div>
+        <div class="mb-4">
+          <a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
+            class="text-blue-500 hover:underline">Google Scholar</a> |
+          <a href="https://www.researchgate.net/profile/Ajay-Khanna-2"
+            class="text-blue-500 hover:underline">ResearchGate</a> |
+          <a href="https://orcid.org/0000-0002-8313-1393" class="text-blue-500 hover:underline">ORCID</a>
+        </div>
+
+        <!-- Interactive Publication Timeline -->
+        <div class="my-8" role="region" aria-label="Publication timeline filter">
+          <div class="flex items-center justify-center mb-6">
+            <div class="publication-timeline-container">
+              <div class="publication-timeline" role="group" aria-label="Filter publications by year">
+                <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')"
+                  aria-pressed="true" aria-label="Show all publications (7 total)">
+                  <span class="year-label">All</span>
+                  <span class="year-count" aria-hidden="true">7</span>
+                </button>
+                <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')"
+                  aria-pressed="false" aria-label="Show 2025 publications (2 total)">
+                  <span class="year-label">2025</span>
+                  <span class="year-count" aria-hidden="true">2</span>
+                </button>
+                <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')"
+                  aria-pressed="false" aria-label="Show 2024 publications (2 total)">
+                  <span class="year-label">2024</span>
+                  <span class="year-count" aria-hidden="true">2</span>
+                </button>
+                <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')"
+                  aria-pressed="false" aria-label="Show 2022 publications (1 total)">
+                  <span class="year-label">2022</span>
+                  <span class="year-count" aria-hidden="true">1</span>
+                </button>
+                <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')"
+                  aria-pressed="false" aria-label="Show 2021 publications (1 total)">
+                  <span class="year-label">2021</span>
+                  <span class="year-count" aria-hidden="true">1</span>
+                </button>
+                <button class="timeline-year" data-year="2018" onclick="filterPublicationsByYear('2018')"
+                  aria-pressed="false" aria-label="Show 2018 publications (1 total)">
+                  <span class="year-label">2018</span>
+                  <span class="year-count" aria-hidden="true">1</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-      </div>
-    </section>
+        <!-- Publication List -->
+        <div class="space-y-8" id="publicationList">
+          <!-- Publication 1 - NEW -->
+          <div class="publication-item" data-year="2025">
+            <h4 class="text-xl font-semibold">1. Covalent Control of Excitonic Interactions in Perylene Diimide Trimers:
+              A
+              Computational Study</h4>
+            <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Jean-Huber Olivier, Sebastian
+              Fernandez-Albertia, and Sergei Tretiak <span
+                class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded">Peer-reviewed journal (2025 -
+                Submitted)</span>
+              <span class="inline-block bg-yellow-200 text-yellow-800 text-xs px-2 py-1 rounded font-semibold">Under
+                Review</span>
+            </p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+              Comprehensive study investigating structural disorder effects on electronic and optical properties in
+              π-stacked perylene diimide aggregates, providing insights for organic photovoltaic design.</p>
+          </div>
 
-    <!-- Professional Certifications Section -->
-    <section id="certifications" class="my-12">
-      <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Professional Certifications</h2>
-      <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Continuous learning and
-        specialization in cutting-edge computational methods</p>
+          <!-- Publication 2 - Journal Cover -->
+          <div class="publication-item" data-year="2025">
+            <h4 class="text-xl font-semibold">2. <a href="https://doi.org/10.1021/acs.jpclett.5c02638"
+                class="text-blue-500 hover:underline">Deconstructing Chirality: Probing Local and Nonlocal Effects in
+                Azobenzene Derivatives with X-ray Circular Dichroism</a></h4>
+            <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Victor M. Freixas, Lei Xu, Jérémy R.
+              Rouxel, Niranjan Govind, Marco Garavelli, Shaul Mukamel, and Sergei Tretiak <span
+                class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded">J. Phys. Chem. Lett. 16
+                (2025)</span>
+              <span class="inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded font-semibold">Journal
+                Cover</span>
+              <span class="inline-block bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded font-semibold">Top 15%
+                Novelty</span>
+            </p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+              Delivered foundational insights into the structural origins of chiroptical signals, leading to a
+              mechanistic
+              understanding crucial for the rational design of functional molecular machines. Accepted without revision
+              and selected for journal cover.</p>
+          </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Publication 3 -->
+          <div class="publication-item" data-year="2024">
+            <h4 class="text-xl font-semibold">4. <a href="https://doi.org/10.1063/5.0217080"
+                class="text-blue-500 hover:underline">Calculating Absorption and Fluorescence Spectra for Chromophores
+                in
+                Solution with Ensemble Franck-Condon Methods</a></h4>
+            <p style="width: fit-content;"><u><strong>Ajay Khanna</strong></u>, Sapana V. Shedge, Tim J. Zuehlsdorff,
+              Christine M. Isborn <span class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem.
+                Phys. (2024)</span><span
+                class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 6</span>
+              <span class="inline-block bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded font-semibold">Top 5-25%
+                Novelty</span>
+            </p>
 
-        <!-- Certification 1: Cheminformatics and Medicinal Chemistry -->
-        <div
-          class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition-shadow duration-300"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-start">
-            <div class="bg-blue-100 p-3 rounded-lg mr-4">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
+              computational approach for accurate prediction of absorption and fluorescence spectra in solution,
+              advancing
+              spectroscopic analysis techniques.</p>
+          </div>
+
+          <!-- Publication 4 -->
+          <div class="publication-item" data-year="2022">
+            <h4 class="text-xl font-semibold">5. <a href="https://www.nature.com/articles/s41467-022-35589-4"
+                class="text-blue-500 hover:underline">Molecular Polariton Electroabsorption</a></h4>
+            <p style="width: fit-content;">Chiao-Yu Cheng, Nina Krainova, Alyssa Brigeman, <u><strong>Ajay
+                  Khanna</strong></u>, Sapana Shedge, Christine Isborn, Joel Yuen-Zhou, Noel C. Giebink <span
+                class="inline-block bg-green-800 text-white text-xs px-2 py-1 rounded">Nature Comm. (2022)</span> <span
+                class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 22</span></p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> || Novel
+              study on molecular polariton electroabsorption, opening new avenues in optoelectronics and quantum
+              technology.</p>
+          </div>
+          <!-- Publication 5 -->
+          <div class="publication-item" data-year="2021">
+            <h4 class="text-xl font-semibold">6. <a
+                href="https://pubs.aip.org/aip/jcp/article/154/8/084116/1062868/Explicit-environmental-and-vibronic-effects-in"
+                class="text-blue-500 hover:underline">Explicit Environmental and Vibronic Effects in Simulations of
+                Linear
+                and Nonlinear Optical Spectroscopy</a></h4>
+            <p style="width: fit-content;">Sapana V. Shedge, Tim J. Zuehlsdorff, <u><strong>Ajay Khanna</strong></u>,
+              Stacey Conley, Christine M. Isborn <span
+                class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">J. Chem. Phys. (2021)</span> <span
+                class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations: 15</span></p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+              Comprehensive exploration of environmental and vibronic effects in optical spectroscopy simulations,
+              enhancing accuracy in molecular property predictions.</p>
+          </div>
+          <!-- Publication 6 -->
+          <div class="publication-item" data-year="2024">
+            <h4 class="text-xl font-semibold">6. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.4c01401"
+                class="text-blue-500 hover:underline">Axial H-Bonding Solvent Controls Inhomogeneous Spectral
+                Broadening,
+                While Peripheral H-Bonding Solvent Controls Vibronic Broadening: Cresyl Violet in Methanol</a></h4>
+            <p style="width: fit-content;">Christopher A. Myers, Shao-Yu Lu, Sapana Shedge, Arthur Pyuskulyan, Katherine
+              Donahoe, <u><strong>Ajay Khanna</strong></u>, Liang Shi, and Christine M. Isborn <span
+                class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">The Journal of Physical Chemistry B
+                2024</span> <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded">Citations:
+                6</span></p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+              Systematic dissection of solvent effects on spectral line shapes, improving simulation accuracy by
+              identifying the critical role of specific molecular interactions.</p>
+          </div>
+          <!-- Publication 7 -->
+          <div class="publication-item" data-year="2018">
+            <h4 class="text-xl font-semibold">7. <a href="https://hittransaction.in/journals/4_1A/41A_01.pdf"
+                class="text-blue-500 hover:underline">Ligand Driven Electron Counting Rule Selection: A Case Study for
+                Ge5R Complex</a></h4>
+            <p style="width: fit-content;">Rakesh Parida, G. Naaresh Reddy, <u><strong>Ajay Khanna</strong></u>,
+              Gourisankar Roymahapatra, Santanab Giri <span
+                class="inline-block bg-indigo-600 text-white text-xs px-2 py-1 rounded">Int. J. HIT. TRANSC: ECCN. Vol
+                (2018)</span></p>
+            <p class="mt-2 text-gray-700" style="background-color:aliceblue; color: grey; width:fit-content;"> ||
+              Theoretical investigation of ligand-driven electron counting rules in germanium cluster complexes,
+              contributing to understanding of main-group element chemistry.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- World Collaboration Map Section -->
+      <section class="collaboration-section">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Global Research Collaboration</h2>
+          <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Working with leading researchers and institutions worldwide to advance computational chemistry
+          </p>
+
+          <!-- Map Container -->
+          <div id="collaboration-map" data-aos="fade-up" data-aos-delay="200"></div>
+
+          <!-- Collaboration Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-blue-600 mb-2">12</div>
+              <div class="text-sm text-gray-600">Institutions</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-green-600 mb-2">4</div>
+              <div class="text-sm text-gray-600">Countries</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
+              <div class="text-sm text-gray-600">Collaborators</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-orange-600 mb-2">7</div>
+              <div class="text-sm text-gray-600">Joint Publications</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Timeline Section -->
+      <section id="research-timeline" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">My Research Journey</h2>
+          <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            From first publication to cutting-edge postdoctoral research
+          </p>
+
+          <!-- Timeline Container (Horizontal Scrollable) -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="200">
+            <!-- Scroll Instructions -->
+            <div class="text-center text-sm text-gray-500 mb-4 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
                 </path>
               </svg>
+              <span>Scroll horizontally to explore the timeline</span>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Introduction to Cheminformatics and Medicinal
-                Chemistry</h3>
-              <p class="text-blue-600 font-semibold mb-2">Udemy</p>
-              <p class="text-gray-600 text-sm mb-3">2024</p>
-              <p class="text-gray-700 text-sm">Comprehensive training in computational methods for molecular
-                representation, drug-target interactions, and structure-based drug design</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Certification 2: Data Science with Python -->
-        <div
-          class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition-shadow duration-300"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="flex items-start">
-            <div class="bg-purple-100 p-3 rounded-lg mr-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                </path>
+            <div class="timeline-scroll-container">
+              <div class="timeline-track">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- 2018: First Publication -->
+                <div class="timeline-event" data-year="2018">
+                  <div class="timeline-dot education"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-icon">📄</div>
+                    <h4 class="timeline-title">First Publication</h4>
+                    <p class="timeline-description">
+                      Ligand Driven Electron Counting Rule Selection (NIT Rourkela collaboration)
+                    </p>
+                    <span class="timeline-badge publication">Publication</span>
+                  </div>
+                </div>
+
+                <!-- 2019: PhD Start + Fellowship -->
+                <div class="timeline-event" data-year="2019">
+                  <div class="timeline-dot education"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-icon">🎓</div>
+                    <h4 class="timeline-title">Ph.D. Started</h4>
+                    <p class="timeline-description">
+                      UC Merced - Computational Chemistry<br>
+                      <span class="text-sm text-yellow-600 font-semibold">🏆 Summer Research Fellowship</span>
+                    </p>
+                    <span class="timeline-badge education">Education</span>
+                  </div>
+                </div>
+
+                <!-- 2020: Summer Fellowship (2nd) -->
+                <div class="timeline-event" data-year="2020">
+                  <div class="timeline-dot award"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-icon">🏆</div>
+                    <h4 class="timeline-title">Summer Research Fellowship</h4>
+                    <p class="timeline-description">
+                      UC Merced (2nd consecutive year)
+                    </p>
+                    <span class="timeline-badge award">Award</span>
+                  </div>
+                </div>
+
+                <!-- 2021: Publication + Conferences -->
+                <div class="timeline-event" data-year="2021">
+                  <div class="timeline-dot publication"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-icon">📄</div>
+                    <h4 class="timeline-title">J. Chem. Phys. Publication</h4>
+                    <p class="timeline-description">
+                      Explicit Environmental Effects in Optical Spectroscopy<br>
+                      <span class="text-sm text-green-600">🎤 ACS Conference (Talk & Poster)</span><br>
+                      <span class="text-sm text-green-600">🎤 UC Merced Talk</span>
+                    </p>
+                    <span class="timeline-badge publication">Publication</span>
+                    <span class="timeline-badge conference">Conference</span>
+                  </div>
+                </div>
+
+                <!-- 2022: Nature Communications + Multiple Awards -->
+                <div class="timeline-event" data-year="2022">
+                  <div class="timeline-dot publication"></div>
+                  <div class="timeline-card highlight">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-icon">⭐</div>
+                    <h4 class="timeline-title">Nature Communications</h4>
+                    <p class="timeline-description">
+                      Molecular Polariton Electroabsorption (22 citations)<br>
+                      <span class="text-sm text-yellow-600 font-semibold">🏆 5 Awards & Fellowships:</span><br>
+                      <span class="text-xs">• Graduate Excel Peer Mentor Award</span><br>
+                      <span class="text-xs">• Graduate Fellowship Incentive Program</span><br>
+                      <span class="text-xs">• GROW TA Training Fellowship</span><br>
+                      <span class="text-xs">• Chemistry Travel Award</span><br>
+                      <span class="text-sm text-green-600">🎤 ACS Spring Conference (Talk)</span>
+                    </p>
+                    <span class="timeline-badge publication">Publication</span>
+                    <span class="timeline-badge award">Awards</span>
+                  </div>
+                </div>
+
+                <!-- 2023: Internship + Outstanding Award + Grant -->
+                <div class="timeline-event" data-year="2023">
+                  <div class="timeline-dot work"></div>
+                  <div class="timeline-card highlight">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-icon">💼</div>
+                    <h4 class="timeline-title">CADD Intern - Frontier Medicines</h4>
+                    <p class="timeline-description">
+                      Virtual screening, QM/MM, and drug design<br>
+                      <span class="text-sm text-yellow-600 font-semibold">🏆 Outstanding Graduate Student Award (UC
+                        Merced)</span><br>
+                      <span class="text-sm text-purple-600 font-semibold">💰 XSEDE/ACCESS HPC Grant ($5,263)</span><br>
+                      <span class="text-xs">8000 GPU-hours + 3000 CPU-hours</span>
+                    </p>
+                    <span class="timeline-badge work">Work Experience</span>
+                    <span class="timeline-badge award">Grant</span>
+                  </div>
+                </div>
+
+                <!-- 2024: PhD Complete + Publications + Conference -->
+                <div class="timeline-event" data-year="2024">
+                  <div class="timeline-dot education"></div>
+                  <div class="timeline-card highlight">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-icon">🎓</div>
+                    <h4 class="timeline-title">Ph.D. Completed</h4>
+                    <p class="timeline-description">
+                      UC Merced - Computational Chemistry<br>
+                      <span class="text-sm text-blue-600">📄 2 Publications:</span><br>
+                      <span class="text-xs">• J. Chem. Phys. (Franck-Condon Methods - 6 citations)</span><br>
+                      <span class="text-xs">• J. Phys. Chem. B (Spectral Broadening - 6 citations)</span><br>
+                      <span class="text-sm text-green-600">🎤 WCTC Conference (Poster)</span>
+                    </p>
+                    <span class="timeline-badge education">Milestone</span>
+                    <span class="timeline-badge publication">Publications</span>
+                  </div>
+                </div>
+
+                <!-- 2025: LANL Postdoc + Journal Cover -->
+                <div class="timeline-event" data-year="2025">
+                  <div class="timeline-dot work"></div>
+                  <div class="timeline-card highlight current">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-icon">🚀</div>
+                    <h4 class="timeline-title">Postdoc - Los Alamos National Laboratory</h4>
+                    <p class="timeline-description">
+                      Deep Learning for Non-Adiabatic MD & Chiroptical Spectroscopy<br>
+                      <span class="text-sm text-blue-600">📄 2 Publications (2025):</span><br>
+                      <span class="text-xs">• J. Phys. Chem. Lett. (Journal Cover + Top 15% Novelty)</span><br>
+                      <span class="text-xs">• J. Phys. Chem. C. (Under Review)</span><br>
+                      <span class="text-sm text-green-600">🎤 ESP 2025 Conference (Poster)</span>
+                    </p>
+                    <span class="timeline-badge work current">Current Position</span>
+                    <span class="timeline-badge publication">Publications</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="timeline-arrow timeline-arrow-left" onclick="scrollTimeline('left')"
+              aria-label="Scroll timeline left">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
               </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Science with Python</h3>
-              <p class="text-purple-600 font-semibold mb-2">Simplilearn</p>
-              <p class="text-gray-600 text-sm mb-3">2022</p>
-              <p class="text-gray-700 text-sm">Expertise in data analysis, visualization, and machine learning using
-                Python ecosystem (NumPy, Pandas, Scikit-learn)</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Certification 3: CUDA Python -->
-        <div
-          class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-lg p-6 border-l-4 border-orange-500 hover:shadow-xl transition-shadow duration-300"
-          data-aos="fade-up" data-aos-delay="300">
-          <div class="flex items-start">
-            <div class="bg-orange-100 p-3 rounded-lg mr-4">
-              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                </path>
+            </button>
+            <button class="timeline-arrow timeline-arrow-right" onclick="scrollTimeline('right')"
+              aria-label="Scroll timeline right">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
+            </button>
+          </div>
+
+          <!-- Timeline Summary Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12 max-w-4xl mx-auto" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="text-center bg-blue-50 rounded-lg p-4">
+              <div class="text-3xl font-bold text-blue-600">6</div>
+              <div class="text-sm text-gray-600">Years Journey</div>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Fundamental of Accelerated Computing with CUDA Python
-              </h3>
-              <p class="text-orange-600 font-semibold mb-2">NVIDIA</p>
-              <p class="text-gray-600 text-sm mb-3">2023</p>
-              <p class="text-gray-700 text-sm">GPU-accelerated computing and parallel programming for high-performance
-                scientific simulations</p>
+            <div class="text-center bg-green-50 rounded-lg p-4">
+              <div class="text-3xl font-bold text-green-600">7</div>
+              <div class="text-sm text-gray-600">Publications</div>
+            </div>
+            <div class="text-center bg-yellow-50 rounded-lg p-4">
+              <div class="text-3xl font-bold text-yellow-600">7+</div>
+              <div class="text-sm text-gray-600">Awards</div>
+            </div>
+            <div class="text-center bg-purple-50 rounded-lg p-4">
+              <div class="text-3xl font-bold text-purple-600">5</div>
+              <div class="text-sm text-gray-600">Conferences</div>
+            </div>
+            <div class="text-center bg-pink-50 rounded-lg p-4">
+              <div class="text-3xl font-bold text-pink-600">1</div>
+              <div class="text-sm text-gray-600">HPC Grant</div>
             </div>
           </div>
+
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- Professional Certifications Section -->
+      <section id="certifications" class="my-12">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Professional Certifications</h2>
+        <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Continuous learning and
+          specialization in cutting-edge computational methods</p>
 
-    <!-- Tutorials Section -->
-    <section id="tutorials" class="my-12">
-      <h2 class="text-3xl font-bold mb-4"> <a href="./tutorials.html">Tutorials</a></h2>
-      <div class="relative">
-        <div class="overflow-hidden">
-          <div class="flex transition-transform duration-300 ease-in-out" id="tutorialSlider">
-            <!-- Tutorial 1 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      class="text-blue-500 hover:underline">Running Classical MD Sims</a></h3>
-                  <p class="text-gray-700">Getting started with running classical molecular dynamics simulations using
-                    Amber24</p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Certification 1: Cheminformatics and Medicinal Chemistry -->
+          <div
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                  </path>
+                </svg>
               </div>
-            </div>
-            <!-- Tutorial 2 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
-                      class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
-                  <p class="text-gray-700">How to run ab initio molecular dynamics (AIMD) simulations in gas, implicit
-                    and explicit Enviroments</p>
-                </div>
-              </div>
-            </div>
-            <!-- Tutorial 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
-                      class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
-                  <p class="text-gray-700">TeraChem for electronic structure calculations: Gas, implicit and explicit
-                    environments</p>
-                </div>
-              </div>
-            </div>
-            <!-- Tutorial 4 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
-                  class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
-                      class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
-                  <p class="text-gray-700">Gaussian16 for electronic structure calculations: Gas, implicit and explicit
-                    environments</p>
-                </div>
-              </div>
-            </div>
-            <!-- Tutorial 5 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
-                      class="text-blue-500 hover:underline">More Tutorials</a></h3>
-                  <p class="text-gray-700">Click For More Tutorials on different types of MD and AIMD sims. Electronic
-                    structure, data analysis, quality images etc</p>
-                </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Introduction to Cheminformatics and Medicinal
+                  Chemistry</h3>
+                <p class="text-blue-600 font-semibold mb-2">Udemy</p>
+                <p class="text-gray-600 text-sm mb-3">2024</p>
+                <p class="text-gray-700 text-sm">Comprehensive training in computational methods for molecular
+                  representation, drug-target interactions, and structure-based drug design</p>
               </div>
             </div>
           </div>
-        </div>
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideTutorials(1)" aria-label="Previous tutorial">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-        </button>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideTutorials(-1)" aria-label="Next tutorial">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </button>
-      </div>
-    </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="my-12">
-      <h2 class="text-3xl font-bold mb-4">Resume</h2>
-      <a href="./resume.html" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Download Full
-        Resume</a>
-    </section>
+          <!-- Certification 2: Data Science with Python -->
+          <div
+            class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start">
+              <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Science with Python</h3>
+                <p class="text-purple-600 font-semibold mb-2">Simplilearn</p>
+                <p class="text-gray-600 text-sm mb-3">2022</p>
+                <p class="text-gray-700 text-sm">Expertise in data analysis, visualization, and machine learning using
+                  Python ecosystem (NumPy, Pandas, Scikit-learn)</p>
+              </div>
+            </div>
+          </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="my-12" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="text-3xl font-bold mb-4">Contact Me</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg" aria-label="Contact form">
-        <div class="mb-4">
-          <label for="contact-name" class="block text-gray-700 font-medium mb-2">
-            Name <span class="text-red-600" aria-label="required">*</span>
-          </label>
-          <input type="text"
-                 id="contact-name"
-                 name="name"
-                 autocomplete="name"
-                 class="w-full border border-gray-300 p-2 rounded"
-                 aria-required="true"
-                 required>
-        </div>
-        <div class="mb-4">
-          <label for="contact-email" class="block text-gray-700 font-medium mb-2">
-            Email <span class="text-red-600" aria-label="required">*</span>
-          </label>
-          <input type="email"
-                 id="contact-email"
-                 name="_replyto"
-                 autocomplete="email"
-                 class="w-full border border-gray-300 p-2 rounded"
-                 aria-required="true"
-                 aria-describedby="email-hint"
-                 required>
-          <p id="email-hint" class="text-sm text-gray-600 mt-1">We'll never share your email with anyone else.</p>
-        </div>
-        <div class="mb-4">
-          <label for="contact-message" class="block text-gray-700 font-medium mb-2">
-            Message <span class="text-red-600" aria-label="required">*</span>
-          </label>
-          <textarea id="contact-message"
-                    name="message"
-                    placeholder="Your message here..."
-                    class="w-full border border-gray-300 p-2 rounded h-32"
-                    aria-required="true"
-                    required></textarea>
-        </div>
-        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Send Message
-        </button>
-      </form>
-    </section>
+          <!-- Certification 3: CUDA Python -->
+          <div
+            class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-lg p-6 border-l-4 border-orange-500 hover:shadow-xl transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-start">
+              <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Fundamental of Accelerated Computing with CUDA
+                  Python
+                </h3>
+                <p class="text-orange-600 font-semibold mb-2">NVIDIA</p>
+                <p class="text-gray-600 text-sm mb-3">2023</p>
+                <p class="text-gray-700 text-sm">GPU-accelerated computing and parallel programming for high-performance
+                  scientific simulations</p>
+              </div>
+            </div>
+          </div>
 
-  </div>
+        </div>
+      </section>
+
+      <!-- Tutorials Section -->
+      <section id="tutorials" class="my-12">
+        <h2 class="text-3xl font-bold mb-4"> <a href="./tutorials.html">Tutorials</a></h2>
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div class="flex transition-transform duration-300 ease-in-out" id="tutorialSlider">
+              <!-- Tutorial 1 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a
+                        href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                        class="text-blue-500 hover:underline">Running Classical MD Sims</a></h3>
+                    <p class="text-gray-700">Getting started with running classical molecular dynamics simulations using
+                      Amber24</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tutorial 2 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
+                        class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
+                    <p class="text-gray-700">How to run ab initio molecular dynamics (AIMD) simulations in gas, implicit
+                      and explicit Enviroments</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tutorial 3 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
+                        class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
+                    <p class="text-gray-700">TeraChem for electronic structure calculations: Gas, implicit and explicit
+                      environments</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tutorial 4 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
+                        class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
+                    <p class="text-gray-700">Gaussian16 for electronic structure calculations: Gas, implicit and
+                      explicit
+                      environments</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tutorial 5 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
+                        class="text-blue-500 hover:underline">More Tutorials</a></h3>
+                    <p class="text-gray-700">Click For More Tutorials on different types of MD and AIMD sims. Electronic
+                      structure, data analysis, quality images etc</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            onclick="slideTutorials(1)" aria-label="Previous tutorial">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+            onclick="slideTutorials(-1)" aria-label="Next tutorial">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section id="resume" class="my-12">
+        <h2 class="text-3xl font-bold mb-4">Resume</h2>
+        <a href="./resume.html" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Download Full
+          Resume</a>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="my-12" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="text-3xl font-bold mb-4">Contact Me</h2>
+        <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg" aria-label="Contact form">
+          <div class="mb-4">
+            <label for="contact-name" class="block text-gray-700 font-medium mb-2">
+              Name <span class="text-red-600" aria-label="required">*</span>
+            </label>
+            <input type="text" id="contact-name" name="name" autocomplete="name"
+              class="w-full border border-gray-300 p-2 rounded" aria-required="true" required>
+          </div>
+          <div class="mb-4">
+            <label for="contact-email" class="block text-gray-700 font-medium mb-2">
+              Email <span class="text-red-600" aria-label="required">*</span>
+            </label>
+            <input type="email" id="contact-email" name="_replyto" autocomplete="email"
+              class="w-full border border-gray-300 p-2 rounded" aria-required="true" aria-describedby="email-hint"
+              required>
+            <p id="email-hint" class="text-sm text-gray-600 mt-1">We'll never share your email with anyone else.</p>
+          </div>
+          <div class="mb-4">
+            <label for="contact-message" class="block text-gray-700 font-medium mb-2">
+              Message <span class="text-red-600" aria-label="required">*</span>
+            </label>
+            <textarea id="contact-message" name="message" placeholder="Your message here..."
+              class="w-full border border-gray-300 p-2 rounded h-32" aria-required="true" required></textarea>
+          </div>
+          <button type="submit"
+            class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+    </div>
   </main>
   <!-- End Main Content -->
 
