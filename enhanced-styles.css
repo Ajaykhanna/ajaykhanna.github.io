@@ -1148,3 +1148,230 @@ button:focus {
     padding: 0 10px;
   }
 }
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS (WCAG AA)
+   ============================================ */
+
+/* Skip to Main Content Link */
+.skip-to-main-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #1e40af;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-main-content:focus {
+  left: 0;
+  top: 0;
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Enhanced Focus Indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Focus visible for keyboard users only */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Navigation Focus Styles */
+nav a:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+  background-color: rgba(251, 191, 36, 0.1);
+}
+
+/* Button Focus Styles */
+.filter-btn:focus,
+.timeline-year:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+  z-index: 1;
+}
+
+/* FAB Focus Styles */
+.fab-main:focus,
+.fab-action:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.2);
+}
+
+/* Form Focus Styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 0;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Carousel Button Focus */
+button[onclick*="slide"]:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(251, 191, 36, 0.2);
+  z-index: 20;
+}
+
+/* Touch Target Size Enhancement for Mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Navigation Links */
+  nav a {
+    padding: 12px 16px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Filter Buttons */
+  .filter-btn,
+  .timeline-year {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  .stat-card:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  a,
+  button {
+    outline-width: 2px;
+  }
+
+  .filter-btn.active,
+  .timeline-year.active {
+    border: 3px solid currentColor;
+  }
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Ensure Interactive Elements are Accessible */
+button:disabled,
+button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Keyboard Navigation Indicators */
+.keyboard-user button:focus,
+.keyboard-user a:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+
+/* Link Accessibility */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Form Label Association */
+label {
+  cursor: pointer;
+}
+
+input[required] + label::after,
+textarea[required] + label::after {
+  content: " *";
+  color: #ef4444;
+}
+
+/* Better Color Contrast for Text */
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+/* Accessible Card Hover States */
+.project-card:hover,
+.stat-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Within for Container Elements */
+.project-card:focus-within,
+.publication-card:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+}

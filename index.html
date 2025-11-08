@@ -177,8 +177,11 @@
 </head>
 
 <body class="font-sans leading-normal tracking-normal text-gray-900">
+  <!-- Skip Navigation Link for Screen Readers -->
+  <a href="#main-content" class="skip-to-main-content">Skip to main content</a>
+
   <!-- Navigation Bar -->
-  <nav class="bg-white fixed w-full z-50 top-0 shadow">
+  <nav class="bg-white fixed w-full z-50 top-0 shadow" role="navigation" aria-label="Main navigation">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <!-- changed sizes: h-10 w-10 -> h-12 w-12 (≈20% larger) -->
       <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-12 w-12 rounded-full mr-2">
@@ -189,8 +192,11 @@
       </div>
       <div class="block lg:hidden pr-4">
         <button id="nav-toggle"
-          class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline">
-          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+          class="flex items-center p-1 text-gray-900 hover:text-blue-500 focus:outline-none focus:shadow-outline"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-content">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z" />
           </svg>
         </button>
@@ -235,10 +241,12 @@
   <!-- Reading Progress Bar -->
   <div id="progress-bar"
     class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-40 transition-all duration-300"
-    style="width: 0%"></div>
+    style="width: 0%" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero introduction">
     <!-- Particle Background -->
     <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900"></div>
 
@@ -701,24 +709,27 @@
   <div class="container mx-auto px-4">
 
     <!-- Projects Section -->
-    <section id="projects" class="my-12">
-      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+    <section id="projects" class="my-12" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="text-3xl font-bold mb-4">Projects</h2>
+
+      <!-- Screen reader announcements for filter changes -->
+      <div aria-live="polite" aria-atomic="true" class="sr-only" id="project-filter-status"></div>
 
       <!-- Project Filters -->
-      <div class="project-filters mb-8">
-        <button class="filter-btn active" data-category="all" onclick="filterProjects('all')">
+      <div class="project-filters mb-8" role="group" aria-label="Project category filters">
+        <button class="filter-btn active" data-category="all" onclick="filterProjects('all')" aria-pressed="true" aria-label="Show all projects">
           All Projects
         </button>
-        <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')">
+        <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')" aria-pressed="false" aria-label="Filter by Spectroscopy projects">
           Spectroscopy
         </button>
-        <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')">
+        <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')" aria-pressed="false" aria-label="Filter by QM/MM projects">
           QM/MM
         </button>
-        <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')">
+        <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')" aria-pressed="false" aria-label="Filter by Tools projects">
           Tools
         </button>
-        <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')">
+        <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')" aria-pressed="false" aria-label="Filter by Energy Transfer projects">
           Energy Transfer
         </button>
       </div>
@@ -796,14 +807,14 @@
           </div>
         </div>
         <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideProject(1)">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          onclick="slideProject(1)" aria-label="Previous project">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
         <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideProject(-1)">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          onclick="slideProject(-1)" aria-label="Next project">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </button>
@@ -1159,8 +1170,11 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="my-12 ">
-      <h2 class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
+    <section id="publications" class="my-12 " aria-labelledby="publications-heading">
+      <h2 id="publications-heading" class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
+
+      <!-- Screen reader announcements for filter changes -->
+      <div aria-live="polite" aria-atomic="true" class="sr-only" id="publication-filter-status"></div>
       <div class="mb-4">
         <a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
           class="text-blue-500 hover:underline">Google Scholar</a> |
@@ -1170,33 +1184,33 @@
       </div>
 
       <!-- Interactive Publication Timeline -->
-      <div class="my-8">
+      <div class="my-8" role="region" aria-label="Publication timeline filter">
         <div class="flex items-center justify-center mb-6">
           <div class="publication-timeline-container">
-            <div class="publication-timeline">
-              <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')">
+            <div class="publication-timeline" role="group" aria-label="Filter publications by year">
+              <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')" aria-pressed="true" aria-label="Show all publications (7 total)">
                 <span class="year-label">All</span>
-                <span class="year-count">7</span>
+                <span class="year-count" aria-hidden="true">7</span>
               </button>
-              <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')">
+              <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')" aria-pressed="false" aria-label="Show 2025 publications (2 total)">
                 <span class="year-label">2025</span>
-                <span class="year-count">2</span>
+                <span class="year-count" aria-hidden="true">2</span>
               </button>
-              <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')">
+              <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')" aria-pressed="false" aria-label="Show 2024 publications (2 total)">
                 <span class="year-label">2024</span>
-                <span class="year-count">2</span>
+                <span class="year-count" aria-hidden="true">2</span>
               </button>
-              <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')">
+              <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')" aria-pressed="false" aria-label="Show 2022 publications (1 total)">
                 <span class="year-label">2022</span>
-                <span class="year-count">1</span>
+                <span class="year-count" aria-hidden="true">1</span>
               </button>
-              <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')">
+              <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')" aria-pressed="false" aria-label="Show 2021 publications (1 total)">
                 <span class="year-label">2021</span>
-                <span class="year-count">1</span>
+                <span class="year-count" aria-hidden="true">1</span>
               </button>
-              <button class="timeline-year" data-year="2018" onclick="filterPublicationsByYear('2018')">
+              <button class="timeline-year" data-year="2018" onclick="filterPublicationsByYear('2018')" aria-pressed="false" aria-label="Show 2018 publications (1 total)">
                 <span class="year-label">2018</span>
-                <span class="year-count">1</span>
+                <span class="year-count" aria-hidden="true">1</span>
               </button>
             </div>
           </div>
@@ -1513,13 +1527,13 @@
           </div>
 
           <!-- Navigation Arrows -->
-          <button class="timeline-arrow timeline-arrow-left" onclick="scrollTimeline('left')">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="timeline-arrow timeline-arrow-left" onclick="scrollTimeline('left')" aria-label="Scroll timeline left">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button class="timeline-arrow timeline-arrow-right" onclick="scrollTimeline('right')">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="timeline-arrow timeline-arrow-right" onclick="scrollTimeline('right')" aria-label="Scroll timeline right">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
@@ -1705,14 +1719,14 @@
           </div>
         </div>
         <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideTutorials(1)">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          onclick="slideTutorials(1)" aria-label="Previous tutorial">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
         <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-          onclick="slideTutorials(-1)">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          onclick="slideTutorials(-1)" aria-label="Next tutorial">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </button>
@@ -1727,29 +1741,55 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="my-12">
-      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg">
+    <section id="contact" class="my-12" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="text-3xl font-bold mb-4">Contact Me</h2>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg" aria-label="Contact form">
         <div class="mb-4">
-          <label class="block text-gray-700">Name
-          <input type="text" name="name" autocomplete="given-name" class="w-full border border-gray-300 p-2 rounded"
-            required></label>
+          <label for="contact-name" class="block text-gray-700 font-medium mb-2">
+            Name <span class="text-red-600" aria-label="required">*</span>
+          </label>
+          <input type="text"
+                 id="contact-name"
+                 name="name"
+                 autocomplete="name"
+                 class="w-full border border-gray-300 p-2 rounded"
+                 aria-required="true"
+                 required>
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Email
-          <input type="email" name="_replyto" autocomplete="email" class="w-full border border-gray-300 p-2 rounded"
-            required></label>
+          <label for="contact-email" class="block text-gray-700 font-medium mb-2">
+            Email <span class="text-red-600" aria-label="required">*</span>
+          </label>
+          <input type="email"
+                 id="contact-email"
+                 name="_replyto"
+                 autocomplete="email"
+                 class="w-full border border-gray-300 p-2 rounded"
+                 aria-required="true"
+                 aria-describedby="email-hint"
+                 required>
+          <p id="email-hint" class="text-sm text-gray-600 mt-1">We'll never share your email with anyone else.</p>
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Message
-          <textarea name="message" placeholder="Your message here..."
-            class="w-full border border-gray-300 p-2 rounded h-32" required></textarea></label>
+          <label for="contact-message" class="block text-gray-700 font-medium mb-2">
+            Message <span class="text-red-600" aria-label="required">*</span>
+          </label>
+          <textarea id="contact-message"
+                    name="message"
+                    placeholder="Your message here..."
+                    class="w-full border border-gray-300 p-2 rounded h-32"
+                    aria-required="true"
+                    required></textarea>
         </div>
-        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send</button>
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Send Message
+        </button>
       </form>
     </section>
 
   </div>
+  </main>
+  <!-- End Main Content -->
 
   <!-- Floating Action Button (FAB) -->
   <div class="fab-container" id="fabContainer">
