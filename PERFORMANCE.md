@@ -236,6 +236,42 @@ GitHub Pages automatically serves assets with gzip/brotli compression, providing
 
 ---
 
+### 8. External Link Security and Performance
+
+**What**: Adding `target="_blank"` and `rel="noopener noreferrer"` to all external links for security and performance.
+
+**Security Vulnerability Prevented**: Without `rel="noopener"`, external pages can access the original page through `window.opener`, potentially leading to **tabnabbing attacks** where malicious sites can redirect the original page to phishing sites.
+
+**Implementation**:
+```html
+<!-- Project/Tutorial Links -->
+<a href="https://github.com/Ajaykhanna/MolMan"
+   target="_blank" rel="noopener noreferrer"
+   class="text-blue-500 hover:underline">MolVizMan</a>
+
+<!-- Research Profile Links -->
+<a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
+   target="_blank" rel="noopener noreferrer"
+   class="text-blue-500 hover:underline">Google Scholar</a>
+```
+
+**Links Updated**:
+- 5 project card links (GitHub repositories)
+- 4 tutorial card links (GitHub repositories)
+- 3 research profile links (Google Scholar, ResearchGate, ORCID)
+- **Total: 12 external links** secured
+
+**Benefits**:
+- ✅ **Security**: Prevents tabnabbing attacks (OWASP Top 10)
+- ✅ **Performance**: External page can't access `window.opener` (reduces overhead)
+- ✅ **Privacy**: Prevents referer leakage with `noreferrer`
+- ✅ **UX**: Opens external links in new tabs (users don't lose their place)
+- ✅ **SEO**: Search engines recognize proper external link handling
+
+**Security Impact**: Mitigates **CWE-1022** (tabnabbing vulnerability)
+
+---
+
 ## 📈 Performance Improvements Summary
 
 ### Before Optimization:
@@ -446,6 +482,7 @@ Every 3 months:
 - [x] CLS prevention with explicit image dimensions (13 images)
 - [x] Automatic compression via GitHub Pages (gzip/brotli)
 - [x] CDN optimization for external libraries
+- [x] External link security (12 links with noopener noreferrer)
 - [x] CDN configuration documented
 - [x] Performance monitoring setup documented
 
