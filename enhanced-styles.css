@@ -603,6 +603,15 @@ button:focus {
   background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 
+.timeline-year:hover .year-label {
+  color: #1e293b;
+}
+
+.timeline-year:hover .year-count {
+  color: #1e40af;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .timeline-year.active {
   background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   border-color: #1d4ed8;
@@ -635,8 +644,9 @@ button:focus {
 }
 
 .timeline-year.active .year-count {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
+  background: rgba(255, 255, 255, 0.25);
+  color: #1e293b;
+  font-weight: 700;
 }
 
 /* Publication Item Animations */
