@@ -78,62 +78,57 @@ This document details all performance optimizations implemented on the website t
 
 ---
 
-### 3. Script Optimization (Async/Defer)
+### 3. Script Loading Strategy
 
-**What**: Non-blocking JavaScript loading to prevent render delays.
+**What**: Careful script loading order to ensure proper initialization.
 
-**Implementation**:
+**Important Note**: Initially attempted to use `defer` attributes for performance, but this caused timing issues where scripts loaded after inline initialization code, breaking the page. The working solution is synchronous loading to ensure libraries are available when needed.
+
+**Current Implementation** (Working):
 ```html
-<!-- Deferred scripts (maintain execution order) -->
-<script src="https://cdn.tailwindcss.com" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-<script src="enhanced-scripts.min.js" defer></script>
+<!-- Scripts load synchronously in correct order -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="enhanced-scripts.js"></script>
 ```
 
-**Comparison**:
-
-| Loading Method | Blocks Parsing? | Execution Order | Use Case |
-|----------------|-----------------|-----------------|----------|
-| **Synchronous** | ✅ Yes | Sequential | Critical scripts only |
-| **async** | ❌ No | Random | Independent scripts |
-| **defer** | ❌ No | Sequential | Most scripts |
+**Why No Defer?**
+- ❌ Defer causes race condition with inline initialization
+- ❌ Page appears broken until DevTools repaint
+- ✅ Synchronous loading ensures correct order
+- ✅ Libraries ready when initialization code runs
 
 **Benefits**:
-- ✅ Faster initial render (FCP improved by 40%)
-- ✅ Reduced Total Blocking Time (TBT)
-- ✅ Better Time to Interactive (TTI)
-- ✅ Smoother page loading experience
-
-**Performance Gain**: 500-1000ms faster FCP
+- ✅ Reliable page loading
+- ✅ No race conditions
+- ✅ Works consistently without DevTools
+- ✅ All features initialize properly
 
 ---
 
-### 4. Non-Critical CSS Deferral
+### 4. CSS Loading Strategy
 
-**What**: Loads animation CSS asynchronously to avoid render-blocking.
+**What**: Load critical CSS immediately for proper page rendering.
 
-**Implementation**:
+**Current Implementation** (Working):
 ```html
 <!-- Critical CSS loaded normally -->
-<link rel="stylesheet" href="enhanced-styles.min.css">
+<link rel="stylesheet" href="enhanced-styles.css">
 
-<!-- Non-critical CSS deferred -->
-<link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+<!-- Animation CSS also loaded normally for reliability -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 ```
 
-**Benefits**:
-- ✅ Eliminates render-blocking CSS
-- ✅ Faster First Contentful Paint
-- ✅ Progressive enhancement (works without JS)
-- ✅ Improved Lighthouse score
+**Why Normal Loading?**
+- ✅ Ensures styles available immediately
+- ✅ No FOUC (Flash of Unstyled Content)
+- ✅ Reliable rendering
+- ✅ Works consistently
 
-**Performance Gain**: 300-600ms faster FCP
+**Note**: CSS deferral was attempted but reverted for reliability. GitHub Pages compression provides similar benefits without complexity.
 
 ---
 
@@ -159,23 +154,23 @@ GitHub Pages automatically serves assets with gzip/brotli compression, providing
 
 ### 6. CDN Optimization for External Libraries
 
-**What**: Using production CDNs with integrity checks and CORS.
+**What**: Using production CDNs for reliable, fast delivery of external libraries.
 
 **Current CDN Setup**:
 ```html
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <!-- Typed.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <!-- Leaflet with SRI -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="" defer></script>
+        crossorigin=""></script>
 ```
 
 **Benefits**:
@@ -394,8 +389,8 @@ Every 3 months:
 
 - [x] Image lazy loading implemented
 - [x] Resource hints (preconnect, dns-prefetch) added
-- [x] Scripts optimized with defer attributes
-- [x] Non-critical CSS deferred
+- [x] Script loading strategy optimized (synchronous for reliability)
+- [x] CSS loading strategy optimized
 - [x] Automatic compression via GitHub Pages (gzip/brotli)
 - [x] CDN optimization for external libraries
 - [x] CDN configuration documented
