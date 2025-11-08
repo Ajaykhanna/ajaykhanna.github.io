@@ -44,8 +44,9 @@ This document details all performance optimizations implemented on the website t
 - ✅ Better mobile performance
 
 **Files Modified**:
-- `index.html`: 10 images with lazy loading
+- `index.html`: 11 images with lazy loading
 - 2 hero images with eager loading + high priority
+- Hero image preloaded in `<head>` for optimal LCP
 
 ---
 
@@ -66,6 +67,9 @@ This document details all performance optimizations implemented on the website t
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="dns-prefetch" href="https://unpkg.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+<!-- Preload critical hero image for LCP -->
+<link rel="preload" href="./images/head_img_ajay.png" as="image" type="image/png" fetchpriority="high">
 ```
 
 **Benefits**:
@@ -73,6 +77,7 @@ This document details all performance optimizations implemented on the website t
 - ✅ Establishes TCP connections early
 - ✅ Performs TLS negotiation in advance
 - ✅ Improves Time to First Byte (TTFB)
+- ✅ Preload ensures critical hero image loads immediately (improves LCP)
 
 **Performance Gain**: 200-500ms faster resource loading
 
