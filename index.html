@@ -8,9 +8,10 @@
   <meta name="description"
     content="Ajay Khanna - Computational Chemist specializing in drug discovery, energy transfer, energy storage, and green energy solutions through quantum mechanics, molecular dynamics, and machine learning">
   <!-- Tailwind CSS - Production CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"> -->
   <!-- Custom Styles -->
   <link rel="stylesheet" href="enhanced-styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Particles.js for animated background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <!-- Typed.js for dynamic typing effect -->
@@ -1580,16 +1581,19 @@
       <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
       <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg">
         <div class="mb-4">
-          <label class="block text-gray-700">Name</label>
-          <input type="text" name="name" class="w-full border border-gray-300 p-2 rounded" required>
+          <label class="block text-gray-700">Name
+          <input type="text" name="name" autocomplete="given-name" class="w-full border border-gray-300 p-2 rounded"
+            required></label>
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Email</label>
-          <input type="email" name="_replyto" class="w-full border border-gray-300 p-2 rounded" required>
+          <label class="block text-gray-700">Email
+          <input type="email" name="_replyto" autocomplete="email" class="w-full border border-gray-300 p-2 rounded"
+            required></label>
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700">Message</label>
-          <textarea name="message" class="w-full border border-gray-300 p-2 rounded h-32" required></textarea>
+          <label class="block text-gray-700">Message
+          <textarea name="message" placeholder="Your message here..."
+            class="w-full border border-gray-300 p-2 rounded h-32" required></textarea></label>
         </div>
         <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send</button>
       </form>
