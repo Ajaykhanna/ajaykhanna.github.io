@@ -1039,12 +1039,29 @@ button:focus {
     padding: 30px 10px;
   }
 
+  .timeline-track {
+    gap: 60px;
+  }
+
   .timeline-event {
     min-width: 280px;
   }
 
   .timeline-card {
-    padding: 20px;
+    padding: 18px;
+    margin-top: 70px;
+  }
+
+  .timeline-year {
+    font-size: 1.25rem;
+  }
+
+  .timeline-title {
+    font-size: 1.125rem;
+  }
+
+  .timeline-icon {
+    font-size: 1.75rem;
   }
 
   .timeline-arrow {
@@ -1055,5 +1072,79 @@ button:focus {
   .timeline-arrow svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .timeline-scroll-container {
+    margin: 0 20px;
+    padding: 20px 5px;
+  }
+
+  .timeline-track {
+    gap: 40px;
+  }
+
+  .timeline-event {
+    min-width: 240px;
+  }
+
+  .timeline-card {
+    padding: 16px;
+    margin-top: 60px;
+    border-radius: 12px;
+  }
+
+  .timeline-year {
+    font-size: 1.125rem;
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .timeline-description {
+    font-size: 0.813rem;
+    margin-bottom: 10px;
+  }
+
+  .timeline-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .timeline-badge {
+    font-size: 0.688rem;
+    padding: 3px 10px;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .timeline-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .timeline-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Section heading adjustments for mobile */
+  #research-timeline h2 {
+    font-size: 1.875rem;
+  }
+
+  #research-timeline p {
+    font-size: 1rem;
+    padding: 0 10px;
   }
 }
