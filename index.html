@@ -55,19 +55,6 @@
     });
   </script>
 
-  <!-- Resource Hints for Performance Optimization -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="https://unpkg.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- Preload Critical Hero Image for LCP Optimization -->
-  <link rel="preload" href="./images/head_img_ajay.png" as="image" type="image/png" fetchpriority="high">
-
   <!-- Tailwind CSS - Production CDN -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"> -->
   <!-- Custom Styles -->
@@ -197,7 +184,7 @@
   <nav class="bg-white fixed w-full z-50 top-0 shadow" role="navigation" aria-label="Main navigation">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <!-- changed sizes: h-10 w-10 -> h-12 w-12 (≈20% larger) -->
-      <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-12 w-12 rounded-full mr-2" width="48" height="48" loading="eager" fetchpriority="high">
+      <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-12 w-12 rounded-full mr-2">
       <div class="pl-4">
         <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
           Ajay Khanna
@@ -258,19 +245,10 @@
   <!-- Main Content -->
   <main id="main-content">
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero introduction">
-    <!-- Particle Background -->
-    <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900"></div>
-
-    <!-- Hero Content -->
-    <div class="relative z-10 container mx-auto px-4 text-center text-white" data-aos="fade-up"
-      data-aos-duration="1000">
-      <div class="flex justify-center mb-8">
-        <!-- changed sizes: w-40 h-40 -> w-44 h-44 (≈10% larger) -->
-        <img src="./images/head_img_ajay.png" alt="Ajay Khanna"
-          class="w-44 h-44 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300"
-          width="176" height="176"
-          loading="eager" fetchpriority="high">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Hero introduction">
+      <!-- Particle Background -->
+      <div id="particles-js" class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
       </div>
 
       <!-- Hero Content -->
@@ -1134,45 +1112,6 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
-
-      <div class="max-w-6xl mx-auto">
-        <!-- Main Content Grid -->
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-
-          <!-- Photo & Quick Info -->
-          <div class="md:col-span-1" data-aos="fade-right">
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg text-center">
-              <!-- Photo Placeholder -->
-              <div
-                class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold shadow-xl">
-                <img src="./images/head_img_ajay.png" alt="Ajay Khanna" class="w-48 h-48 rounded-full object-cover" width="192" height="192" loading="lazy">
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ajay Khanna, Ph.D.</h3>
-              <p class="text-blue-600 font-semibold mb-1">Postdoctoral Researcher</p>
-              <p class="text-gray-600 text-sm mb-6">Los Alamos National Laboratory</p>
-
-              <!-- Quick Stats -->
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="bg-white rounded-lg p-3 shadow">
-                  <div class="text-2xl font-bold text-blue-600">7</div>
-                  <div class="text-xs text-gray-600">Publications</div>
-                </div>
-                <div class="bg-white rounded-lg p-3 shadow">
-                  <div class="text-2xl font-bold text-green-600">50+</div>
-                  <div class="text-xs text-gray-600">Citations</div>
-                </div>
-              </div>
 
             <div class="mt-4">
               <h4 class="font-semibold text-gray-800 mb-2">Research Focus:</h4>
@@ -1248,105 +1187,27 @@
             </div>
           </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="my-12" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" class="text-3xl font-bold mb-4">Projects</h2>
-
-      <!-- Screen reader announcements for filter changes -->
-      <div aria-live="polite" aria-atomic="true" class="sr-only" id="project-filter-status"></div>
-
-      <!-- Project Filters -->
-      <div class="project-filters mb-8" role="group" aria-label="Project category filters">
-        <button class="filter-btn active" data-category="all" onclick="filterProjects('all')" aria-pressed="true" aria-label="Show all projects">
-          All Projects
-        </button>
-        <button class="filter-btn" data-category="spectroscopy" onclick="filterProjects('spectroscopy')" aria-pressed="false" aria-label="Filter by Spectroscopy projects">
-          Spectroscopy
-        </button>
-        <button class="filter-btn" data-category="qmmm" onclick="filterProjects('qmmm')" aria-pressed="false" aria-label="Filter by QM/MM projects">
-          QM/MM
-        </button>
-        <button class="filter-btn" data-category="tools" onclick="filterProjects('tools')" aria-pressed="false" aria-label="Filter by Tools projects">
-          Tools
-        </button>
-        <button class="filter-btn" data-category="energy" onclick="filterProjects('energy')" aria-pressed="false" aria-label="Filter by Energy Transfer projects">
-          Energy Transfer
-        </button>
-      </div>
-
-      <div class="relative">
-        <div class="overflow-hidden">
-          <div class="flex transition-transform duration-300 ease-in-out" id="projectSlider">
-            <!-- Project 1 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="spectroscopy">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
-                  class=" w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Computing Absorption and Fluorescence Spectra</a></h3>
-                  <p class="text-gray-700">Calculating absorption and fluroscence spectra of molecules in explicit
-                    environment using ensemble Franck-Condon methods </p>
-                </div>
+          <!-- Teaching & Mentorship -->
+          <div
+            class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg shadow-lg p-6 border-l-4 border-purple-500"
+            data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Teaching & Mentorship</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">Graduate Mentoring</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>• GradEXCEL Program mentor (2019-2022)</li>
+                  <li>• Supervised undergraduate researchers</li>
+                  <li>• Graduate Excel Peer Mentor Award</li>
+                </ul>
               </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="qmmm">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Automate QM/MM Sims</a></h3>
-                  <p class="text-gray-700">A Python program designed automate MD trajectories containing dyes in
-                    solvents to hybrid QM/MM simulations. </p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">MolVizMan</a></h3>
-                  <p class="text-gray-700">An interactive Python GUI application allows you to visualize and manipulate
-                    molecules from an XYZ file.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="energy">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Excitonic Coupling</a></h3>
-                  <p class="text-gray-700">Computing Excitonic Coupling Between Molecules Using Various Excitonic
-                    Coupling Schemes</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">DOI2BibTex</a></h3>
-                  <p class="text-gray-700">Convert Digital Object Identifiers (DOI) into BibTeX entries with a simple,
-                    user-friendly web app built using Streamlit!</p>
-                </div>
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">Teaching Development</h4>
+                <ul class="space-y-1 text-gray-700 text-sm">
+                  <li>• Advanced Pedagogy certification</li>
+                  <li>• GROW TA Training Fellowship</li>
+                  <li>• Stanford Writing in Sciences course</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1552,59 +1413,9 @@
               <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
               <div class="text-sm text-gray-600">Collaborators</div>
             </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="my-12 " aria-labelledby="publications-heading">
-      <h2 id="publications-heading" class="text-3xl font-bold mb-4">🌟 Featured Publications</h2>
-
-      <!-- Screen reader announcements for filter changes -->
-      <div aria-live="polite" aria-atomic="true" class="sr-only" id="publication-filter-status"></div>
-      <div class="mb-4">
-        <a href="https://scholar.google.com/citations?user=qJM0sOIAAAAJ&hl=en"
-          target="_blank" rel="noopener noreferrer"
-          class="text-blue-500 hover:underline">Google Scholar</a> |
-        <a href="https://www.researchgate.net/profile/Ajay-Khanna-2"
-          target="_blank" rel="noopener noreferrer"
-          class="text-blue-500 hover:underline">ResearchGate</a> |
-        <a href="https://orcid.org/0000-0002-8313-1393"
-          target="_blank" rel="noopener noreferrer"
-          class="text-blue-500 hover:underline">ORCID</a>
-      </div>
-
-      <!-- Interactive Publication Timeline -->
-      <div class="my-8" role="region" aria-label="Publication timeline filter">
-        <div class="flex items-center justify-center mb-6">
-          <div class="publication-timeline-container">
-            <div class="publication-timeline" role="group" aria-label="Filter publications by year">
-              <button class="timeline-year active" data-year="all" onclick="filterPublicationsByYear('all')" aria-pressed="true" aria-label="Show all publications (7 total)">
-                <span class="year-label">All</span>
-                <span class="year-count" aria-hidden="true">7</span>
-              </button>
-              <button class="timeline-year" data-year="2025" onclick="filterPublicationsByYear('2025')" aria-pressed="false" aria-label="Show 2025 publications (2 total)">
-                <span class="year-label">2025</span>
-                <span class="year-count" aria-hidden="true">2</span>
-              </button>
-              <button class="timeline-year" data-year="2024" onclick="filterPublicationsByYear('2024')" aria-pressed="false" aria-label="Show 2024 publications (2 total)">
-                <span class="year-label">2024</span>
-                <span class="year-count" aria-hidden="true">2</span>
-              </button>
-              <button class="timeline-year" data-year="2022" onclick="filterPublicationsByYear('2022')" aria-pressed="false" aria-label="Show 2022 publications (1 total)">
-                <span class="year-label">2022</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
-              <button class="timeline-year" data-year="2021" onclick="filterPublicationsByYear('2021')" aria-pressed="false" aria-label="Show 2021 publications (1 total)">
-                <span class="year-label">2021</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
-              <button class="timeline-year" data-year="2018" onclick="filterPublicationsByYear('2018')" aria-pressed="false" aria-label="Show 2018 publications (1 total)">
-                <span class="year-label">2018</span>
-                <span class="year-count" aria-hidden="true">1</span>
-              </button>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-orange-600 mb-2">7</div>
+              <div class="text-sm text-gray-600">Joint Publications</div>
             </div>
           </div>
         </div>
@@ -1895,78 +1706,79 @@
             </div>
           </div>
 
-    <!-- Tutorials Section -->
-    <section id="tutorials" class="my-12">
-      <h2 class="text-3xl font-bold mb-4"> <a href="./tutorials.html">Tutorials</a></h2>
-      <div class="relative">
-        <div class="overflow-hidden">
-          <div class="flex transition-transform duration-300 ease-in-out" id="tutorialSlider">
-            <!-- Tutorial 1 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a
-                      href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Running Classical MD Sims</a></h3>
-                  <p class="text-gray-700">Getting started with running classical molecular dynamics simulations using
-                    Amber24</p>
+        </div>
+      </section>
+
+      <!-- Tutorials Section -->
+      <section id="tutorials" class="my-12">
+        <h2 class="text-3xl font-bold mb-4"> <a href="./tutorials.html">Tutorials</a></h2>
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div class="flex transition-transform duration-300 ease-in-out" id="tutorialSlider">
+              <!-- Tutorial 1 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a
+                        href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
+                        class="text-blue-500 hover:underline">Running Classical MD Sims</a></h3>
+                    <p class="text-gray-700">Getting started with running classical molecular dynamics simulations using
+                      Amber24</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Tutorial 2 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
-                  <p class="text-gray-700">How to run ab initio molecular dynamics (AIMD) simulations in gas, implicit
-                    and explicit Enviroments</p>
+              <!-- Tutorial 2 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
+                        class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
+                    <p class="text-gray-700">How to run ab initio molecular dynamics (AIMD) simulations in gas, implicit
+                      and explicit Enviroments</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Tutorial 3 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
-                  <p class="text-gray-700">TeraChem for electronic structure calculations: Gas, implicit and explicit
-                    environments</p>
+              <!-- Tutorial 3 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
+                        class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
+                    <p class="text-gray-700">TeraChem for electronic structure calculations: Gas, implicit and explicit
+                      environments</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Tutorial 4 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
-                  class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
-                      target="_blank" rel="noopener noreferrer"
-                      class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
-                  <p class="text-gray-700">Gaussian16 for electronic structure calculations: Gas, implicit and explicit
-                    environments</p>
+              <!-- Tutorial 4 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
+                    class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
+                        class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
+                    <p class="text-gray-700">Gaussian16 for electronic structure calculations: Gas, implicit and
+                      explicit
+                      environments</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Tutorial 5 -->
-            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
-                <div class="p-4 bg-gray-100">
-                  <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
-                      class="text-blue-500 hover:underline">More Tutorials</a></h3>
-                  <p class="text-gray-700">Click For More Tutorials on different types of MD and AIMD sims. Electronic
-                    structure, data analysis, quality images etc</p>
+              <!-- Tutorial 5 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover">
+                  <div class="p-4 bg-gray-100">
+                    <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
+                        class="text-blue-500 hover:underline">More Tutorials</a></h3>
+                    <p class="text-gray-700">Click For More Tutorials on different types of MD and AIMD sims. Electronic
+                      structure, data analysis, quality images etc</p>
+                  </div>
                 </div>
               </div>
             </div>
