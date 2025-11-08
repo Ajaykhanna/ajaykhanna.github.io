@@ -1,0 +1,33 @@
+# robots.txt for https://ajaykhanna.github.io/
+# This file tells search engine crawlers which pages they can access
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific directories (if any in the future)
+# Disallow: /private/
+# Disallow: /temp/
+
+# Crawl delay (optional, commented out by default)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ajaykhanna.github.io/sitemap.xml
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (if needed in the future)
+# User-agent: BadBot
+# Disallow: /
