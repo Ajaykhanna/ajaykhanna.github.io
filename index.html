@@ -55,23 +55,34 @@
     });
   </script>
 
+  <!-- Resource Hints for Performance Optimization -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
   <!-- Tailwind CSS - Production CDN -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"> -->
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="enhanced-styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Styles - Minified for performance -->
+  <link rel="stylesheet" href="enhanced-styles.min.css">
+  <script src="https://cdn.tailwindcss.com" defer></script>
   <!-- Particles.js for animated background -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
   <!-- Typed.js for dynamic typing effect -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <!-- AOS (Animate On Scroll) -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <!-- AOS (Animate On Scroll) - Deferred loading for performance -->
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <!-- Leaflet.js for interactive maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -184,7 +195,7 @@
   <nav class="bg-white fixed w-full z-50 top-0 shadow" role="navigation" aria-label="Main navigation">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <!-- changed sizes: h-10 w-10 -> h-12 w-12 (≈20% larger) -->
-      <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-12 w-12 rounded-full mr-2">
+      <img src="./images/head_img_ajay.png" alt="Profile Picture" class="h-12 w-12 rounded-full mr-2" loading="eager" fetchpriority="high">
       <div class="pl-4">
         <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
           Ajay Khanna
@@ -256,7 +267,8 @@
       <div class="flex justify-center mb-8">
         <!-- changed sizes: w-40 h-40 -> w-44 h-44 (≈10% larger) -->
         <img src="./images/head_img_ajay.png" alt="Ajay Khanna"
-          class="w-44 h-44 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300">
+          class="w-44 h-44 rounded-full border-4 border-white shadow-2xl transform hover:scale-110 transition-transform duration-300"
+          loading="eager" fetchpriority="high">
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
@@ -757,7 +769,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="spectroscopy">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/cover_image_v4.png" alt="abs_fluorescence_spectrum.png""
-                  class=" w-full h-48 object-cover">
+                  class=" w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a
                       href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
@@ -771,7 +783,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="qmmm">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="CV+ dimer in Water"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a
                       href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
@@ -785,7 +797,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_molvizman_banner.jpg" alt="MolVizMan"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
                       class="text-blue-500 hover:underline">MolVizMan</a></h3>
@@ -798,7 +810,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="energy">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="nbd_nr_transition_densities"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
                       class="text-blue-500 hover:underline">Excitonic Coupling</a></h3>
@@ -811,7 +823,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3 project-item" data-category="tools">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_doi2bibtex_logo.png" alt="DOI2BibTex"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
                       class="text-blue-500 hover:underline">DOI2BibTex</a></h3>
@@ -1673,7 +1685,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_cv_dimer_water_pi_stacking.png" alt="classic_md_simulation"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a
                       href="https://github.com/Ajaykhanna/Molecular_Dynamics_101/tree/main/utilities"
@@ -1687,7 +1699,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_molvizman_banner.jpg" alt="aimd_simulation"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/MolMan"
                       class="text-blue-500 hover:underline">Running AIMD Simulations</a></h3>
@@ -1700,7 +1712,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_nbd_nr_transdens_qm_solvent.png" alt="everything_terachem"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/Excitonic_Coupling"
                       class="text-blue-500 hover:underline">Everything TeraChem</a></h3>
@@ -1713,7 +1725,7 @@
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="./images/projects/resized_doi2bibtex_logo.png" alt="everything_gaussian"
-                  class="w-full h-48 object-cover">
+                  class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/Ajaykhanna/DOI2BibTex"
                       class="text-blue-500 hover:underline">Everything Gaussian</a></h3>
@@ -1725,7 +1737,7 @@
             <!-- Tutorial 5 -->
             <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-3">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover">
+                <img src="./images/more_logo.png" alt="more_tutorials" class="w-full h-48 object-cover" loading="lazy">
                 <div class="p-4 bg-gray-100">
                   <h3 class="text-xl font-semibold mb-2"><a href="./tutorials.html"
                       class="text-blue-500 hover:underline">More Tutorials</a></h3>
@@ -1911,9 +1923,9 @@
     </div>
   </footer>
 
-  <!-- External JavaScript File -->
+  <!-- External JavaScript File - Minified for performance -->
   <!-- <script src="scripts.js"></script> -->
-  <script src="enhanced-scripts.js"></script>
+  <script src="enhanced-scripts.min.js" defer></script>
 
   <!-- Initialize Collaboration Map -->
   <script>
