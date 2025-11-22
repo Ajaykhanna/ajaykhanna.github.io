@@ -347,6 +347,44 @@ if (window.__unifiedScriptsLoaded) {
       });
     };
 
+    /* ---------- Toggle Publications Show More/Less ---------- */
+    window.togglePublications = function () {
+      // Get all publication items
+      const allPubs = document.querySelectorAll(".publication-item");
+      const toggleText = document.getElementById("toggleText");
+      const toggleArrow = document.getElementById("toggleArrow");
+      const toggleBtn = document.querySelector(".publication-toggle-btn");
+
+      // Get publications 4-7 (index 3-6)
+      const collapsiblePubs = Array.from(allPubs).slice(3);
+
+      // Check if publications are currently collapsed
+      const isCollapsed = collapsiblePubs[0]?.classList.contains("publication-collapsed");
+
+      collapsiblePubs.forEach((pub) => {
+        if (isCollapsed) {
+          // Expand publications
+          pub.classList.remove("publication-collapsed");
+          pub.classList.add("publication-expanded");
+        } else {
+          // Collapse publications
+          pub.classList.remove("publication-expanded");
+          pub.classList.add("publication-collapsed");
+        }
+      });
+
+      // Update button text and arrow
+      if (isCollapsed) {
+        toggleText.textContent = "Show Less";
+        toggleArrow.classList.add("rotated");
+        toggleBtn.setAttribute("aria-expanded", "true");
+      } else {
+        toggleText.textContent = "Show More";
+        toggleArrow.classList.remove("rotated");
+        toggleBtn.setAttribute("aria-expanded", "false");
+      }
+    };
+
     /* ---------- Collaboration Map Initialization ---------- */
     function initCollaborationMap() {
       const mapElement = document.getElementById("collaboration-map");
