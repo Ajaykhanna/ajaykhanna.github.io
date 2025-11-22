@@ -913,7 +913,7 @@ button:focus {
   box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
 }
 
-.timeline-year {
+.research-timeline-year {
   font-size: 1.5rem;
   font-weight: 800;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
@@ -1052,7 +1052,7 @@ button:focus {
     margin-top: 70px;
   }
 
-  .timeline-year {
+  .research-timeline-year {
     font-size: 1.25rem;
   }
 
@@ -1096,7 +1096,7 @@ button:focus {
     border-radius: 12px;
   }
 
-  .timeline-year {
+  .research-timeline-year {
     font-size: 1.125rem;
     margin-bottom: 6px;
   }
