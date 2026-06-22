@@ -280,8 +280,8 @@ if (window.__unifiedScriptsLoaded) {
             closeAll();
             return;
           }
-          if (action === "resume") {
-            window.open("./resume.html", "_blank");
+          if (action === "request-cv") {
+            window.open("https://docs.google.com/forms/d/e/1FAIpQLSdvZynU-9x1oh9GiWDvtSpSv4DOFLHplM5b6l1k0LDeTWJmZg/viewform?usp=publish-editor", "_blank");
             closeAll();
             return;
           }
