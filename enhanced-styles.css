@@ -752,6 +752,7 @@ button:focus {
               opacity 0.4s ease,
               transform 0.4s ease,
               margin 0.3s ease;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
