@@ -70,10 +70,10 @@ if (window.__unifiedScriptsLoaded) {
       if (!el) return;
       new Typed("#typed-output", {
         strings: [
-          "Hybrid QM/MM Specialist",
-          "ML for Chemistry Enthusiast",
-          "Energy Transfer Researcher",
-          "Spectroscopy Analyst",
+          "MLIP &amp; GNN Developer",
+          "Nonadiabatic Dynamics Researcher",
+          "QM/MM Spectroscopy Specialist",
+          "Computational Drug Discovery",
         ],
         typeSpeed: 50,
         backSpeed: 30,
