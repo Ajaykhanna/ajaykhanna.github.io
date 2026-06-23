@@ -763,49 +763,72 @@ button:focus {
   margin-bottom: 32px !important;
 }
 
-/* Toggle Button Container */
+/* Toggle Button Container — sits on the left timeline line */
 .publication-toggle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 32px 0;
   position: relative;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
 }
 
-/* Toggle Button */
+/* Timeline dot on the vertical line, same position as publication nodes */
+.publication-toggle-container::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  z-index: 2;
+}
+
+/* Toggle Button — compact, inline with the timeline */
 .publication-toggle-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: white;
+  gap: 6px;
+  padding: 4px 0;
+  background: transparent;
+  color: #4f46e5;
   border: none;
-  border-radius: 50px;
+  border-radius: 0;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  transition: color 0.2s ease;
   position: relative;
   z-index: 10;
 }
 
 .publication-toggle-btn:hover {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.4);
-  transform: translateY(-2px);
+  background: transparent;
+  color: #3730a3;
+  box-shadow: none;
+  transform: none;
 }
 
 .publication-toggle-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Connector dots between timeline node and label */
+.toggle-dots {
+  color: #818cf8;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
 }
 
 /* Arrow Icon */
 .toggle-arrow {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -835,15 +858,20 @@ button:focus {
     border-width: 2px;
   }
 
+  .publication-toggle-container::before {
+    left: -22px;
+    width: 12px;
+    height: 12px;
+  }
+
   .publication-toggle-btn {
-    padding: 12px 24px;
-    font-size: 0.875rem;
-    gap: 10px;
+    font-size: 0.85rem;
+    gap: 4px;
   }
 
   .toggle-arrow {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
   }
 }
 
